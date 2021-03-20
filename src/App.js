@@ -1,6 +1,12 @@
+import Header from "./components/Header";
+import Homepage from "./components/Homepage";
+
 function App() {
     return (
-        <h1>Hier beginnt die Entwicklung</h1>
+        <div>
+            <Header/>
+            <Homepage/>
+        </div>
     );
 }
 
