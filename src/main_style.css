@@ -7,3 +7,12 @@
     color: white;
     left: 5px;
 }
+
+
+.moviePosterSlider .swiper-button-next {
+    top: 38%;
+}
+
+.moviePosterSlider .swiper-button-prev {
+    top: 38%;
+}

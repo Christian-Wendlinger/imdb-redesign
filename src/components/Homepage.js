@@ -67,7 +67,8 @@ export default function Homepage() {
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}
-                        slidesPerGroup={6}>
+                        slidesPerGroup={6}
+                        className={"moviePosterSlider"}>
                         {moviesPosters.map(movie => {
                             return (
                                 <SwiperSlide>
@@ -89,7 +90,8 @@ export default function Homepage() {
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}
-                        slidesPerGroup={6}>
+                        slidesPerGroup={6}
+                        className={"moviePosterSlider"}>
                         {moviesPosters.sort(() => Math.random() - 0.5).map(movie => {
                             return (
                                 <SwiperSlide>
