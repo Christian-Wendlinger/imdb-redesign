@@ -1,6 +1,7 @@
 import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
 import {news} from "../../data/news";
 import NewsListItem from "../listItems/NewsListItem";
+import {useEffect} from "react";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -10,6 +11,11 @@ const useStyle = makeStyles({
 });
 
 export default function TopNewsPage() {
+    // IMPORTANT! : Jump to top of the page when loading page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const classes = useStyle();
     return (
         <Container>

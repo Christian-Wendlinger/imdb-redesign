@@ -7,7 +7,7 @@ import SwiperCore, {Navigation} from 'swiper';
 // swiper css
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import Head from "../SoundOfMetal/Head";
+import Head from "../SoundOfMetal/head";
 import CastSlide from "../Slides/CastSlide";
 import MoreLikeThis from "../SoundOfMetal/MoreLikeThis";
 
@@ -48,27 +48,27 @@ export default function Homepage() {
             <Grid container direction={"column"} spacing={5}>
                 <div className={classes.head}>
                     <Grid item xs>
-                            {movies.map(movie => {
-                                return (
-                                    <Head
-                                        poster={movie.poster}
-                                        trailer={movie.poster}
-                                        title={movie.title}
-                                        informations={movie.informations}
-                                        description={movie.plotSummary}
-                                    />
-                                );
-                            })}
+                        {movies.map(movie => {
+                            return (
+                                <Head
+                                    poster={movie.poster}
+                                    trailer={movie.poster}
+                                    title={movie.title}
+                                    informations={movie.informations}
+                                    description={movie.plotSummary}
+                                />
+                            );
+                        })}
                     </Grid>
                 </div>
             </Grid>
         </Container>
         </div>
-                
+
         <Container>
             <Grid container direction={"column"} spacing={5}>
                 <Grid item xs></Grid>
-            
+
                 <Grid container spacing={5}>
                     <Grid item xs={8}>
 
@@ -123,7 +123,7 @@ export default function Homepage() {
                     </Grid>
 
                     <Grid item xs={1}></Grid>
-                    
+
                     <Grid item xs={3}>
                         <Grid container direction={"column"} spacing={5}>
                             <Grid item xs>

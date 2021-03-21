@@ -20,6 +20,7 @@ import NewsSlide from "../Slides/NewsSlide";
 import {bornToday} from "../../data/bornToday";
 import BornTodaySlide from "../Slides/BornTodaySlide";
 import {Link} from "react-router-dom";
+import {useEffect} from "react";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -34,6 +35,11 @@ const useStyle = makeStyles({
 });
 
 export default function Homepage() {
+    // IMPORTANT! : Jump to top of the page when loading page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const classes = useStyle();
     return (
         <Container>
