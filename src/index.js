@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './main_style.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'fontsource-roboto';
@@ -32,10 +31,11 @@ const theme = createMuiTheme({
     typography: {
         h1: {
             fontSize: 30,
-            fontWeight: "bold"
+            fontWeight: "bolder"
         },
         h2: {
-            fontSize: 20
+            fontSize: 20,
+            fontWeight: "bold"
         },
         body1: {
             fontSize: 16
