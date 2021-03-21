@@ -35,11 +35,11 @@ export default function Head({poster, trailer, title, informations, description}
             <div className={classes.content}>
 
                 <Grid container spacing={5}>
+                    <Grid item xs={1}></Grid>
                     <Grid item xs={3}>
                         <img src={poster} width={"100%"}/>
                     </Grid>
-                    <Grid item xs={1}></Grid>
-                    <Grid item xs={7}>
+                    <Grid item xs={6}>
                         <Grid container direction={"column"} spacing={0}>
                             <Grid item>
                                 <Typography variant={"h1"} color={"text"} className={classes.headline}>
@@ -64,7 +64,7 @@ export default function Head({poster, trailer, title, informations, description}
 
                             <Grid item>
                                 <Typography variant={"body1"}>
-                                    {description}
+                                    {description} <Typography variant={"body1"} color={"primary"}>»</Typography>
                                 </Typography>
                             </Grid>
 
