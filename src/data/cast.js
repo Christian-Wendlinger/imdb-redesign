@@ -50,16 +50,6 @@ export const cast = [
         role: "Richard Berger"
     },
     {
-        image: '/photos/soundOfMetalPictures/Domenico Toledo.png',
-        name: "Domenico Toledo",
-        age: "-",
-        born: "-",
-        description: "Domenico Toledo is an actor, known for Sound of Metal (2019). »",
-        zodiacSign: "-",
-        knownFor: "Sound of Metal",
-        role: "Michael"
-    },
-    {
         image: '/photos/soundOfMetalPictures/Chelsea Lee.png',
         name: "Chelsea Lee",
         age: "-",
