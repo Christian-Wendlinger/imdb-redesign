@@ -12,16 +12,15 @@ const useStyle = makeStyles({
     },
     headline: {
         marginBottom: 5,
-        fontWeight: "bold"
     },
     addIcon: {
-        fontSize: 28,
+        fontSize: 25,
         marginLeft: 5,
         cursor: "pointer",
         color: "#F2F2F2"
     },
     starIcon: {
-        fontSize: 17,
+        fontSize: 18,
         marginRight: 3
     },
     rightSide: {
@@ -40,7 +39,7 @@ export default function MainSlide({image, title, rating, age, runtime, genres, y
                     <Grid item xs={6}>
                         <Grid container direction={"column"} spacing={0}>
                             <Grid item>
-                                <Typography variant={"body1"} color={"primary"}>
+                                <Typography variant={"body1"} color={"primary"} className={classes.headline}>
                                     {title}
                                     <AddBox className={classes.addIcon}/>
                                 </Typography>

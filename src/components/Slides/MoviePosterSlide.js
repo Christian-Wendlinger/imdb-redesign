@@ -11,7 +11,7 @@ const useStyle = makeStyles({
         marginBottom: ruleMargin
     },
     addIcon: {
-        fontSize: 28,
+        fontSize: 25,
         cursor: "pointer",
         color: "#F2F2F2"
     },
@@ -32,7 +32,7 @@ export default function MoviePosterSlide({image, title, rating, year}) {
                 <img src={image} width={"100%"}/>
             </Grid>
 
-            <Grid item container direction={"row"} justify={"space-between"} alignItems={"center"} xs className={classes.firstRow}>
+            <Grid item container direction={"row"} justify={"space-between"} alignItems={"center"} className={classes.firstRow}>
                 <Grid container xs={6}>
                     <Grid item>
                         <Star color={"primary"} className={classes.starIcon}/>

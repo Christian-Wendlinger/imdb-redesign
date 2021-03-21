@@ -12,7 +12,6 @@ const useStyle = makeStyles({
     },
     headline: {
         marginTop: 5,
-        fontWeight: "bold"
     },
     rightSide: {
         paddingRight: 40
@@ -34,7 +33,7 @@ export default function NewsSlide({image, title, description, date}) {
                         </Grid>
 
                         <Grid item>
-                            <Typography variant={"body1"} color={"primary"} style={{marginTop: 5}}>{title}</Typography>
+                            <Typography variant={"body1"} color={"primary"} className={classes.headline}>{title}</Typography>
                         </Grid>
 
                         <Grid item style={{width: "100%"}}>
