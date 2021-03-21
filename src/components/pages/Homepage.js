@@ -19,6 +19,7 @@ import {news} from "../../data/news";
 import NewsSlide from "../Slides/NewsSlide";
 import {bornToday} from "../../data/bornToday";
 import BornTodaySlide from "../Slides/BornTodaySlide";
+import {Link} from "react-router-dom";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -84,7 +85,8 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Explore what's streaming</Typography>
+                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Explore what's
+                        streaming</Typography>
                     <HomeTabs/>
                     <Swiper
                         navigation
@@ -107,7 +109,9 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Top News</Typography>
+                    <Link to={"/news"} style={{textDecoration: "none"}}>
+                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Top News</Typography>
+                    </Link>
                     <Swiper
                         navigation
                         spaceBetween={16}
@@ -120,7 +124,8 @@ export default function Homepage() {
                                         image={article.image}
                                         date={article.date}
                                         title={article.title}
-                                        description={article.description}
+                                        description={article.descriptionShort}
+                                        category={article.category}
                                     />
                                 </SwiperSlide>
                             );

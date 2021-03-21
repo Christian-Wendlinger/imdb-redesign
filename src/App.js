@@ -7,6 +7,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import TopNewsPage from "./components/pages/TopNewsPage";
 
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
             <Header/>
             <Switch>
                 <Route path={"/"} exact>
-                    <Homepage />
+                    <Homepage/>
+                </Route>
+                <Route path={"/news"} exact>
+                    <TopNewsPage/>
                 </Route>
             </Switch>
             <Footer/>

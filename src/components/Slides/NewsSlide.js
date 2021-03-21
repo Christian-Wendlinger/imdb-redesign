@@ -17,7 +17,7 @@ const useStyle = makeStyles({
     }
 });
 
-export default function NewsSlide({image, title, description, date}) {
+export default function NewsSlide({image, title, description, date, category}) {
     const classes = useStyle();
     return (
         <div className={classes.rightSide}>
@@ -28,7 +28,7 @@ export default function NewsSlide({image, title, description, date}) {
                 <Grid item xs={8}>
                     <Grid container direction={"column"} alignItems={"flex-start"} spacing={0}>
                         <Grid item>
-                            <Typography variant={"body2"}>{date}</Typography>
+                            <Typography variant={"body2"}>{date} - {category}</Typography>
                         </Grid>
 
                         <Grid item>
