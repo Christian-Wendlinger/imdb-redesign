@@ -85,8 +85,9 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Explore what's
-                        streaming</Typography>
+                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                        Explore what's streaming
+                    </Typography>
                     <HomeTabs/>
                     <Swiper
                         navigation
@@ -126,6 +127,7 @@ export default function Homepage() {
                                         title={article.title}
                                         description={article.descriptionShort}
                                         category={article.category}
+                                        link={article.link}
                                     />
                                 </SwiperSlide>
                             );

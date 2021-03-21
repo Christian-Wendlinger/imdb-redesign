@@ -37,7 +37,7 @@ export default function NewsListItem({image, title, date, category, author, port
                             </Grid>
 
                             <Grid item xs>
-                                <Grid container direction={"column"} spacing={2}>
+                                <Grid container direction={"column"} spacing={1}>
                                     {paragraphs.map(paragraph => {
                                         return (
                                             <Grid item xs>

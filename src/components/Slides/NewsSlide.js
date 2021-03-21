@@ -17,7 +17,7 @@ const useStyle = makeStyles({
     }
 });
 
-export default function NewsSlide({image, title, description, date, category}) {
+export default function NewsSlide({image, title, description, date, category, link}) {
     const classes = useStyle();
     return (
         <div className={classes.rightSide}>
@@ -32,7 +32,11 @@ export default function NewsSlide({image, title, description, date, category}) {
                         </Grid>
 
                         <Grid item>
-                            <Typography variant={"body1"} color={"primary"} className={classes.headline}>{title}</Typography>
+                            <a href={link} style={{textDecoration: "none"}} target={"_blank"}>
+                                <Typography variant={"body1"} color={"primary"} className={classes.headline}>
+                                    {title}
+                                </Typography>
+                            </a>
                         </Grid>
 
                         <Grid item style={{width: "100%"}}>
