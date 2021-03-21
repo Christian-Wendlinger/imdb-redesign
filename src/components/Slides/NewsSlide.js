@@ -1,6 +1,5 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 
-
 const ruleMargin = 17;
 
 const useStyle = makeStyles({

@@ -1,6 +1,6 @@
 export const cast = [
     {
-        image: "https://m.media-amazon.com/images/M/MV5BOTVkNzI2ZDEtZGEzNy00ZGI0LTkxNDktYTFjZWUyODgyODQ1XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_UY317_CR14,0,214,317_AL_.jpg",
+        image: '/photos/soundOfMetalPictures/Olivia Cooke.png',
         name: "Olivia Cooke",
         age: "27",
         born: "January 21, 1990 in New York City, New York, USA",
@@ -9,7 +9,7 @@ export const cast = [
         knownFor: "Ready Player One, Ich und Earl und das Mädchen, Sound of Metal, Vollblüter"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Riz Ahmed.png',
         name: "Riz Ahmed",
         age: "39",
         born: "December 1, 1982 in Wembley, London, England, UK",
@@ -18,7 +18,7 @@ export const cast = [
         knownFor: "Sound of Metal, Star Wars: Rogue One, Nightcrawler - Jede Nacht hat ihren Preis, Four Lions"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Paul Raci.png',
         name: "Paul Raci",
         age: "72",
         born: "April 7, 1948 in Chicago, Illinois, USA",
@@ -27,7 +27,7 @@ export const cast = [
         knownFor: "Sound of Metal, Baskets, Goliath, No Ordinary Hero: The SuperDeafy Movie"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Lauren Ridloff.png',
         name: "Lauren Ridloff",
         age: "42",
         born: "April 6, 1978 in Chicago, Illinois, USA",
@@ -36,7 +36,7 @@ export const cast = [
         knownFor: "Sound of Metal, The Walking Dead, The Eternals, If You Could Hear My Own Tune"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Mathieu Amalric.png',
         name: "Mathieu Amalric",
         age: "55",
         born: "October 25, 1965 in  Neuilly-sur-Seine, Hauts-de-Seine, France",
@@ -45,7 +45,7 @@ export const cast = [
         knownFor: "Schmetterling und Taucherglocke, Grand Budapest Hotel, München, James Bond 007 - Ein Quantum Trost"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Domenico Toledo.png',
         name: "Domenico Toledo",
         age: "-",
         born: "-",
@@ -54,7 +54,7 @@ export const cast = [
         knownFor: "Sound of Metal"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Chelsea Lee.png',
         name: "Chelsea Lee",
         age: "-",
         born: "-",
@@ -63,7 +63,7 @@ export const cast = [
         knownFor: "Sound of Metal, The Button"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Shaheem Sanchez.png',
         name: "Shaheem Sanchez",
         age: "-",
         born: "-",
@@ -72,7 +72,7 @@ export const cast = [
         knownFor: "Sound of Metal, CL: I Quit 180327"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Chris Perfetti.png',
         name: "Chris Perfetti",
         age: "-",
         born: "-",
@@ -81,7 +81,7 @@ export const cast = [
         knownFor: "The Night Of: Die Wahrheit einer Nacht, Looking, Crossbones, What We Do in the Shadows"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Bill Thorpe.png',
         name: "Bill Thorpe",
         age: "-",
         born: "-",
@@ -90,7 +90,7 @@ export const cast = [
         knownFor: "Mystic River, Auftrag Rache, In Your Eyes, Joy: Alles außer gewöhnlich"
     },
     {
-        image: "",
+        image: '/photos/soundOfMetalPictures/Michael Tow.png',
         name: "Michael Tow",
         age: "-",
         born: "-",

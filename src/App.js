@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Homepage from "./components/pages/Homepage";
+import SoundOfMetal from "./components/pages/SoundOfMetal";
 import Footer from "./components/Footer";
 import {
     HashRouter as Router,
@@ -14,7 +15,7 @@ function App() {
             <Header/>
             <Switch>
                 <Route path={"/"} exact>
-                    <Homepage/>
+                    <Homepage />
                 </Route>
             </Switch>
             <Footer/>
