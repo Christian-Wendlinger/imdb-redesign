@@ -13,7 +13,7 @@ const theme = createMuiTheme({
     palette: {
         // Hintergrundfarbe
         background:{
-            default: "#3D3F42",
+            default: "#303234",
         },
         // Textfarbe
         text: {
@@ -25,7 +25,7 @@ const theme = createMuiTheme({
         },
         // Dunkles (Header) Grau
         secondary: {
-            main: "#353638"
+            main: "#232427"
         }
     },
     typography: {

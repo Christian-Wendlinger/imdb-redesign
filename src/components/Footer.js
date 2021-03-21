@@ -3,7 +3,7 @@ import {Facebook, Instagram, Launch, Twitter, YouTube} from "@material-ui/icons"
 
 const ustStyle = makeStyles({
     background: {
-        backgroundColor: "#353638"
+        backgroundColor: "#232427"
     },
     main: {
         marginTop: 50

@@ -1,32 +1,68 @@
 export const bornToday = [
     {
-        image: "https://m.media-amazon.com/images/M/MV5BOTVkNzI2ZDEtZGEzNy00ZGI0LTkxNDktYTFjZWUyODgyODQ1XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_UY317_CR14,0,214,317_AL_.jpg",
-        name: "Olivia Cooke",
-        age: "27"
-    },
-    {
-        image: "https://m.media-amazon.com/images/M/MV5BMTc3NTM4MzQ5MV5BMl5BanBnXkFtZTcwOTE4MDczNw@@._V1_UY317_CR0,0,214,317_AL_.jpg",
+        image: '/photos/bornTodayPictures/Gary Oldman.png',
         name: "Gary Oldman",
         age: "63"
     },
     {
-        image: "https://m.media-amazon.com/images/M/MV5BMTgxMTc1MTYzM15BMl5BanBnXkFtZTgwNzI5NjMwOTE@._V1_UY317_CR19,0,214,317_AL_.jpg",
-        name: "Sonequa Martin-Green",
-        age: "36"
-    },
-    {
-        image: "https://m.media-amazon.com/images/M/MV5BODQ4ODU5NjIxMF5BMl5BanBnXkFtZTgwNzIzNTIzNzM@._V1_UY317_CR12,0,214,317_AL_.jpg",
-        name: "Scott Eastwood",
-        age: "35"
-    },
-    {
-        image: "https://m.media-amazon.com/images/M/MV5BZTc0NmY1NTEtOGJkOS00OWU4LTgzMjgtNTc2MzhjNWUzMTUyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_UY317_CR4,0,214,317_AL_.jpg",
+        image: '/photos/bornTodayPictures/Justin Pierce.png',
         name: "Justin Pierce",
         age: "46"
     },
     {
-        image: "https://m.media-amazon.com/images/M/MV5BNDE5NDA1OTA4NV5BMl5BanBnXkFtZTcwMDE3NDk0NA@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+        image: '/photos/bornTodayPictures/Sonequa Martin-Green.png',
+        name: "Sonequa Martin-Green",
+        age: "36"
+    },
+    {
+        image: '/photos/bornTodayPictures/Scott Eastwood.png',
+        name: "Scott Eastwood",
+        age: "35"
+    },
+    {
+        image: '/photos/bornTodayPictures/Matthew Broderick.png',
+        name: "Matthew Broderick",
+        age: "46"
+    },
+    {
+        image: '/photos/bornTodayPictures/Timothy Dalton.png',
         name: "Timothy Dalton",
         age: "75"
-    }
+    },
+    {
+        image: '/photos/bornTodayPictures/Rhys Darby.png',
+        name: "Rhys Darby",
+        age: "47"
+    },
+    {
+        image: '/photos/bornTodayPictures/Jace Norman.png',
+        name: "Jace Norman",
+        age: "21"
+    },
+    {
+        image: '/photos/bornTodayPictures/Jaye Davidson.png',
+        name: "Jaye Davidson",
+        age: "53"
+    },
+    {
+        image: '/photos/bornTodayPictures/Max Pomeranc.png',
+        name: "Max Pomeranc",
+        age: "37"
+    },
+    {
+        image: '/photos/bornTodayPictures/Rachael MacFarlane.png',
+        name: "Rachael MacFarlane",
+        age: "45"
+    },
+    {
+        image: '/photos/bornTodayPictures/Rosie O\'Donnell.png',
+        name: "Rosie O'Donnell",
+        age: "59"
+    },
+    {
+        image: '/photos/bornTodayPictures/Santino Fontana.png',
+        name: "Santino Fontana",
+        age: "39"
+    },
+    
 ]

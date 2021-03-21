@@ -139,7 +139,7 @@ export default function Homepage() {
                             return (
                                 <SwiperSlide>
                                     <BornTodaySlide
-                                        image={celeb.image}
+                                        image={process.env.PUBLIC_URL + celeb.image}
                                         name={celeb.name}
                                         age={celeb.age}/>
                                 </SwiperSlide>
