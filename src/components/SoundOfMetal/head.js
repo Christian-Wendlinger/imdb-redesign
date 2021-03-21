@@ -11,7 +11,7 @@ const useStyle = makeStyles({
         marginBottom: ruleMargin
     },
     headline: {
-        marginBottom: 5,
+        marginBottom: 15,
     },
     addIcon: {
         fontSize: 25,
@@ -23,30 +23,37 @@ const useStyle = makeStyles({
         fontSize: 18,
         marginRight: 3
     },
-    rightSide: {
-        paddingRight: 40
+    content: {
+        paddingTop: 60,
+        marginBottom: 30
     }
 });
 
 export default function Head({poster, trailer, title, informations, description}) {
     const classes = useStyle();
     return (
-            <div className={classes.rightSide}>
-                <Grid container spacing={2}>
+            <div className={classes.content}>
+
+                <Grid container spacing={5}>
                     <Grid item xs={3}>
                         <img src={poster} width={"100%"}/>
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={1}></Grid>
+                    <Grid item xs={7}>
                         <Grid container direction={"column"} spacing={0}>
                             <Grid item>
-                                <Typography variant={"h1"} color={"primary"} className={classes.headline}>
+                                <Typography variant={"h1"} color={"text"} className={classes.headline}>
                                     {title}
                                     <AddBox className={classes.addIcon}/>
                                 </Typography>
                             </Grid>
 
+                            <Grid item style={{width: "100%"}}>
+                                <hr className={classes.balken}/>
+                            </Grid>
+
                             <Grid item>
-                                <Typography variant={"body2"} color={"text"} className={classes.headline}>
+                                <Typography variant={"body2"} color={"text"}>
                                     {informations}
                                 </Typography>
                             </Grid>
@@ -66,5 +73,6 @@ export default function Head({poster, trailer, title, informations, description}
                     </Grid>
                 </Grid>
             </div>
+            
     );
 }

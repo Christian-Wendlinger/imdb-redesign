@@ -28,7 +28,7 @@ const useStyle = makeStyles({
         marginBottom: 15
     },
     firstItem: {
-        marginTop: 15
+        marginTop: 20
     }
 });
 
