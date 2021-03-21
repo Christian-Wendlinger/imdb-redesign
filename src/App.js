@@ -1,14 +1,24 @@
 import Header from "./components/Header";
-import Homepage from "./components/Homepage";
+import Homepage from "./components/pages/Homepage";
 import Footer from "./components/Footer";
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+
 
 function App() {
     return (
-        <div>
+        <Router>
             <Header/>
-            <Homepage/>
+            <Switch>
+                <Route path={"/"} exact>
+                    <Homepage/>
+                </Route>
+            </Switch>
             <Footer/>
-        </div>
+        </Router>
     );
 }
 

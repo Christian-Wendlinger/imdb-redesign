@@ -21,6 +21,6 @@ export const news = [
         image: "https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_UX182_CR0,0,182,268_AL_.jpg",
         title: "‘Tenet’ Is Coming to HBO Max in May",
         description: "Christopher Nolan’s thriller first came to theaters in August of last year, several months before Warner Bros. decided its 2021 titles would debut on HBO Max at the same time as the movies released to theaters. The slate includes highly anticipated movies, like “In the Heights,” “Dune” and the fourth “Matrix.”",
-        date: "20 March 2021 - Celebrity"
+        date: "20 March 2021 - Movie"
     }
 ]

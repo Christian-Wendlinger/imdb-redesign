@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home"><Typography variant="h4" color="primary">IMDb</Typography></Navbar.Brand>
+                <Navbar.Brand href="/"><Typography variant="h4" color="primary">IMDb</Typography></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">

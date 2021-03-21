@@ -7,18 +7,18 @@ import SwiperCore, {Navigation} from 'swiper';
 // swiper css
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import {detailedMovieData} from "../data/detailedMovies";
-import MainSlide from "./Slides/MainSlide";
+import {detailedMovieData} from "../../data/detailedMovies";
+import MainSlide from "../Slides/MainSlide";
 
 // main css (custom swiper style)
-import "../main_style.css";
-import {moviesPosters} from "../data/moviePosters";
-import MoviePosterSlide from "./Slides/MoviePosterSlide";
-import HomeTabs from "./Homepage/HomeTabs";
-import {news} from "../data/news";
-import NewsSlide from "./Slides/NewsSlide";
-import {bornToday} from "../data/bornToday";
-import BornTodaySlide from "./Slides/BornTodaySlide";
+import "../../main_style.css";
+import {moviesPosters} from "../../data/moviePosters";
+import MoviePosterSlide from "../Slides/MoviePosterSlide";
+import HomeTabs from "../Homepage/HomeTabs";
+import {news} from "../../data/news";
+import NewsSlide from "../Slides/NewsSlide";
+import {bornToday} from "../../data/bornToday";
+import BornTodaySlide from "../Slides/BornTodaySlide";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);

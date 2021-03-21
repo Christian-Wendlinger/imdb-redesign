@@ -1,6 +1,5 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, NavigateNext, Star} from "@material-ui/icons";
-import {SwiperSlide} from "swiper/react";
 
 const ruleMargin = 17;
 
@@ -18,7 +17,8 @@ const useStyle = makeStyles({
     addIcon: {
         fontSize: 28,
         marginLeft: 5,
-        cursor: "pointer"
+        cursor: "pointer",
+        color: "#F2F2F2"
     },
     starIcon: {
         fontSize: 17,
@@ -38,9 +38,9 @@ export default function MainSlide({image, title, rating, age, runtime, genres, y
                         <img src={image} width={"100%"}/>
                     </Grid>
                     <Grid item xs={6}>
-                        <Grid container direction={"column"} alignItems={"flex-start"} spacing={0}>
+                        <Grid container direction={"column"} spacing={0}>
                             <Grid item>
-                                <Typography variant={"body1"} className={classes.headline}>
+                                <Typography variant={"body1"} color={"primary"}>
                                     {title}
                                     <AddBox className={classes.addIcon}/>
                                 </Typography>

@@ -12,14 +12,15 @@ const useStyle = makeStyles({
     },
     addIcon: {
         fontSize: 28,
-        cursor: "pointer"
+        cursor: "pointer",
+        color: "#F2F2F2"
     },
     starIcon: {
         fontSize: 21,
         marginRight: 3
     },
     firstRow: {
-        marginTop: 15
+        marginTop: 17,
     }
 });
 

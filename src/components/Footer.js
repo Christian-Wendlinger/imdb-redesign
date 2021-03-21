@@ -1,5 +1,5 @@
 import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
-import {Facebook, Instagram, Twitter, YouTube} from "@material-ui/icons";
+import {Facebook, Instagram, Launch, Twitter, YouTube} from "@material-ui/icons";
 
 const ustStyle = makeStyles({
     background: {
@@ -12,7 +12,8 @@ const ustStyle = makeStyles({
         paddingTop: 10
     },
     link: {
-        cursor: "pointer"
+        cursor: "pointer",
+        color: "white"
     }
 });
 
@@ -21,19 +22,27 @@ export default function Footer() {
     return (
         <footer className={classes.background}>
             <Container className={classes.main}>
-                <Grid container direction={"column"} alignItems={"center"} spacing={2} className={classes.inner}>
-                    <Grid item container direction={"row"} spacing={1} justify={"center"}>
+                <Grid container direction={"column"} alignItems={"center"} spacing={3} className={classes.inner}>
+                    <Grid item container direction={"row"} spacing={2} justify={"center"}>
                         <Grid item>
-                            <Instagram fontSize={"large"}/>
+                            <a href={"https://www.instagram.com/imdb"} target={"_blank"}>
+                                <Instagram fontSize={"large"} className={classes.link}/>
+                            </a>
                         </Grid>
                         <Grid item>
-                            <Twitter fontSize={"large"}/>
+                            <a href={"https://twitter.com/imdb"} target={"_blank"}>
+                                <Twitter fontSize={"large"} className={classes.link}/>
+                            </a>
                         </Grid>
                         <Grid item>
-                            <YouTube fontSize={"large"}/>
+                            <a href={"https://www.youtube.com/imdb"} target={"_blank"}>
+                                <YouTube fontSize={"large"} className={classes.link}/>
+                            </a>
                         </Grid>
                         <Grid item>
-                            <Facebook fontSize={"large"}/>
+                            <a href={"https://www.facebook.com/imdb"} target={"_blank"}>
+                                <Facebook fontSize={"large"} className={classes.link}/>
+                            </a>
                         </Grid>
                     </Grid>
 
