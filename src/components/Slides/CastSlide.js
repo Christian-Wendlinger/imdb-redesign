@@ -1,5 +1,4 @@
-import {Grid, makeStyles, Typography} from "@material-ui/core";
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import {Grid, Typography} from "@material-ui/core";
 
 export default function BornTodaySlide({image, name, role}) {
     return (

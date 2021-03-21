@@ -7,8 +7,9 @@ import SwiperCore, {Navigation} from 'swiper';
 // swiper css
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import Head from "../SoundOfMetal/head";
+import Head from "../SoundOfMetal/Head";
 import CastSlide from "../Slides/CastSlide";
+import MoreLikeThis from "../SoundOfMetal/MoreLikeThis";
 
 // main css (custom swiper style)
 import "../../main_style.css";
@@ -25,7 +26,8 @@ const useStyle = makeStyles({
         marginBottom: 15
     },
     head: {
-        background: "#1d1e20"
+        background: "#1d1e20",
+        marginBottom: 30
     },
     balken: {
         borderTop: "1px solid",
@@ -39,6 +41,9 @@ export default function Homepage() {
     const classes = useStyle();
     return (
 
+        <div>
+
+        <div className={classes.head}>
         <Container>
             <Grid container direction={"column"} spacing={5}>
                 <div className={classes.head}>
@@ -56,7 +61,12 @@ export default function Homepage() {
                             })}
                     </Grid>
                 </div>
-
+            </Grid>
+        </Container>
+        </div>
+                
+        <Container>
+            <Grid container direction={"column"} spacing={5}>
                 <Grid item xs></Grid>
             
                 <Grid container spacing={5}>
@@ -118,6 +128,24 @@ export default function Homepage() {
                         <Grid container direction={"column"} spacing={5}>
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>More Like This</Typography>
+                                <Swiper
+                                    navigation
+                                    spaceBetween={16}
+                                    slidesPerView={3}
+                                    slidesPerGroup={3}>
+                                    {movies.map(movie => {
+                                        movie.moreLikeThis.map(title => {
+                                            return (
+                                                <SwiperSlide>
+                                                    <MoreLikeThis
+                                                        image={title.image}
+                                                        image2={title.image2}
+                                                    />
+                                                </SwiperSlide>
+                                            );
+                                        })
+                                    })}
+                                </Swiper>
                             </Grid>
 
                             <Grid item style={{width: "100%"}}>
@@ -143,6 +171,8 @@ export default function Homepage() {
 
             </Grid>
         </Container>
+
+        </div>
     );
 }
 
