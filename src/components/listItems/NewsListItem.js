@@ -20,11 +20,11 @@ export default function NewsListItem({image, title, date, category, author, port
         [
             <Grid item>
                 <Grid container spacing={2}>
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                         <img src={image} width={"100%"}/>
                     </Grid>
 
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <Grid container direction={"column"} spacing={3}>
                             <Grid item xs>
                                 <a href={link} target={"_blank"} style={{textDecoration: "none"}}>

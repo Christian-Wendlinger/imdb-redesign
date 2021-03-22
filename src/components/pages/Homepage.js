@@ -69,7 +69,11 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Recommended</Typography>
+                    <Link to={"/browse"} style={{textDecoration: "none"}}>
+                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                            Recommended
+                        </Typography>
+                    </Link>
                     <Swiper
                         navigation
                         spaceBetween={16}
@@ -91,7 +95,7 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                    <Typography variant={"h2"} className={classes.headline}>
                         Explore what's streaming
                     </Typography>
                     <HomeTabs/>
@@ -142,7 +146,11 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Born Today</Typography>
+                    <Link to={"/born-today"} style={{textDecoration: "none"}}>
+                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                            Born Today
+                        </Typography>
+                    </Link>
                     <Swiper
                         navigation
                         spaceBetween={16}

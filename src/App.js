@@ -8,6 +8,8 @@ import {
     Route,
 } from "react-router-dom";
 import TopNewsPage from "./components/pages/TopNewsPage";
+import BrowsePage from "./components/pages/BrowsePage";
+import BornTodayPage from "./components/pages/BornTodayPage";
 
 
 function App() {
@@ -20,6 +22,12 @@ function App() {
                 </Route>
                 <Route path={"/news"} exact>
                     <TopNewsPage/>
+                </Route>
+                <Route path={"/browse"} exact>
+                    <BrowsePage/>
+                </Route>
+                <Route path={"/born-today"} exact>
+                    <BornTodayPage/>
                 </Route>
             </Switch>
             <Footer/>
