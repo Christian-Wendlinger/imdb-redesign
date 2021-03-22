@@ -21,7 +21,7 @@ const theme = createMuiTheme({
         },
         // IMDB Orange
         primary: {
-            main: "#d89d2a"
+            main: "#F5C518"
         },
         // Dunkles (Header) Grau
         secondary: {
