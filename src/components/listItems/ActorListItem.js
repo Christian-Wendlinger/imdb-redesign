@@ -1,5 +1,4 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
-import {AddBox, Star, StarBorder} from "@material-ui/icons";
 
 const ruleMargin = 15;
 
@@ -16,16 +15,16 @@ const useStyle = makeStyles({
 });
 
 export default function ActorListItem({
-                                              number,
-                                              image,
-                                              name,
-                                              age,
-                                              born,
-                                              description,
-                                              zodiacSign,
-                                              knownFor,
-                                              lastItem
-                                          }) {
+                                          number,
+                                          image,
+                                          name,
+                                          age,
+                                          born,
+                                          description,
+                                          zodiacSign,
+                                          knownFor,
+                                          lastItem
+                                      }) {
     const classes = useStyle();
     return (
         [
@@ -41,13 +40,16 @@ export default function ActorListItem({
                             <Grid item xs>
                                 <Grid container spacing={1} alignItems={"center"}>
                                     <Grid item>
-                                        <Typography variant={"body1"} color={"primary"}>{number !== undefined && number + "."} {name} ({age})</Typography>
+                                        <Typography variant={"body1"}
+                                                    color={"primary"}>{number !== undefined && number + "."} {name} {age !== undefined && `(${age})`}</Typography>
                                     </Grid>
                                 </Grid>
 
+                                {born !== undefined &&
                                 <Typography variant={"body2"} className={classes.subtitle}>
                                     {born}
                                 </Typography>
+                                }
                             </Grid>
 
                             <Grid item xs>
@@ -55,7 +57,8 @@ export default function ActorListItem({
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"body2"}>Zodiac Sign : &nbsp;{zodiacSign}</Typography>
+                                {zodiacSign !== undefined &&
+                                <Typography variant={"body2"}>Zodiac Sign : &nbsp;{zodiacSign}</Typography>}
                                 <Typography variant={"body2"}>Known For : &nbsp;&nbsp;&nbsp;{knownFor}</Typography>
                             </Grid>
                         </Grid>

@@ -1,4 +1,19 @@
-export const moviesPosters = [
+export const moviePosters = [
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        age: "12",
+        runtime: "2h",
+        genres: "Drama, Music",
+        director: "Darius Marder, Abraham Marder",
+        stars: "Riz Ahmed, Olivia Cooke, Paul Raci",
+        votes: "45.695",
+        gross: "$ 148,476",
+        description: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing. He goes to a pharmacy in order to figure out what is happening to him. The pharmacist refers him to a doctor that Ruben is able to see immediately. The doctor performs a hearing test and determines Ruben can only successfully hear 20-30 percent of words and his hearing will continue to deteriorate rapidly.",
+        link: "/movies/tt5363618"
+    },
     {
         image: "https://m.media-amazon.com/images/M/MV5BNGZlNjdlZmMtYTg0MC00MmZkLWIyNDktYmNlOWYzMTkzYWQ1XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
         title: "Der Prinz aus Zamunda",
@@ -11,7 +26,7 @@ export const moviesPosters = [
         stars: "Eddie Murphy, Paul Bates, Garcelle Beauvais",
         votes: "187.647",
         gross: "$ 288,752,301",
-        description: "Immersed in luxury and riches, the courteous blue blood and refined heir apparent to Africa's prosperous kingdom of Zamunda, Prince Akeem, summons up the courage to reject an arranged marriage proposal on his twenty-first birthday. Bent on finding true love, the young aristocrat along with his trusted valet, Semmi, find themselves in the strange and unknown urban jungle of New York City's Queens, trying to mingle with their neighbours by posing as humble exchange students."
+        description: "Immersed in luxury and riches, the courteous blue blood and refined heir apparent to Africa's prosperous kingdom of Zamunda, Prince Akeem, summons up the courage to reject an arranged marriage proposal on his twenty-first birthday. Bent on finding true love, the young aristocrat along with his trusted valet, Semmi, find themselves in the strange and unknown urban jungle of New York City's Queens, trying to mingle with their neighbours by posing as humble exchange students.",
     },
     {
         image: "https://m.media-amazon.com/images/M/MV5BMjgwNGNkZGYtMWQyYS00YjEzLWFmZTctODUzYWMxOWJkNTAzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",

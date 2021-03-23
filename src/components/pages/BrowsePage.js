@@ -1,7 +1,7 @@
 import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
 import {useEffect} from "react";
 import BrowseMovieListItem from "../listItems/BrowseMovieListItem";
-import {moviesPosters} from "../../data/moviePosters";
+import {moviePosters} from "../../data/moviePosters";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -26,7 +26,7 @@ export default function BrowsePage() {
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>
-                        {moviesPosters.map((item, index) => {
+                        {moviePosters.map((item, index) => {
                                 return (
                                     <BrowseMovieListItem
                                         image={item.image}
@@ -42,7 +42,8 @@ export default function BrowsePage() {
                                         stars={item.stars}
                                         votes={item.votes}
                                         gross={item.gross}
-                                        lastItem={index === moviesPosters.length - 1}/>
+                                        link={item.link}
+                                        lastItem={index === moviePosters.length - 1}/>
                                 );
                             }
                         )}

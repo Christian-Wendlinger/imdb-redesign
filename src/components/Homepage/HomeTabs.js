@@ -41,17 +41,24 @@ const values = [
 ];
 
 
-export default function HomeTabs() {
+export default function HomeTabs({shuffle}) {
     const [data, setData] = useState(values);
 
     return (
         <div style={{marginBottom: 15}}>
             <Grid container spacing={3}>
-                {data.map((tab => <HomepageTabItem name={tab.name} active={tab.active}
-                                                   onClick={() => setData(data.map(item => item.id === tab.id ? {
-                                                       ...item,
-                                                       active: true
-                                                   } : {...item, active: false}))}/>))}
+                {data.map((tab =>
+                    <HomepageTabItem
+                        name={tab.name}
+                        active={tab.active}
+                        onClick={() => {
+                            setData(data.map(item => item.id === tab.id ? {
+                                ...item,
+                                active: true
+                            } : {...item, active: false}))
+                            shuffle()
+                        }}
+                    />))}
             </Grid>
         </div>
     );

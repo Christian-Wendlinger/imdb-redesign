@@ -12,7 +12,7 @@ import MainSlide from "../Slides/MainSlide";
 
 // main css (custom swiper style)
 import "../../main_style.css";
-import {moviesPosters} from "../../data/moviePosters";
+import {moviePosters} from "../../data/moviePosters";
 import MoviePosterSlide from "../Slides/MoviePosterSlide";
 import HomeTabs from "../Homepage/HomeTabs";
 import {news} from "../../data/news";
@@ -20,7 +20,7 @@ import NewsSlide from "../Slides/NewsSlide";
 import {bornToday} from "../../data/bornToday";
 import BornTodaySlide from "../Slides/BornTodaySlide";
 import {Link} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -39,6 +39,9 @@ export default function Homepage() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
+    const [recommended, setRecommended] = useState([...moviePosters]);
+    const [explore, setExplore] = useState([...moviePosters].sort(() => Math.random() - 0.5))
 
     const classes = useStyle();
     return (
@@ -80,14 +83,15 @@ export default function Homepage() {
                         slidesPerView={6}
                         slidesPerGroup={6}
                         className={"moviePosterSlider"}>
-                        {moviesPosters.map(movie => {
+                        {recommended.map(movie => {
                             return (
                                 <SwiperSlide>
                                     <MoviePosterSlide
                                         image={movie.image}
                                         rating={movie.rating}
                                         title={movie.title}
-                                        year={movie.year}/>
+                                        year={movie.year}
+                                        link={movie.link}/>
                                 </SwiperSlide>
                             );
                         })}
@@ -98,21 +102,22 @@ export default function Homepage() {
                     <Typography variant={"h2"} className={classes.headline}>
                         Explore what's streaming
                     </Typography>
-                    <HomeTabs/>
+                    <HomeTabs shuffle={() => setExplore([...moviePosters].sort(() => Math.random() - 0.5))}/>
                     <Swiper
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}
                         slidesPerGroup={6}
                         className={"moviePosterSlider"}>
-                        {moviesPosters.sort(() => Math.random() - 0.5).map(movie => {
+                        {explore.map(movie => {
                             return (
                                 <SwiperSlide>
                                     <MoviePosterSlide
                                         image={movie.image}
                                         rating={movie.rating}
                                         title={movie.title}
-                                        year={movie.year}/>
+                                        year={movie.year}
+                                        link={movie.link}/>
                                 </SwiperSlide>
                             );
                         })}

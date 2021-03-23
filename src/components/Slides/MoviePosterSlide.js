@@ -1,5 +1,6 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, Star} from "@material-ui/icons";
+import {Link} from "react-router-dom";
 
 const ruleMargin = 3;
 
@@ -24,15 +25,18 @@ const useStyle = makeStyles({
     }
 });
 
-export default function MoviePosterSlide({image, title, rating, year}) {
+export default function MoviePosterSlide({image, title, rating, year, link}) {
     const classes = useStyle();
     return (
         <Grid container direction={"column"} spacing={1}>
             <Grid item>
-                <img src={image} width={"100%"}/>
+                <Link to={link} style={{textDecoration: "none"}}>
+                    <img src={image} width={"100%"}/>
+                </Link>
             </Grid>
 
-            <Grid item container direction={"row"} justify={"space-between"} alignItems={"center"} className={classes.firstRow}>
+            <Grid item container direction={"row"} justify={"space-between"} alignItems={"center"}
+                  className={classes.firstRow}>
                 <Grid container xs={6}>
                     <Grid item>
                         <Star color={"primary"} className={classes.starIcon}/>
@@ -51,9 +55,11 @@ export default function MoviePosterSlide({image, title, rating, year}) {
             </Grid>
 
             <Grid item>
-                <Typography variant={"body1"}>
-                    {title} ({year})
-                </Typography>
+                <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
+                    <Typography variant={"body1"}>
+                        {title} ({year})
+                    </Typography>
+                </Link>
             </Grid>
         </Grid>
     );

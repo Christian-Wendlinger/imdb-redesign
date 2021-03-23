@@ -47,7 +47,7 @@ export const movies = [
                 content: [
                     {
                         key: "Plot Summary",
-                        value: "»" 
+                        value: "»"
                     },
                     {
                         key: "Plot Keywords",
@@ -164,7 +164,7 @@ export const movies = [
                 author: "arshadfilms1",
                 date: "15 September 2019",
                 text: "The Sound of Metal is definitely one of the top films this year and it has everything to do with the steak kar performances of the lead actor Riz Ahmed. With blond hair it's hard to even place him as a Pakistani playing the role. Ahmed is an intense actor and takes us into the world of a tormented drummer trying to come to terms with losing his hearing not long after overcoming addiction. This new battle takes him into an unfamiliar world where the sound design helps the audience feel what the protagonist must feel. This film selves into experimentation with the auditory experience of cinema. An absolute must-watch."
-            },
+            }
         ],
         didYouKnow: [
             {

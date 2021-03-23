@@ -37,7 +37,7 @@ const useStyle = makeStyles({
     }
 });
 
-export default function Homepage() {
+export default function SoundOfMetal() {
     const classes = useStyle();
     return (
 

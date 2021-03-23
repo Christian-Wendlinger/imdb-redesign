@@ -1,5 +1,6 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, Star, StarBorder} from "@material-ui/icons";
+import {Link} from "react-router-dom";
 
 const ruleMargin = 15;
 
@@ -37,6 +38,7 @@ export default function BrowseMovieListItem({
                                                 stars,
                                                 votes,
                                                 gross,
+                                                link,
                                                 lastItem
                                             }) {
     const classes = useStyle();
@@ -46,7 +48,9 @@ export default function BrowseMovieListItem({
                 <Grid container spacing={2}>
                     <Grid item xs={3} container direction={"column"} spacing={3}>
                         <Grid item xs>
-                            <img src={image} width={"100%"}/>
+                            <Link to={link}>
+                                <img src={image} width={"100%"}/>
+                            </Link>
                         </Grid>
 
                         <Grid item xs container justify={"space-between"} direction={"row"}>
@@ -80,7 +84,10 @@ export default function BrowseMovieListItem({
                             <Grid item xs>
                                 <Grid container spacing={1} alignItems={"center"}>
                                     <Grid item>
-                                        <Typography variant={"body1"} color={"primary"}>{number}. {title}</Typography>
+                                        <Link to={link} style={{textDecoration: "none"}}>
+                                            <Typography variant={"body1"}
+                                                        color={"primary"}>{number}. {title}</Typography>
+                                        </Link>
                                     </Grid>
 
                                     <Grid item>
@@ -99,7 +106,8 @@ export default function BrowseMovieListItem({
 
                             <Grid item xs>
                                 <Typography variant={"body2"}>Director : &nbsp;{director}</Typography>
-                                <Typography variant={"body2"}>Stars : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stars}</Typography>
+                                <Typography variant={"body2"}>Stars
+                                    : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stars}</Typography>
                             </Grid>
 
                             <Grid item xs>
