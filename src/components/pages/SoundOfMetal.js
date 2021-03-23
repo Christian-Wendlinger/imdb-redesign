@@ -14,6 +14,7 @@ import Editorial from "../SoundOfMetal/Editorial";
 import Detail from "../SoundOfMetal/Detail";
 import UserReviewShortItem from "../listItems/UserReviewShortItem";
 import DidYouKnow from "../SoundOfMetal/DidYouKnow";
+import Photos from "../SoundOfMetal/Photos";
 
 // main css (custom swiper style)
 import "../../main_style.css";
@@ -110,16 +111,46 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Grid container direction={"row"} spacing={2}>
+                                <Grid container direction={"row"} spacing={2} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Grid container direction={"column"} spacing={2}>
                                             <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
-                                        </Grid>
+                                            <Swiper
+                                                navigation
+                                                spaceBetween={10}
+                                                slidesPerView={1}
+                                                slidesPerGroup={1}>
+
+                                                {movies[0].photos.map(photoPair => {
+                                                    return (
+                                                        <SwiperSlide>
+                                                            <Photos 
+                                                                images={photoPair} 
+                                                            />
+                                                        </SwiperSlide>
+                                                    );
+
+                                                })}
+                                            </Swiper>
                                     </Grid>
                                     <Grid item xs>
-                                        <Grid container direction={"column"} spacing={2}>
                                             <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
-                                        </Grid>
+                                            <Swiper
+                                                navigation
+                                                spaceBetween={10}
+                                                slidesPerView={1}
+                                                slidesPerGroup={1}>
+
+                                                {movies[0].photos.map(photoPair => {
+                                                    return (
+                                                        <SwiperSlide>
+                                                            <Photos 
+                                                                images={photoPair} 
+                                                            />
+                                                        </SwiperSlide>
+                                                    );
+
+                                                })}
+                                            </Swiper>
                                     </Grid>
                                 </Grid>
                             </Grid>
