@@ -35,7 +35,6 @@ export default function Head({poster, trailer, title, informations, description}
             <div className={classes.content}>
 
                 <Grid container spacing={5}>
-                    <Grid item xs={1}></Grid>
                     <Grid item xs={3}>
                         <img src={poster} width={"100%"}/>
                     </Grid>
@@ -64,8 +63,12 @@ export default function Head({poster, trailer, title, informations, description}
 
                             <Grid item>
                                 <Typography variant={"body1"}>
-                                    {description} <Typography variant={"body1"} color={"primary"}>»</Typography>
+                                    {description} <Typography variant={"body1"} color={"primary"} style={{display:"inline"}}>More »</Typography>
                                 </Typography>
+                            </Grid>
+
+                            <Grid item>
+                                <video src={trailer}/>
                             </Grid>
 
                         

@@ -4,6 +4,7 @@ export const movies = [
         informations: "2h | Drama, Music | 4 December 2020 (Germany) | 12 | Directed by Darius Marder | Wirting Credits: Darius Marder, Abraham Marder, Derek Cianfrance",
         plotSummary: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing. He goes to a pharmacy in order to figure out what is happening to him. The pharmacist refers him to a doctor that Ruben is able to see immediately. The doctor performs a hearing test and determines Ruben can only successfully hear 20-30 percent of words and his hearing will continue to deteriorate rapidly. He may be able to get cochlear implants to correct it.",
         poster: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg",
+        trailer: "https://imdb-video.media-imdb.com/vi2477703449/1434659607842-pgv4ql-1600972305252.mp4?Expires=1616616187&Signature=OEbxXtP-tHUVQGhiyX0wolY-vMbA-S3gSg98h~g3vPrOq7gEG4I91v3pt33v9RksD4rzJAtrsM7oIvzQ1rB6ufMNeP5B0Sbm3loSZL3rxTcyiL1ON6vLZPKGc401wxUg6A2MfA3Mr9Wy5OVmPCFyjuoVKN134jFqp7koEdj22QhVMDCpLya6JQCUR-34WZoKbkBanE6rosRkALMMXBeCfSJHiDYSkZl2InuO8OK~9jAReEdm99s02WVLwtDcBamjoJhFmbQZB4Cck4mmzT2z0vqxBujJec3xx3vh0x2SSFmft8bnrAWoLVxOV-x5JzislVYeFKNLeOlqsKIMgj1S~Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
         cast: [
             {
                 name: "Riz Ahmed"
@@ -39,7 +40,53 @@ export const movies = [
                 name: "Michael Tow"
             }
         ],
-        photos: "",
+        photos: [
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BYzgzZjMyNmYtMDI1Yi00OWE3LWFmOGMtZTAwNGI4NTIxMjM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BMjc4MDBhM2QtODM1OS00NTZlLThmZGQtODc0NzU3MjZhM2EyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BZWQ4N2QyMTUtZTQ3NC00MjNiLWE2MzAtYjJiNzViZThiYzZkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BYmUyNTU2MzYtNmM5MS00ZDk1LTk2YjQtOTZiZmE5YjM2ZjVlXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BYWRjOTZiOGMtYjY0Ny00NjE5LThmYTctNGIzNDExOWZiY2I0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BZTA3OTNmODUtMmI5NS00ZThkLTk3ZDYtYjFmMTY0MjQ1MThhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BOTZmNDYyMWMtOTk2NS00OWZhLTlkNjUtYmM4MTBkYzgwMGQyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BMzFhOWFmOWUtZjE2MS00ZDc3LWFlM2ItZmE4MzFjMGMwNTM2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BMDE4YTQ3MjEtNjk4OS00YTMxLTg4N2YtNTc5NTg4MDZmMDdiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BOGQ1YTg1NmMtNTg3NS00YTE1LTk2ZWEtNjI4ZjI5NTIyYzU5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BNWQzYzBlYmMtZjEzYi00ODQ3LThmNTctYWU5NThhYjVjODJkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BYmFjZWE5Y2MtNjk2NS00YTY0LTg5OGMtNTE2N2VjMmU1Y2YzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BNDU0NGQ3ODktNDJkOS00ODE0LTgzYTctY2JiNzhlY2E1OGYzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BNDk2Mjk4MzEtYmRmMS00YjcwLTgyMDQtMDQwNjdhMDliNGMzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BNzgxZDBiYjMtYzkxNi00MDAzLTgwOTEtNjFjMmJmMzc4NmFhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            }
+        ],
         videos: "",
         details: [
             {
