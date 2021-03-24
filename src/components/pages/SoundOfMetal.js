@@ -20,6 +20,8 @@ import Photos from "../SoundOfMetal/Photos";
 import "../../main_style.css";
 import {movies} from "../../data/movies";
 import {cast} from "../../data/cast";
+import {useEffect} from "react";
+import {Link} from "react-router-dom";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -49,6 +51,12 @@ const useStyle = makeStyles({
 });
 
 export default function SoundOfMetal() {
+
+    // IMPORTANT! : Jump to top of the page when loading page
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const classes = useStyle();
     return (
 
@@ -81,17 +89,21 @@ export default function SoundOfMetal() {
                 <Grid item xs></Grid>
 
                 <Grid container spacing={5}>
-                    <Grid item xs={8}>
+
+                    <Grid item xs={9}>
 
                         <Grid container direction={"column"} spacing={5}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Cast</Typography>
+                                <Link to="/movies/tt5363618/cast" style={{textDecoration: "none"}}>
+                                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Cast</Typography>
+                                </Link>
+
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
-                                    slidesPerView={4}
-                                    slidesPerGroup={4}>
+                                    slidesPerView={5}
+                                    slidesPerGroup={5}>
                                     {cast.map(actor => {
                                         return (
                                             <SwiperSlide>
@@ -113,44 +125,10 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Grid container direction={"row"} spacing={2} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                            <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
-                                            <Swiper
-                                                navigation
-                                                spaceBetween={10}
-                                                slidesPerView={1}
-                                                slidesPerGroup={1}>
-
-                                                {movies[0].photos.map(photoPair => {
-                                                    return (
-                                                        <SwiperSlide>
-                                                            <Photos 
-                                                                images={photoPair} 
-                                                            />
-                                                        </SwiperSlide>
-                                                    );
-
-                                                })}
-                                            </Swiper>
+                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
                                     </Grid>
                                     <Grid item xs>
-                                            <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
-                                            <Swiper
-                                                navigation
-                                                spaceBetween={10}
-                                                slidesPerView={1}
-                                                slidesPerGroup={1}>
-
-                                                {movies[0].photos.map(photoPair => {
-                                                    return (
-                                                        <SwiperSlide>
-                                                            <Photos 
-                                                                images={photoPair} 
-                                                            />
-                                                        </SwiperSlide>
-                                                    );
-
-                                                })}
-                                            </Swiper>
+                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -176,7 +154,10 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Reviews</Typography>
+                                <Link to="/movies/tt5363618/user-reviews" style={{textDecoration: "none"}}>
+                                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Reviews</Typography>
+                                </Link>
+                                
                                 <Grid container direction={"column"} spacing={2}>
                                     <UserReviewShortItem
                                             rating={movies[0].reviews[0].rating}
@@ -236,7 +217,6 @@ export default function SoundOfMetal() {
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={1}></Grid>
 
                     <Grid item xs={3}>
                         <Grid container direction={"column"} spacing={2}>
