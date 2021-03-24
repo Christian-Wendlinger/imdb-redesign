@@ -13,6 +13,7 @@ import SoundOfMetal from "./components/pages/SoundOfMetal";
 import CastPage from "./components/pages/detailsPages/CastPage";
 import PhotosPage from "./components/pages/detailsPages/PhotosPage";
 import UserReviewsPage from "./components/pages/detailsPages/UserReviewsPage";
+import BrowseNdPage from "./components/pages/BrowseNdPage";
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
                 </Route>
                 <Route path={"/movies/tt5363618/user-reviews"} exact>
                     <UserReviewsPage pageName={"User Reviews"} year={"2019"} movieTitle={"Sound Of Metal"} rating={"7.8"} pageId={"tt5363618"}/>
+                </Route>
+                <Route path={"/browse-nd"} exact>
+                    <BrowseNdPage/>
                 </Route>
             </Switch>
             <Footer/>

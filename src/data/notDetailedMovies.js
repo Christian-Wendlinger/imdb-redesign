@@ -1,0 +1,60 @@
+export const notDetailedMovies = [
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+    {
+        image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        title: "Sound of Metal",
+        rating: "7.8",
+        year: "2019",
+        votes: "45.695",
+        gross: "$ 148,476",
+    },
+
+
+]

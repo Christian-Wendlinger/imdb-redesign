@@ -7,7 +7,7 @@ import SwiperCore, {Navigation} from 'swiper';
 // swiper css
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import Head from "../SoundOfMetal/Head";
+import Head from "../SoundOfMetal/head";
 import CastSlide from "../Slides/CastSlide";
 import MoreLikeThis from "../SoundOfMetal/MoreLikeThis";
 import Editorial from "../SoundOfMetal/Editorial";
