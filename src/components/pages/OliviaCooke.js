@@ -14,6 +14,7 @@ import Photos from "../SoundOfMetal/Photos";
 import MoviePosterSlide from "../Slides/MoviePosterSlide"
 import StarDetail from "../SoundOfMetal/StarDetails";
 import KnownForTabs from "../SoundOfMetal/KnownForTabs";
+import Videos from "../SoundOfMetal/Videos";
 
 // main css (custom swiper style)
 import "../../main_style.css";
@@ -125,7 +126,7 @@ export default function OliviaCooke() {
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             slidesPerGroup={1}>
-                                            {movies[0].photos.map(photos => {
+                                            {oliviaCooke[0].photos.map(photos => {
                                                 return (
                                                     <SwiperSlide>
                                                         <Photos
@@ -143,11 +144,11 @@ export default function OliviaCooke() {
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             slidesPerGroup={1}>
-                                            {movies[0].photos.map(photos => {
+                                            {oliviaCooke[0].videos.map(video => {
                                                 return (
                                                     <SwiperSlide>
                                                         <Photos
-                                                            images={photos}
+                                                            images={video}
                                                         />
                                                     </SwiperSlide>
                                                 );

@@ -70,6 +70,50 @@ export const oliviaCooke = [
                     }
                 ]
             }
+        ],
+        photos: [
+            {
+                image: '/photos/oliviaCookePictures/photo1.png',
+                image2: '/photos/oliviaCookePictures/photo2.png',
+                image3: '/photos/oliviaCookePictures/photo3.png',
+                image4: '/photos/oliviaCookePictures/photo4.png',
+                image5: '/photos/oliviaCookePictures/photo5.png',
+                image6: '/photos/oliviaCookePictures/photo6.png'
+            },
+            {
+                image: '/photos/oliviaCookePictures/photo7.png',
+                image2: '/photos/oliviaCookePictures/photo8.png',
+                image3: '/photos/oliviaCookePictures/photo9.png',
+                image4: '/photos/oliviaCookePictures/photo10.png',
+                image5: '/photos/oliviaCookePictures/photo11.png',
+                image6: '/photos/oliviaCookePictures/photo12.png'
+            },
+            {
+                image: '/photos/oliviaCookePictures/photo13.png',
+                image2: '/photos/oliviaCookePictures/photo14.png',
+                image3: '/photos/oliviaCookePictures/photo15.png',
+                image4: '/photos/oliviaCookePictures/photo16.png',
+                image5: '/photos/oliviaCookePictures/photo17.png',
+                image6: '/photos/oliviaCookePictures/photo18.png'
+            }
+        ],
+        videos: [
+            {
+                image: '/photos/oliviaCookePictures/video1.png',
+                image2: '/photos/oliviaCookePictures/video2.png',
+                image3: '/photos/oliviaCookePictures/video3.png',
+                image4: '/photos/oliviaCookePictures/video4.png',
+                image5: '/photos/oliviaCookePictures/video5.png',
+                image6: '/photos/oliviaCookePictures/video6.png'
+            },
+            {
+                image: '/photos/oliviaCookePictures/video7.png',
+                image2: '/photos/oliviaCookePictures/video8.png',
+                image3: '/photos/oliviaCookePictures/video9.png',
+                image4: '/photos/oliviaCookePictures/video10.png',
+                image5: '/photos/oliviaCookePictures/video11.png',
+                image6: '/photos/oliviaCookePictures/video12.png'
+            }
         ]
     }
 ]
