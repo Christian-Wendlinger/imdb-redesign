@@ -1,4 +1,5 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {AddBox, Star, StarBorder} from "@material-ui/icons";
 
 const ruleMargin = 15;
 
@@ -35,23 +36,23 @@ export default function ActorListItem({
 
 
                     <Grid item xs={10}>
-                        <Grid container direction={"column"} spacing={2}>
-                            <Grid item xs>
-                                <Grid container spacing={1} alignItems={"center"}>
+                        <Grid container direction={"column"} spacing={4}>
+                            <Grid item xs={10}>                                
+                                    <Typography variant={"h2"}
+                                                color={"primary"}>{number !== undefined && number + "."} {title} </Typography>                                    
+                            </Grid>
+                            <Grid item xs={10}>
+                                <Grid container spacing={0}>
                                     <Grid item>
-                                        <Typography variant={"body1"}
-                                                    color={"primary"}>{number !== undefined && number + "."} {title} {year !== undefined && `(${year})`}</Typography>
+                                                <Star color={"primary"} className={classes.starIcon}/>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                        <Typography variant={"body1"} classtitle={classes.subtitle}>
+                                                {rating} votes: {votes !== undefined && votes} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gross: {gross !== undefined && gross}
+                                        </Typography>
                                     </Grid>
                                 </Grid>
-
-                                {rating !== undefined &&
-                                <Typography variant={"body2"} classtitle={classes.subtitle}>
-                                    {rating} votes: {votes !== undefined && votes} gross: {gross !== undefined && gross}
-                                </Typography>
-                                }
                             </Grid>
-
-
                         </Grid>
                     </Grid>
                 </Grid>
