@@ -49,7 +49,7 @@ export default function Homepage() {
             <Grid container direction={"column"} spacing={5} className={classes.firstItem}>
                 <Grid item xs>
                     <Typography variant={"h2"} className={classes.headline}>Featured</Typography>
-                    <Swiper navigation loop>
+                    <Swiper navigation loop simulateTouch={false}>
                         {detailedMovieData.map(movie => {
                             return (
                                 <SwiperSlide>
@@ -78,6 +78,7 @@ export default function Homepage() {
                         </Typography>
                     </Link>
                     <Swiper
+                        simulateTouch={false}
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}
@@ -104,6 +105,7 @@ export default function Homepage() {
                     </Typography>
                     <HomeTabs shuffle={() => setExplore([...moviePosters].sort(() => Math.random() - 0.5))}/>
                     <Swiper
+                        simulateTouch={false}
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}
@@ -129,6 +131,7 @@ export default function Homepage() {
                         <Typography variant={"h2"} color={"primary"} className={classes.headline}>Top News</Typography>
                     </Link>
                     <Swiper
+                        simulateTouch={false}
                         navigation
                         spaceBetween={16}
                         slidesPerView={2}
@@ -157,6 +160,7 @@ export default function Homepage() {
                         </Typography>
                     </Link>
                     <Swiper
+                        simulateTouch={false}
                         navigation
                         spaceBetween={16}
                         slidesPerView={6}

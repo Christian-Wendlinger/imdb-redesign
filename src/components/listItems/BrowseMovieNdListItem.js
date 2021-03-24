@@ -1,7 +1,7 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, Star, StarBorder} from "@material-ui/icons";
 
-const ruleMargin = 15;
+const ruleMargin = 5;
 
 const useStyle = makeStyles({
     balken: {
@@ -29,17 +29,17 @@ export default function ActorListItem({
     return (
         [
             <Grid item>
-                <Grid container spacing={2}>
-                    <Grid item xs={2}>
+                <Grid container spacing={2} alignItems={"center"}>
+                    <Grid item xs={1}>
                         <img src={image} width={"100%"}/>
                     </Grid>
 
 
                     <Grid item xs={7}>
-                        <Grid container direction={"column"} spacing={6}>
-                            <Grid item>                                
+                        <Grid container direction={"column"} spacing={4}>
+                            <Grid item>
                                     <Typography variant={"h2"}
-                                                color={"primary"}>{number !== undefined && number + "."} {title} </Typography>                                    
+                                                color={"primary"}>{number !== undefined && number + "."} {title} </Typography>
                             </Grid>
 
 
