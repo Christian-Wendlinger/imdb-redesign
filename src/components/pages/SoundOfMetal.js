@@ -64,14 +64,14 @@ export default function SoundOfMetal() {
 
         <div className={classes.head}>
         <Container>
-            <Grid container direction={"column"} spacing={5}>
-                <div className={classes.head}>
+            <Grid container spacing={5}>
                     <Grid item xs>
                         {movies.map(movie => {
                             return (
                                 <Head
                                     poster={movie.poster}
                                     trailer={movie.trailer}
+                                    trailerPoster={movie.trailerPoster}
                                     title={movie.title}
                                     informations={movie.informations}
                                     description={movie.plotSummary}
@@ -79,19 +79,13 @@ export default function SoundOfMetal() {
                             );
                         })}
                     </Grid>
-                </div>
             </Grid>
         </Container>
         </div>
 
         <Container>
-            <Grid container direction={"column"} spacing={5}>
-                <Grid item xs></Grid>
-
                 <Grid container spacing={5}>
-
                     <Grid item xs={9}>
-
                         <Grid container direction={"column"} spacing={5}>
 
                             <Grid item xs>
@@ -301,7 +295,6 @@ export default function SoundOfMetal() {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
         </Container>
 
         </div>

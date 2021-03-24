@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'fontsource-roboto';
+import "../node_modules/video-react/dist/video-react.css";
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

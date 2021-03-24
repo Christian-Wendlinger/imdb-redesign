@@ -1,14 +1,15 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, NavigateNext, Star} from "@material-ui/icons";
+import React from 'react';
+import ReactPlayer from 'react-player'
 
-const ruleMargin = 17;
 
 const useStyle = makeStyles({
     balken: {
         borderTop: "1px solid",
         borderColor: "#5B5F63",
-        marginTop: ruleMargin,
-        marginBottom: ruleMargin
+        marginTop: 17,
+        marginBottom: 17
     },
     headline: {
         marginBottom: 15,
@@ -29,17 +30,18 @@ const useStyle = makeStyles({
     }
 });
 
-export default function Head({poster, trailer, title, informations, description}) {
+export default function Head({poster, trailer, trailerPoster, title, informations, description}) {
     const classes = useStyle();
     return (
             <div className={classes.content}>
 
                 <Grid container spacing={5}>
+
                     <Grid item xs={3}>
                         <img src={poster} width={"100%"}/>
                     </Grid>
-                    <Grid item xs={6}>
-                        <Grid container direction={"column"} spacing={0}>
+                    <Grid item xs={8}>
+                        <Grid container direction={"column"}>
                             <Grid item>
                                 <Typography variant={"h1"} color={"text"} className={classes.headline}>
                                     {title}
@@ -67,10 +69,9 @@ export default function Head({poster, trailer, title, informations, description}
                                 </Typography>
                             </Grid>
 
-                            <Grid item>
-                                <video src={trailer}/>
+                            <Grid item style={{paddingTop: 40, paddingBottom: 20}}>
+                                <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
                             </Grid>
-
                         
                         </Grid>
                     </Grid>
