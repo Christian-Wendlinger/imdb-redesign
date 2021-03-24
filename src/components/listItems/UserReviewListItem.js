@@ -1,4 +1,4 @@
-import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Star} from "@material-ui/icons";
 
 const ruleMargin = 35;
@@ -54,7 +54,11 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     </Grid>
 
                     <Grid item>
-                        <Typography variant={"body1"} color={"primary"}>{title}</Typography>
+                        <Typography variant={"body1"} color={"text"}>
+                            <Box fontWeight="fontWeightBold">
+                                {title}
+                            </Box>
+                        </Typography>
                     </Grid>
 
                     <Grid item>
