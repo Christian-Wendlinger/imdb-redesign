@@ -33,7 +33,7 @@ const useStyle = makeStyles({
         marginBottom: 20
     },
     head: {
-        background: "#1d1e20",
+        background: "#25272a",
         marginBottom: 30
     },
     balken: {
@@ -117,12 +117,42 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Grid container direction={"row"} spacing={2} alignItems={"flex-start"}>
-                                    <Grid item xs>
+                                <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
+                                    <Grid item xs={6}>
                                         <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
+                                        <Swiper
+                                            navigation
+                                            spaceBetween={16}
+                                            slidesPerView={1}
+                                            slidesPerGroup={1}>
+                                            {movies[0].photos.map(photos => {
+                                                return (
+                                                    <SwiperSlide>
+                                                        <Photos
+                                                            images={photos}
+                                                        />
+                                                    </SwiperSlide>
+                                                );
+                                            })}
+                                        </Swiper>
                                     </Grid>
-                                    <Grid item xs>
+                                    <Grid item xs={6}>
                                         <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
+                                        <Swiper
+                                            navigation
+                                            spaceBetween={16}
+                                            slidesPerView={1}
+                                            slidesPerGroup={1}>
+                                            {movies[0].photos.map(photos => {
+                                                return (
+                                                    <SwiperSlide>
+                                                        <Photos
+                                                            images={photos}
+                                                        />
+                                                    </SwiperSlide>
+                                                );
+                                            })}
+                                        </Swiper>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -206,6 +236,11 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Questions</Typography>
                                 <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is empty. Add the first question. <Typography variant={"body1"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                            </Grid>
+
+                            
+                            <Grid item xs>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to this Page »</Typography>
                             </Grid>
 
                         </Grid>

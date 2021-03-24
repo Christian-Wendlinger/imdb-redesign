@@ -3,7 +3,7 @@ export const cast = [
         image: '/photos/soundOfMetalPictures/Olivia Cooke.png',
         name: "Olivia Cooke",
         age: "27",
-        born: "January 21, 1990 in New York City, New York, USA",
+        born: "December 27, 1993 in Oldham, Greater Manchester, England, UK",
         description: "Olivia Cooke is a Connecticut-born actress. After graduating from Georgetown University in 2012, where she was recruited to play Division One Women's Golf, she moved to Los Angeles to pursue her passion for acting. Kelly majored in theater.",
         zodiacSign: "Auquarius",
         knownFor: "Ready Player One, Ich und Earl und das Mädchen, Sound of Metal, Vollblüter",

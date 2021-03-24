@@ -18,9 +18,16 @@ export default function DidYouKnow({title, content, lastItem}) {
                 </Grid>
                 <Grid item xs>
                     <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
-                        <Typography variant={"body1"} color={"text"} fontWeight="fontWeightBold">
-                            {content}
-                        </Typography>
+                        {content.map(line => {
+                            return (
+                                <Grid item>
+                                    <Typography variant={"body1"} color={"text"} fontWeight="fontWeightBold">
+                                        {line.line}
+                                    </Typography>
+                                </Grid>
+                            );
+                        })}
+                       
                     </Grid>
                 </Grid>
             </Grid>

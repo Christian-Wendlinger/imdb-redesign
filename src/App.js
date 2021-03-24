@@ -14,6 +14,7 @@ import CastPage from "./components/pages/detailsPages/CastPage";
 import PhotosPage from "./components/pages/detailsPages/PhotosPage";
 import UserReviewsPage from "./components/pages/detailsPages/UserReviewsPage";
 import BrowseNdPage from "./components/pages/BrowseNdPage";
+import OliviaCooke from "./components/pages/OliviaCooke";
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route path={"/born-today"} exact>
                     <BornTodayPage/>
+                </Route>
+                <Route path={"/olivia-cooke"} exact>
+                    <OliviaCooke/>
                 </Route>
                 <Route path={"/movies/tt5363618"} exact>
                     <SoundOfMetal/>

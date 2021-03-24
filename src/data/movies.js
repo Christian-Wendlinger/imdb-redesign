@@ -51,21 +51,13 @@ export const movies = [
                 image6: '/photos/soundOfMetalPictures/photo6.png'
             },
             {
-                image: "https://m.media-amazon.com/images/M/MV5BOTZmNDYyMWMtOTk2NS00OWZhLTlkNjUtYmM4MTBkYzgwMGQyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image2: "https://m.media-amazon.com/images/M/MV5BMzFhOWFmOWUtZjE2MS00ZDc3LWFlM2ItZmE4MzFjMGMwNTM2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image3: "https://m.media-amazon.com/images/M/MV5BMDE4YTQ3MjEtNjk4OS00YTMxLTg4N2YtNTc5NTg4MDZmMDdiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image4: "https://m.media-amazon.com/images/M/MV5BOGQ1YTg1NmMtNTg3NS00YTE1LTk2ZWEtNjI4ZjI5NTIyYzU5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image5: "https://m.media-amazon.com/images/M/MV5BNWQzYzBlYmMtZjEzYi00ODQ3LThmNTctYWU5NThhYjVjODJkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image6: "https://m.media-amazon.com/images/M/MV5BYmFjZWE5Y2MtNjk2NS00YTY0LTg5OGMtNTE2N2VjMmU1Y2YzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+                image: '/photos/soundOfMetalPictures/photo7.png',
+                image2: '/photos/soundOfMetalPictures/photo8.png',
+                image3: '/photos/soundOfMetalPictures/photo9.png',
+                image4: '/photos/soundOfMetalPictures/photo10.png',
+                image5: '/photos/soundOfMetalPictures/photo11.png',
+                image6: '/photos/soundOfMetalPictures/photo12.png'
             },
-            {
-                image: "https://m.media-amazon.com/images/M/MV5BNDU0NGQ3ODktNDJkOS00ODE0LTgzYTctY2JiNzhlY2E1OGYzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image2: "https://m.media-amazon.com/images/M/MV5BNDk2Mjk4MzEtYmRmMS00YjcwLTgyMDQtMDQwNjdhMDliNGMzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image3: "https://m.media-amazon.com/images/M/MV5BNzgxZDBiYjMtYzkxNi00MDAzLTgwOTEtNjFjMmJmMzc4NmFhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image4: "https://m.media-amazon.com/images/M/MV5BZDg5OTg2ZDEtZmQwZi00ZGZhLThlMjMtN2NjZWJlMDQwMjcyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image5: "https://m.media-amazon.com/images/M/MV5BOGI2MjgyZmQtZDBhZi00NDIxLTk5ZTUtOWI3NmEwYjY5ZGIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
-                image6: "https://m.media-amazon.com/images/M/MV5BZTU4MmI5YjMtODY3ZS00ZTJmLThiYmUtZTlkOTQzNzMyNWUzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
-            }
         ],
         videos: "",
         details: [
@@ -196,15 +188,30 @@ export const movies = [
         didYouKnow: [
             {
                 title: "Trivia",
-                content: "Riz Ahmed spent 6 months learning the drums for this film."
+                content: [
+                    {
+                        line: "Riz Ahmed spent 6 months learning the drums for this film."
+                    }
+                ]
             },
             {
                 title: "Quotes",
-                content: "Ruben: Like, what does it matter? What does it matter? It just passes. Yo. If I disappear, like, who cares? Nobody cares, man. Seriously. Yo, and that's okay. That's life. That's life. No, for real. Okay? It just passes. It just fucking... fucking passes. Joe: I wonder, uh, all these mornings you've been sitting in my study, sitting, have you had any moments of stillness? Because you're right, Ruben. The world does keep moving, and it can be a damn cruel place. But for me, those moments of stillness, that ... "
+                content: [
+                    {
+                        line: "Ruben: Like, what does it matter? What does it matter? It just passes. Yo. If I disappear, like, who cares? Nobody cares, man. Seriously. Yo, and that's okay. That's life. That's life. No, for real. Okay? It just passes. It just fucking... fucking passes.",
+                    },
+                    {
+                        line: "Joe: I wonder, uh, all these mornings you've been sitting in my study, sitting, have you had any moments of stillness? Because you're right, Ruben. The world does keep moving, and it can be a damn cruel place. But for me, those moments of stillness, that ... "
+                    }
+                ]
             },
             {
                 title: "Goofs",
-                content: "Ruben gets simultaneous bilateral cochlear implants and is sent on his merry way. In actuality, he would be evaluated for suitability, including his commitment to learning how to process the new sounds. He would be expected to begin the work after activation and he would be informed of the differences between past hearing and the new experience up front."
+                content: [
+                    {
+                        line: "Ruben gets simultaneous bilateral cochlear implants and is sent on his merry way. In actuality, he would be evaluated for suitability, including his commitment to learning how to process the new sounds. He would be expected to begin the work after activation and he would be informed of the differences between past hearing and the new experience up front."
+                    }
+                ]
             }
         ],
         questions: "This FAQ is empty. Add the first question.",
@@ -220,6 +227,18 @@ export const movies = [
             {
                 image: "https://m.media-amazon.com/images/M/MV5BZTllMjI0ZGYtM2FmZC00ZmY4LTlkNTYtZThlOWQ1OGQyZTA3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
                 image2: "https://m.media-amazon.com/images/M/MV5BOTYwNWNmM2UtNDhlOC00ZGQzLWI1MTMtMmZlMTFjM2Y1N2ZhXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BNTBlZGY1OTAtN2RjMC00ZThiLWFiZmUtN2VkOGMxNmMyYjQwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+                image2: "https://m.media-amazon.com/images/M/MV5BOTNjM2Y2ZjgtMDc5NS00MDQ1LTgyNGYtYzYwMTAyNWQwYTMyXkEyXkFqcGdeQXVyMjE4NzUxNDA@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BYmJlYWQ0NWMtMzU5Ni00MDNhLTk2YmUtYWYzZTJhMDMxMzE0XkEyXkFqcGdeQXVyODE0OTU5Nzg@._V1_UX182_CR0,0,182,268_AL_.jpg",
+                image2: "https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+            },
+            {
+                image: "https://m.media-amazon.com/images/M/MV5BMGE3MzMzOTAtOTExMy00MzFiLWFjNDItN2ZiZmYyYjY2MWUwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg",
+                image2: "https://m.media-amazon.com/images/M/MV5BNmY3OTdkOWEtNjc2ZC00OTZmLWI5OWItMjdjYjRkNTExNDNhXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_UX182_CR0,0,182,268_AL_.jpg"
             }
         ]
 
