@@ -35,13 +35,15 @@ export default function ActorListItem({
                     </Grid>
 
 
-                    <Grid item xs={10}>
-                        <Grid container direction={"column"} spacing={4}>
-                            <Grid item xs={10}>                                
+                    <Grid item xs={7}>
+                        <Grid container direction={"column"} spacing={6}>
+                            <Grid item>                                
                                     <Typography variant={"h2"}
                                                 color={"primary"}>{number !== undefined && number + "."} {title} </Typography>                                    
                             </Grid>
-                            <Grid item xs={10}>
+
+
+                            <Grid item xs={9}>
                                 <Grid container spacing={0}>
                                     <Grid item>
                                                 <Star color={"primary"} className={classes.starIcon}/>
@@ -52,6 +54,21 @@ export default function ActorListItem({
                                         </Typography>
                                     </Grid>
                                 </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Grid container spacing={0}>
+                            <Grid item>
+                                        <StarBorder color={"primary"} className={classes.starIcon}/>
+                            </Grid>
+                            <Grid item xs={9}>
+                                <Typography variant={"body1"} classtitle={classes.subtitle}>
+                                    &nbsp;Rate
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                        <AddBox color={"primary"} className={classes.starIcon}/>
                             </Grid>
                         </Grid>
                     </Grid>
