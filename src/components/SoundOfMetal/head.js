@@ -12,7 +12,7 @@ const useStyle = makeStyles({
         marginBottom: 17
     },
     headline: {
-        marginBottom: 15,
+        marginBottom: 5,
     },
     addIcon: {
         fontSize: 25,
@@ -69,7 +69,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                                 </Typography>
                             </Grid>
 
-                            <Grid item style={{paddingTop: 40, paddingBottom: 20}}>
+                            <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
                                 <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
                             </Grid>
                         

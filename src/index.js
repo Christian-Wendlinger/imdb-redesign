@@ -39,7 +39,7 @@ const theme = createMuiTheme({
             fontWeight: "bold"
         },
         body1: {
-            fontSize: 16
+            fontSize: 14
         },
         body2: {
             fontSize: 12
