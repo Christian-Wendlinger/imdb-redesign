@@ -8,7 +8,8 @@ export const cast = [
         zodiacSign: "Auquarius",
         knownFor: "Ready Player One, Ich und Earl und das Mädchen, Sound of Metal, Vollblüter",
         role: "Lou",
-        largeImage: "https://m.media-amazon.com/images/M/MV5BOTVkNzI2ZDEtZGEzNy00ZGI0LTkxNDktYTFjZWUyODgyODQ1XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_UY317_CR14,0,214,317_AL_.jpg"
+        largeImage: "https://m.media-amazon.com/images/M/MV5BOTVkNzI2ZDEtZGEzNy00ZGI0LTkxNDktYTFjZWUyODgyODQ1XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_UY317_CR14,0,214,317_AL_.jpg",
+        link: "/olivia-cooke"
     },
     {
         image: '/photos/soundOfMetalPictures/Riz Ahmed.png',

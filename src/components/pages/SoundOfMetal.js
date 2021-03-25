@@ -12,9 +12,10 @@ import CastSlide from "../Slides/CastSlide";
 import MoreLikeThis from "../SoundOfMetal/MoreLikeThis";
 import Editorial from "../SoundOfMetal/Editorial";
 import Detail from "../SoundOfMetal/Detail";
-import UserReviewShortItem from "../listItems/UserReviewShortItem";
+import UserReviewListItem from "../listItems/UserReviewListItem";
 import DidYouKnow from "../SoundOfMetal/DidYouKnow";
 import Photos from "../SoundOfMetal/Photos";
+import ShowMore from "../ShowMore";
 
 // main css (custom swiper style)
 import "../../main_style.css";
@@ -86,7 +87,7 @@ export default function SoundOfMetal() {
         <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
-                        <Grid container direction={"column"} spacing={5}>
+                        <Grid container direction={"column"} spacing={4}>
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/cast" style={{textDecoration: "none"}}>
@@ -105,6 +106,7 @@ export default function SoundOfMetal() {
                                                     image={process.env.PUBLIC_URL + actor.image}
                                                     name={actor.name}
                                                     role={actor.role}
+                                                    link={actor.link}
                                                 />
                                             </SwiperSlide>
                                         );
@@ -119,7 +121,9 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
                                     <Grid item xs={6}>
+                                        <Link to="/movies/tt5363618/photos" style={{textDecoration: "none"}}>
                                         <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
+                                        </Link>
                                         <Swiper
                                             navigation
                                             spaceBetween={16}
@@ -157,9 +161,13 @@ export default function SoundOfMetal() {
                                 </Grid>
                             </Grid>
 
+                            <Grid item style={{width: "100%"}}>
+                                <hr className={classes.balken}/>
+                            </Grid>
+
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Details</Typography>
-                                <Grid container direction={"column"} spacing={2}>
+                                <Grid container direction={"column"} spacing={0}>
                                     {movies[0].details.map((detail, index) => {
                                         return(
                                             <Detail 
@@ -182,8 +190,8 @@ export default function SoundOfMetal() {
                                     <Typography variant={"h2"} color={"primary"} className={classes.headline}>Reviews</Typography>
                                 </Link>
                                 
-                                <Grid container direction={"column"} spacing={2}>
-                                    <UserReviewShortItem
+                                <Grid container direction={"column"}>
+                                    <UserReviewListItem
                                             rating={movies[0].reviews[0].rating}
                                             author={movies[0].reviews[0].author}
                                             date={movies[0].reviews[0].date}
@@ -191,7 +199,7 @@ export default function SoundOfMetal() {
                                             text={movies[0].reviews[0].text}
                                             lastItem={false}
                                     />
-                                    <UserReviewShortItem
+                                    <UserReviewListItem
                                             rating={movies[0].reviews[1].rating}
                                             author={movies[0].reviews[1].author}
                                             date={movies[0].reviews[1].date}
@@ -199,7 +207,7 @@ export default function SoundOfMetal() {
                                             text={movies[0].reviews[1].text}
                                             lastItem={false}
                                     />  
-                                    <UserReviewShortItem
+                                    <UserReviewListItem
                                             rating={movies[0].reviews[2].rating}
                                             author={movies[0].reviews[2].author}
                                             date={movies[0].reviews[2].date}
@@ -216,7 +224,7 @@ export default function SoundOfMetal() {
 
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You Know</Typography>
-                                <Grid container direction={"column"} spacing={2}>
+                                <Grid container direction={"column"} spacing={1}>
                                     {movies[0].didYouKnow.map((item, index) => {
                                             return(
                                                 <DidYouKnow 
@@ -277,19 +285,19 @@ export default function SoundOfMetal() {
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related News</Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Picture – Is ‘Sound of Metal’ Peaking at the Perfect Time? <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Picture – Is ‘Sound of Metal’ Peaking at the Perfect Time? <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor – Can Anthony Hopkins Catch Up to Ahmed, Boseman and Lindo? <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor – Can Anthony Hopkins Catch Up to Ahmed, Boseman and Lindo? <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Supporting Actor – Will Sacha Baron Cohen Be the Only Representative from the ‘Chicago 7’ Cast? <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Supporting Actor – Will Sacha Baron Cohen Be the Only Representative from the ‘Chicago 7’ Cast? <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>

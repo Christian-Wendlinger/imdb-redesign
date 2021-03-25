@@ -32,7 +32,7 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
                             pageId={pageId}/>
 
                         <Grid item>
-                            <Grid container direction={"column"}>
+                            <Grid container direction={"column"} spacing={1}>
                                 {movies[0].reviews.map((review, index) =>
                                     <UserReviewListItem
                                         rating={review.rating}
