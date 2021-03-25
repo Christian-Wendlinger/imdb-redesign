@@ -1,5 +1,4 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
-import ShowMore from "../ShowMore";
 import {Link} from "react-router-dom";
 
 const ruleMargin = 15;
@@ -66,7 +65,8 @@ export default function ActorListItem({
                             <Grid item xs>
                                 {zodiacSign !== undefined &&
                                 <Typography variant={"body2"}>Zodiac Sign : &nbsp;{zodiacSign}</Typography>}
-                                <Typography variant={"body2"}>Known For : &nbsp;&nbsp;&nbsp;{knownFor}&nbsp;&nbsp;</Typography>
+                                <Typography variant={"body2"}>Known For
+                                    : &nbsp;&nbsp;&nbsp;{knownFor}&nbsp;&nbsp;</Typography>
                             </Grid>
                         </Grid>
                     </Grid>

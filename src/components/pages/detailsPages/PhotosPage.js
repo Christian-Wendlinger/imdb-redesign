@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {useEffect} from "react";
 import DetailsHeader from "./DetailsHeader";
 import DetailsNavigation from "./DetailsNavigation";
@@ -18,9 +18,9 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
 
     const classes = useStyle();
     return (
-        <Container>
-            <Grid container spacing={6} className={classes.firstItem}>
-                <Grid item container xs={9}>
+        <Container className={classes.firstItem}>
+            <Grid container spacing={5}>
+                <Grid item xs={9}>
                     <Grid container direction={"column"} spacing={3}>
                         <DetailsHeader
                             movieTitle={movieTitle}
@@ -30,7 +30,9 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                             pageId={pageId}/>
 
                         <Grid item>
-                            Hier Photos Komponente
+                            <Grid container direction={"column"} spacing={1}>
+                                Hier Fotos hin
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>

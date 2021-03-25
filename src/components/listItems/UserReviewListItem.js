@@ -1,8 +1,7 @@
-import {Grid, makeStyles, Typography, Box} from "@material-ui/core";
+import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {Star} from "@material-ui/icons";
-import ShowMore from "../ShowMore";
 
-const ruleMargin = 25;
+const ruleMargin = 20;
 
 const useStyle = makeStyles(theme => ({
     balken: {
@@ -61,7 +60,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     </Grid>
 
                     <Grid item>
-                        <Typography variant={"body1"}>{text} <ShowMore variant={"body1"}/></Typography>
+                        <Typography variant={"body1"}>{text}</Typography>
                     </Grid>
 
                 </Grid>

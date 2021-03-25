@@ -1,7 +1,7 @@
 import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
-import {Facebook, Instagram, Launch, Twitter, YouTube} from "@material-ui/icons";
+import {Facebook, Instagram, Twitter, YouTube} from "@material-ui/icons";
 
-const ustStyle = makeStyles(theme =>({
+const ustStyle = makeStyles(theme => ({
     background: {
         backgroundColor: theme.palette.secondary.main
     },

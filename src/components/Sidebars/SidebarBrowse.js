@@ -1,20 +1,30 @@
 import React from 'react';
-import {Grid, makeStyles ,TextField , Typography, Select, FormControl, InputLabel, MenuItem, Radio, FormLabel, RadioGroup, FormControlLabel} from "@material-ui/core";
+import {
+    FormControl,
+    FormControlLabel,
+    Grid,
+    InputLabel,
+    makeStyles,
+    MenuItem,
+    Radio,
+    RadioGroup,
+    Select,
+    TextField,
+    Typography
+} from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
-import {Link} from "react-router-dom";
 
 
 const ruleMargin = 15;
 
 const useStyle = makeStyles((theme) => ({
-    text:{
-        color:theme.palette.text.primary
+    text: {
+        color: theme.palette.text.primary
     },
-    box:{
-        backgroundColor:"#2A2C30"
+    box: {
+        backgroundColor: "#2A2C30"
     }
 }));
-
 
 
 export default function SiderBrowse() {
@@ -23,29 +33,28 @@ export default function SiderBrowse() {
     const [age, setAge] = React.useState('')
 
     const handleChange = (event) => {
-    setAge(event.target.value);
+        setAge(event.target.value);
     };
 
     const [value, setValue] = React.useState("International");
 
     const handleRadio = (event) => {
-      setValue(event.target.value);
+        setValue(event.target.value);
     };
 
-    
-    
+
     return (
         <Grid container direction={"column"} spacing={5}>
             <Grid item>
                 <Typography variant={"h2"}>
-                        Filter by
+                    Filter by
                 </Typography>
             </Grid>
             <Grid item>
                 <Grid container direction={"row"} justify={"space-between"}>
                     <Grid item>
                         <Typography variant={"h3"}>
-                                Genres
+                            Genres
                         </Typography>
                     </Grid>
                     <Grid item>
@@ -57,7 +66,7 @@ export default function SiderBrowse() {
                 <Grid container direction={"row"} justify={"space-between"}>
                     <Grid item>
                         <Typography variant={"h3"}>
-                                Title Type
+                            Title Type
                         </Typography>
                     </Grid>
                     <Grid item>
@@ -71,7 +80,7 @@ export default function SiderBrowse() {
                         <Grid container direction={"row"} justify={"space-between"}>
                             <Grid item>
                                 <Typography variant={"h3"}>
-                                        Votes
+                                    Votes
                                 </Typography>
                             </Grid>
                             <Grid item>
@@ -109,7 +118,7 @@ export default function SiderBrowse() {
                         <Grid container direction={"row"} justify={"space-between"}>
                             <Grid item>
                                 <Typography variant={"h3"}>
-                                        Time Period
+                                    Time Period
                                 </Typography>
                             </Grid>
                             <Grid item>
@@ -124,14 +133,14 @@ export default function SiderBrowse() {
                                 <Grid container direction={"row"} justify={"space-between"}>
                                     <Grid item xs={5}>
                                         <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">From Year</InputLabel>
-                                                <Select
+                                            <InputLabel id="demo-simple-select-outlined-label">From Year</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -140,19 +149,19 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                     <Grid item xs={5}>
-                                    <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">To Year</InputLabel>
-                                                <Select
+                                        <FormControl variant="outlined" className={classes.formControl}>
+                                            <InputLabel id="demo-simple-select-outlined-label">To Year</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -161,7 +170,7 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                 </Grid>
@@ -170,14 +179,14 @@ export default function SiderBrowse() {
                                 <Grid container direction={"row"} justify={"space-between"}>
                                     <Grid item xs={5}>
                                         <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">From Month</InputLabel>
-                                                <Select
+                                            <InputLabel id="demo-simple-select-outlined-label">From Month</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -186,19 +195,19 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                     <Grid item xs={5}>
-                                    <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">To Month</InputLabel>
-                                                <Select
+                                        <FormControl variant="outlined" className={classes.formControl}>
+                                            <InputLabel id="demo-simple-select-outlined-label">To Month</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -207,7 +216,7 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                 </Grid>
@@ -216,14 +225,14 @@ export default function SiderBrowse() {
                                 <Grid container direction={"row"} justify={"space-between"}>
                                     <Grid item xs={5}>
                                         <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">From Day</InputLabel>
-                                                <Select
+                                            <InputLabel id="demo-simple-select-outlined-label">From Day</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -232,19 +241,19 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                     <Grid item xs={5}>
-                                    <FormControl variant="outlined" className={classes.formControl}>
-                                                <InputLabel id="demo-simple-select-outlined-label">To Day</InputLabel>
-                                                <Select
+                                        <FormControl variant="outlined" className={classes.formControl}>
+                                            <InputLabel id="demo-simple-select-outlined-label">To Day</InputLabel>
+                                            <Select
                                                 labelId="demo-simple-select-outlined-label"
                                                 id="demo-simple-select-outlined"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
-                                                >
+                                            >
                                                 <MenuItem value="">
                                                     <em>None</em>
                                                 </MenuItem>
@@ -253,7 +262,7 @@ export default function SiderBrowse() {
                                                 <MenuItem value={2002}>2002</MenuItem>
                                                 <MenuItem value={2003}>2003</MenuItem>
                                                 <MenuItem value={2004}>2004</MenuItem>
-                                                </Select>
+                                            </Select>
                                         </FormControl>
                                     </Grid>
                                 </Grid>
@@ -264,14 +273,14 @@ export default function SiderBrowse() {
                 </Grid>
             </Grid>
 
-            
+
             <Grid item>
                 <Grid container direction={"column"} spacing={2}>
                     <Grid item>
                         <Grid container direction={"row"} justify={"space-between"}>
                             <Grid item>
                                 <Typography variant={"h3"}>
-                                        Region
+                                    Region
                                 </Typography>
                             </Grid>
                             <Grid item>
@@ -279,12 +288,13 @@ export default function SiderBrowse() {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item>                   
+                    <Grid item>
                         <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                            <FormControlLabel value="International" control={<Radio />} label="International" onChange={handleRadio}/>
-                            <FormControlLabel value="English" control={<Radio />} label="English" />
-                            <FormControlLabel value="Indian" control={<Radio />} label="Indian"/>
-                        </RadioGroup>                        
+                            <FormControlLabel value="International" control={<Radio/>} label="International"
+                                              onChange={handleRadio}/>
+                            <FormControlLabel value="English" control={<Radio/>} label="English"/>
+                            <FormControlLabel value="Indian" control={<Radio/>} label="Indian"/>
+                        </RadioGroup>
                     </Grid>
                 </Grid>
             </Grid>

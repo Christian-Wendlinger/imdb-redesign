@@ -20,48 +20,49 @@ const useStyle = makeStyles({
 export default function Head({poster, name, jobs, born, description}) {
     const classes = useStyle();
     return (
-            <div className={classes.content}>
+        <div className={classes.content}>
 
-                <Grid container spacing={5}>
+            <Grid container spacing={5}>
 
-                    <Grid item xs={3}>
-                        <img src={poster} width={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Grid container direction={"column"}>
-                            <Grid item>
-                                <Typography variant={"h1"} color={"text"} className={classes.headline}>
-                                    {name}
-                                </Typography>
-                            </Grid>
-
-                            <Grid item style={{width: "100%"}}>
-                                <hr className={classes.balken}/>
-                            </Grid>
-
-                            <Grid item>
-                                <Typography variant={"body2"} color={"text"}>
-                                    {jobs}
-                                </Typography>
-                                <Typography variant={"body2"} color={"text"}>
-                                    {born}
-                                </Typography>
-                            </Grid>
-
-                            <Grid item style={{width: "100%"}}>
-                                <hr className={classes.balken}/>
-                            </Grid>
-
-                            <Grid item>
-                                <Typography variant={"body1"}>
-                                    {description} <Typography variant={"body1"} color={"primary"} style={{display:"inline"}}>More »</Typography>
-                                </Typography>
-                            </Grid>
-                        
+                <Grid item xs={3}>
+                    <img src={poster} width={"100%"}/>
+                </Grid>
+                <Grid item xs={8}>
+                    <Grid container direction={"column"}>
+                        <Grid item>
+                            <Typography variant={"h1"} color={"text"} className={classes.headline}>
+                                {name}
+                            </Typography>
                         </Grid>
+
+                        <Grid item style={{width: "100%"}}>
+                            <hr className={classes.balken}/>
+                        </Grid>
+
+                        <Grid item>
+                            <Typography variant={"body2"} color={"text"}>
+                                {jobs}
+                            </Typography>
+                            <Typography variant={"body2"} color={"text"}>
+                                {born}
+                            </Typography>
+                        </Grid>
+
+                        <Grid item style={{width: "100%"}}>
+                            <hr className={classes.balken}/>
+                        </Grid>
+
+                        <Grid item>
+                            <Typography variant={"body1"}>
+                                {description} <Typography variant={"body1"} color={"primary"}
+                                                          style={{display: "inline"}}>More »</Typography>
+                            </Typography>
+                        </Grid>
+
                     </Grid>
                 </Grid>
-            </div>
-            
+            </Grid>
+        </div>
+
     );
 }

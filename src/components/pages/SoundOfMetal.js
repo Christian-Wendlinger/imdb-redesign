@@ -43,7 +43,7 @@ const useStyle = makeStyles({
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
-    balkengrau :{
+    balkengrau: {
         borderTop: "1px solid",
         borderColor: "#5B5F63",
         marginTop: 7,
@@ -60,38 +60,37 @@ export default function SoundOfMetal() {
 
     const classes = useStyle();
     return (
-
-        <div>
-
-        <div className={classes.head}>
-        <Container>
-            <Grid container spacing={5}>
-                    <Grid item xs>
-                        {movies.map(movie => {
-                            return (
-                                <Head
-                                    poster={movie.poster}
-                                    trailer={movie.trailer}
-                                    trailerPoster={movie.trailerPoster}
-                                    title={movie.title}
-                                    informations={movie.informations}
-                                    description={movie.plotSummary}
-                                />
-                            );
-                        })}
+        <div style={{zIndex: -1, position: "relative"}}>
+            <div className={classes.head}>
+                <Container>
+                    <Grid container spacing={5}>
+                        <Grid item xs>
+                            {movies.map(movie => {
+                                return (
+                                    <Head
+                                        poster={movie.poster}
+                                        trailer={movie.trailer}
+                                        trailerPoster={movie.trailerPoster}
+                                        title={movie.title}
+                                        informations={movie.informations}
+                                        description={movie.plotSummary}
+                                    />
+                                );
+                            })}
+                        </Grid>
                     </Grid>
-            </Grid>
-        </Container>
-        </div>
+                </Container>
+            </div>
 
-        <Container>
+            <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
                         <Grid container direction={"column"} spacing={4}>
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/cast" style={{textDecoration: "none"}}>
-                                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Cast</Typography>
+                                    <Typography variant={"h2"} color={"primary"}
+                                                className={classes.headline}>Cast</Typography>
                                 </Link>
 
                                 <Swiper
@@ -122,7 +121,8 @@ export default function SoundOfMetal() {
                                 <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
                                     <Grid item xs={6}>
                                         <Link to="/movies/tt5363618/photos" style={{textDecoration: "none"}}>
-                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
+                                            <Typography variant={"h2"} color={"primary"}
+                                                        className={classes.headline}>Photos</Typography>
                                         </Link>
                                         <Swiper
                                             navigation
@@ -141,7 +141,8 @@ export default function SoundOfMetal() {
                                         </Swiper>
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
+                                        <Typography variant={"h2"} color={"primary"}
+                                                    className={classes.headline}>Videos</Typography>
                                         <Swiper
                                             navigation
                                             spaceBetween={16}
@@ -166,18 +167,19 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Details</Typography>
+                                <Typography variant={"h2"} color={"primary"}
+                                            className={classes.headline}>Details</Typography>
                                 <Grid container direction={"column"} spacing={0}>
                                     {movies[0].details.map((detail, index) => {
-                                        return(
-                                            <Detail 
+                                        return (
+                                            <Detail
                                                 title={detail.title}
                                                 pairs={detail.content}
                                                 lastItem={index === movies[0].details.length - 1}
                                             />
                                         );
                                     })}
-                                    
+
                                 </Grid>
                             </Grid>
 
@@ -187,34 +189,35 @@ export default function SoundOfMetal() {
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/user-reviews" style={{textDecoration: "none"}}>
-                                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>Reviews</Typography>
+                                    <Typography variant={"h2"} color={"primary"}
+                                                className={classes.headline}>Reviews</Typography>
                                 </Link>
-                                
+
                                 <Grid container direction={"column"}>
                                     <UserReviewListItem
-                                            rating={movies[0].reviews[0].rating}
-                                            author={movies[0].reviews[0].author}
-                                            date={movies[0].reviews[0].date}
-                                            title={movies[0].reviews[0].title}
-                                            text={movies[0].reviews[0].text}
-                                            lastItem={false}
+                                        rating={movies[0].reviews[0].rating}
+                                        author={movies[0].reviews[0].author}
+                                        date={movies[0].reviews[0].date}
+                                        title={movies[0].reviews[0].title}
+                                        text={movies[0].reviews[0].text}
+                                        lastItem={false}
                                     />
                                     <UserReviewListItem
-                                            rating={movies[0].reviews[1].rating}
-                                            author={movies[0].reviews[1].author}
-                                            date={movies[0].reviews[1].date}
-                                            title={movies[0].reviews[1].title}
-                                            text={movies[0].reviews[1].text}
-                                            lastItem={false}
-                                    />  
+                                        rating={movies[0].reviews[1].rating}
+                                        author={movies[0].reviews[1].author}
+                                        date={movies[0].reviews[1].date}
+                                        title={movies[0].reviews[1].title}
+                                        text={movies[0].reviews[1].text}
+                                        lastItem={false}
+                                    />
                                     <UserReviewListItem
-                                            rating={movies[0].reviews[2].rating}
-                                            author={movies[0].reviews[2].author}
-                                            date={movies[0].reviews[2].date}
-                                            title={movies[0].reviews[2].title}
-                                            text={movies[0].reviews[2].text}
-                                            lastItem={true}
-                                    />                               
+                                        rating={movies[0].reviews[2].rating}
+                                        author={movies[0].reviews[2].author}
+                                        date={movies[0].reviews[2].date}
+                                        title={movies[0].reviews[2].title}
+                                        text={movies[0].reviews[2].text}
+                                        lastItem={true}
+                                    />
                                 </Grid>
                             </Grid>
 
@@ -223,17 +226,18 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You Know</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You
+                                    Know</Typography>
                                 <Grid container direction={"column"} spacing={0}>
                                     {movies[0].didYouKnow.map((item, index) => {
-                                            return(
-                                                <DidYouKnow 
-                                                    title={item.title}
-                                                    content={item.content}
-                                                    lastItem={index === movies[0].didYouKnow.length - 1}
-                                                />
-                                            );
-                                        })}
+                                        return (
+                                            <DidYouKnow
+                                                title={item.title}
+                                                content={item.content}
+                                                lastItem={index === movies[0].didYouKnow.length - 1}
+                                            />
+                                        );
+                                    })}
                                 </Grid>
                             </Grid>
 
@@ -242,13 +246,18 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Questions</Typography>
-                                <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is empty. Add the first question. <Typography variant={"body1"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                <Typography variant={"h2"} color={"primary"}
+                                            className={classes.headline}>Questions</Typography>
+                                <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is
+                                    empty. Add the first question. <Typography variant={"body1"} color={"primary"}
+                                                                               display={"inline"}>More
+                                        »</Typography></Typography>
                             </Grid>
 
-                            
+
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to this Page »</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to
+                                    this Page »</Typography>
                             </Grid>
 
                         </Grid>
@@ -258,21 +267,22 @@ export default function SoundOfMetal() {
                     <Grid item xs={3}>
                         <Grid container direction={"column"} spacing={2}>
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>More Like This</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>More Like
+                                    This</Typography>
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
                                     slidesPerView={3}
                                     slidesPerGroup={3}>
                                     {movies[0].moreLikeThis.map(more => {
-                                            return (
-                                                <SwiperSlide>
-                                                    <MoreLikeThis
-                                                        image={more.image}
-                                                        image2={more.image2}
-                                                    />
-                                                </SwiperSlide>
-                                            );
+                                        return (
+                                            <SwiperSlide>
+                                                <MoreLikeThis
+                                                    image={more.image}
+                                                    image2={more.image2}
+                                                />
+                                            </SwiperSlide>
+                                        );
                                     })}
                                 </Swiper>
                             </Grid>
@@ -282,22 +292,29 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related News</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related
+                                    News</Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Picture – Is ‘Sound of Metal’ Peaking at the Perfect Time? <ShowMore variant={"body2"}/></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Picture –
+                                            Is ‘Sound of Metal’ Peaking at the Perfect Time? <ShowMore
+                                                variant={"body2"}/></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor – Can Anthony Hopkins Catch Up to Ahmed, Boseman and Lindo? <ShowMore variant={"body2"}/></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor –
+                                            Can Anthony Hopkins Catch Up to Ahmed, Boseman and Lindo? <ShowMore
+                                                variant={"body2"}/></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Supporting Actor – Will Sacha Baron Cohen Be the Only Representative from the ‘Chicago 7’ Cast? <ShowMore variant={"body2"}/></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Supporting
+                                            Actor – Will Sacha Baron Cohen Be the Only Representative from the ‘Chicago
+                                            7’ Cast? <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -307,10 +324,11 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial Lists</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial
+                                    Lists</Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BNDJiZDliZDAtMjc5Yy00MzVhLThkY2MtNDYwNTQ2ZTM5MDcxXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX86_CR0,0,86,86_AL_.jpg"
                                             text="IMDbPro Top 100 Most Popular Titles 2020"
                                         />
@@ -319,7 +337,7 @@ export default function SoundOfMetal() {
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BYzA1OGU1YWItOTJlZC00OWNmLTk1OTAtNTU5YTk4NDE3ZGRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UY86_CR59,0,86,86_AL_.jpg"
                                             text="IMDb Picks: The Best Movies & Shows of 2020"
                                         />
@@ -328,7 +346,7 @@ export default function SoundOfMetal() {
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BMzhlYTU3M2UtOTJiNy00MjQxLTljYjQtMmVjNWRiMmI0MzhkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY86_CR51,0,86,86_AL_.jpg"
                                             text="December Picks: The Movies and TV Shows You Can't Miss"
                                         />
@@ -338,7 +356,7 @@ export default function SoundOfMetal() {
                         </Grid>
                     </Grid>
                 </Grid>
-        </Container>
+            </Container>
 
         </div>
     );

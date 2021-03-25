@@ -1,9 +1,7 @@
-import {Container, Grid, makeStyles, Paper, Typography, Checkbox} from "@material-ui/core";
-import {useEffect} from "react";
+import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import React, {useEffect} from "react";
 import BrowseMovieNdListItem from "../listItems/BrowseMovieNdListItem";
 import {notDetailedMovies} from "../../data/notDetailedMovies";
-import Popper from "@material-ui/core/Popper";
-import React from "react";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -23,14 +21,14 @@ export default function BrowseNdPage() {
 
     const handleP1 = (event) => {
         setAnchorEl(anchorEl ? null : event.currentTarget);
-      };
+    };
 
     const handleP2 = (event) => {
         setAnchorEl(anchorEl ? null : event.currentTarget);
     };
 
     const open = Boolean(anchorEl);
-    
+
 
     return (
         <Container>

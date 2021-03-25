@@ -23,7 +23,8 @@ export default function DetailsHeader({movieTitle, year, rating, pageName, pageI
                     <Grid item>
                         <Grid container direction={"row"} alignItems={"center"} spacing={1}>
                             <Grid item>
-                                <Link to={pageId ? `/movies/${pageId}` : undefined} style={{textDecoration: "none", color: "#F2F2F2"}}>
+                                <Link to={pageId ? `/movies/${pageId}` : undefined}
+                                      style={{textDecoration: "none", color: "#F2F2F2"}}>
                                     <Typography variant={"h2"}>{movieTitle} ({year})</Typography>
                                 </Link>
                             </Grid>

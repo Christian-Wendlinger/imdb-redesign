@@ -37,7 +37,8 @@ export default function MoviePosterSlide({image, title, rating, year, link}) {
             </Grid>
 
             <Grid item>
-                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"} className={classes.firstRow}>
+                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"}
+                      className={classes.firstRow}>
                     <Grid item>
                         <Grid container direction={"row"}>
                             <Grid item>

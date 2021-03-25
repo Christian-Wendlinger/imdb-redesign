@@ -25,7 +25,7 @@ export default function TopNewsPage() {
                     <Paper style={{width: "100%"}}>test</Paper>
                 </Grid>
                 <Grid item container xs={9}>
-                    <Grid container direction={"column"} spacing={2}>
+                    <Grid container direction={"column"} spacing={1}>
                         {news.map((item, index) => {
                                 return (
                                     <NewsListItem

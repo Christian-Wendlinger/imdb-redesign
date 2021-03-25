@@ -40,7 +40,7 @@ const useStyle = makeStyles({
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
-    balkengrau :{
+    balkengrau: {
         borderTop: "1px solid",
         borderColor: "#5B5F63",
         marginTop: 7,
@@ -62,33 +62,34 @@ export default function OliviaCooke() {
 
         <div>
 
-        <div className={classes.head}>
-        <Container>
-            <Grid container spacing={5}>
-                    <Grid item xs>
-                        {oliviaCooke.map(star => {
-                            return (
-                                <HeadStar
-                                    poster={star.poster}
-                                    name={star.name}
-                                    jobs={star.jobs}
-                                    born={star.born}
-                                    description={star.description}
-                                />
-                            );
-                        })}
+            <div className={classes.head}>
+                <Container>
+                    <Grid container spacing={5}>
+                        <Grid item xs>
+                            {oliviaCooke.map(star => {
+                                return (
+                                    <HeadStar
+                                        poster={star.poster}
+                                        name={star.name}
+                                        jobs={star.jobs}
+                                        born={star.born}
+                                        description={star.description}
+                                    />
+                                );
+                            })}
+                        </Grid>
                     </Grid>
-            </Grid>
-        </Container>
-        </div>
+                </Container>
+            </div>
 
-        <Container>
+            <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
                         <Grid container direction={"column"} spacing={4}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known For</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known
+                                    For</Typography>
 
                                 <Swiper
                                     navigation
@@ -118,7 +119,8 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
                                     <Grid item xs={6}>
-                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Photos</Typography>
+                                        <Typography variant={"h2"} color={"primary"}
+                                                    className={classes.headline}>Photos</Typography>
                                         <Swiper
                                             navigation
                                             spaceBetween={16}
@@ -136,7 +138,8 @@ export default function OliviaCooke() {
                                         </Swiper>
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>Videos</Typography>
+                                        <Typography variant={"h2"} color={"primary"}
+                                                    className={classes.headline}>Videos</Typography>
                                         <Swiper
                                             navigation
                                             spaceBetween={16}
@@ -161,16 +164,17 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Personal Details</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Personal
+                                    Details</Typography>
                                 <Grid container direction={"column"} spacing={0}>
                                     {oliviaCooke[0].personalDetails.map(detail => {
-                                        return(
-                                            <StarDetail 
+                                        return (
+                                            <StarDetail
                                                 pair={detail}
                                             />
                                         );
                                     })}
-                                    
+
                                 </Grid>
                             </Grid>
 
@@ -180,17 +184,18 @@ export default function OliviaCooke() {
 
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You Know</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You
+                                    Know</Typography>
                                 <Grid container direction={"column"} spacing={0}>
                                     {oliviaCooke[0].didYouKnow.map((item, index) => {
-                                            return(
-                                                <DidYouKnow 
-                                                    title={item.title}
-                                                    content={item.content}
-                                                    lastItem={index === oliviaCooke[0].didYouKnow.length - 1}
-                                                />
-                                            );
-                                        })}
+                                        return (
+                                            <DidYouKnow
+                                                title={item.title}
+                                                content={item.content}
+                                                lastItem={index === oliviaCooke[0].didYouKnow.length - 1}
+                                            />
+                                        );
+                                    })}
                                 </Grid>
                             </Grid>
 
@@ -199,8 +204,10 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} className={classes.headline} color={"primary"}>Filmography</Typography>
-                                <KnownForTabs shuffle={() => setExplore([...oliviaCooke[0].knownFor].sort(() => Math.random() - 0.5))}/>
+                                <Typography variant={"h2"} className={classes.headline}
+                                            color={"primary"}>Filmography</Typography>
+                                <KnownForTabs
+                                    shuffle={() => setExplore([...oliviaCooke[0].knownFor].sort(() => Math.random() - 0.5))}/>
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
@@ -228,7 +235,8 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to this Page »</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to
+                                    this Page »</Typography>
                             </Grid>
 
                         </Grid>
@@ -239,22 +247,33 @@ export default function OliviaCooke() {
                         <Grid container direction={"column"} spacing={2}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related News</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related
+                                    News</Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>John Boyega’s ‘Naked Singularity’ to Open San Francisco Film Fest <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>John Boyega’s ‘Naked Singularity’
+                                            to Open San Francisco Film Fest <Typography variant={"body2"}
+                                                                                        color={"primary"}
+                                                                                        display={"inline"}>More
+                                                »</Typography></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Three More ‘Game of Thrones’ Spinoffs in the Works at HBO <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Three More ‘Game of Thrones’
+                                            Spinoffs in the Works at HBO <Typography variant={"body2"} color={"primary"}
+                                                                                     display={"inline"}>More
+                                                »</Typography></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor – Chadwick Boseman Remains the Academy Favorite for ‘Ma Rainey’s Black Bottom’ <Typography variant={"body2"} color={"primary"} display={"inline"}>More »</Typography></Typography>
+                                        <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor –
+                                            Chadwick Boseman Remains the Academy Favorite for ‘Ma Rainey’s Black
+                                            Bottom’ <Typography variant={"body2"} color={"primary"} display={"inline"}>More
+                                                »</Typography></Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -264,10 +283,11 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial Lists</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial
+                                    Lists</Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BNzllMDdiZTctZmE2OC00NjFhLThkM2MtMjI1ZjEzYWZhY2MyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX86_CR0,0,86,86_AL_.jpg"
                                             text="IMDb STARmeter Award Recipients "
                                         />
@@ -276,7 +296,7 @@ export default function OliviaCooke() {
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BMTUyMTU3MjUwMF5BMl5BanBnXkFtZTgwNTgwNDE2MzI@._V1_UY86_CR14,0,86,86_AL_.jpg"
                                             text="Visions of the Future in Movies and TV"
                                         />
@@ -285,7 +305,7 @@ export default function OliviaCooke() {
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
-                                        <Editorial 
+                                        <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BMTQwMDQ0NDk1OV5BMl5BanBnXkFtZTcwNDcxOTExNg@@._V1_UX86_CR0,0,86,86_AL_.jpg"
                                             text="Top 100 Stars of 2018"
                                         />
@@ -295,7 +315,7 @@ export default function OliviaCooke() {
                         </Grid>
                     </Grid>
                 </Grid>
-        </Container>
+            </Container>
 
         </div>
     );

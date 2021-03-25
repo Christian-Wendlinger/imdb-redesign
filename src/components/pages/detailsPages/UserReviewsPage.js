@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {useEffect} from "react";
 import DetailsHeader from "./DetailsHeader";
 import DetailsNavigation from "./DetailsNavigation";
@@ -20,9 +20,9 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
 
     const classes = useStyle();
     return (
-        <Container>
-            <Grid container spacing={6} className={classes.firstItem}>
-                <Grid item container xs={9}>
+        <Container className={classes.firstItem}>
+            <Grid container spacing={5}>
+                <Grid item xs={9}>
                     <Grid container direction={"column"} spacing={3}>
                         <DetailsHeader
                             movieTitle={movieTitle}
@@ -40,7 +40,8 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
                                         date={review.date}
                                         title={review.title}
                                         text={review.text}
-                                        lastItem={index === movies[0].reviews.length - 1}/>)}
+                                        lastItem={index === movies[0].reviews.length - 1}/>
+                                )}
                             </Grid>
                         </Grid>
                     </Grid>

@@ -1,5 +1,5 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
-import {AddBox, NavigateNext, Star} from "@material-ui/icons";
+import {AddBox} from "@material-ui/icons";
 import React from 'react';
 import ReactPlayer from 'react-player'
 
@@ -33,50 +33,51 @@ const useStyle = makeStyles({
 export default function Head({poster, trailer, trailerPoster, title, informations, description}) {
     const classes = useStyle();
     return (
-            <div className={classes.content}>
+        <div className={classes.content}>
 
-                <Grid container spacing={5}>
+            <Grid container spacing={5}>
 
-                    <Grid item xs={3}>
-                        <img src={poster} width={"100%"}/>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Grid container direction={"column"}>
-                            <Grid item>
-                                <Typography variant={"h1"} color={"text"} className={classes.headline}>
-                                    {title}
-                                    <AddBox className={classes.addIcon}/>
-                                </Typography>
-                            </Grid>
-
-                            <Grid item style={{width: "100%"}}>
-                                <hr className={classes.balken}/>
-                            </Grid>
-
-                            <Grid item>
-                                <Typography variant={"body2"} color={"text"}>
-                                    {informations}
-                                </Typography>
-                            </Grid>
-
-                            <Grid item style={{width: "100%"}}>
-                                <hr className={classes.balken}/>
-                            </Grid>
-
-                            <Grid item>
-                                <Typography variant={"body1"}>
-                                    {description} <Typography variant={"body1"} color={"primary"} style={{display:"inline"}}>More »</Typography>
-                                </Typography>
-                            </Grid>
-
-                            <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
-                                <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
-                            </Grid>
-                        
+                <Grid item xs={3}>
+                    <img src={poster} width={"100%"}/>
+                </Grid>
+                <Grid item xs={8}>
+                    <Grid container direction={"column"}>
+                        <Grid item>
+                            <Typography variant={"h1"} color={"text"} className={classes.headline}>
+                                {title}
+                                <AddBox className={classes.addIcon}/>
+                            </Typography>
                         </Grid>
+
+                        <Grid item style={{width: "100%"}}>
+                            <hr className={classes.balken}/>
+                        </Grid>
+
+                        <Grid item>
+                            <Typography variant={"body2"} color={"text"}>
+                                {informations}
+                            </Typography>
+                        </Grid>
+
+                        <Grid item style={{width: "100%"}}>
+                            <hr className={classes.balken}/>
+                        </Grid>
+
+                        <Grid item>
+                            <Typography variant={"body1"}>
+                                {description} <Typography variant={"body1"} color={"primary"}
+                                                          style={{display: "inline"}}>More »</Typography>
+                            </Typography>
+                        </Grid>
+
+                        <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
+                            <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
+                        </Grid>
+
                     </Grid>
                 </Grid>
-            </div>
-            
+            </Grid>
+        </div>
+
     );
 }

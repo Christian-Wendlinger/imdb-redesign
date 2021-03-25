@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {useEffect} from "react";
 import {cast} from "../../../data/cast";
 import ActorListItem from "../../listItems/ActorListItem";
@@ -20,9 +20,9 @@ export default function CastPage({movieTitle, year, rating, pageName, pageId}) {
 
     const classes = useStyle();
     return (
-        <Container>
-            <Grid container spacing={6} className={classes.firstItem}>
-                <Grid item container xs={9}>
+        <Container className={classes.firstItem}>
+            <Grid container spacing={5}>
+                <Grid item xs={9}>
                     <Grid container direction={"column"} spacing={3}>
                         <DetailsHeader
                             movieTitle={movieTitle}
@@ -30,8 +30,9 @@ export default function CastPage({movieTitle, year, rating, pageName, pageId}) {
                             rating={rating}
                             pageName={pageName}
                             pageId={pageId}/>
+
                         <Grid item>
-                            <Grid container direction={"column"} spacing={2}>
+                            <Grid container direction={"column"} spacing={1}>
                                 {cast.map((item, index) => {
                                         return (
                                             <ActorListItem

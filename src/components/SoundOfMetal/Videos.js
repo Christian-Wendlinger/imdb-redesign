@@ -32,6 +32,6 @@ export default function Photos({videos}) {
                 </Grid>
             </Grid>
         </Grid>
-        
+
     );
 }

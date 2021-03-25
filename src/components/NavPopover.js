@@ -1,7 +1,7 @@
-import {Box, ClickAwayListener, Grid, makeStyles, MuiThemeProvider, Popover, Typography} from "@material-ui/core";
+import {Box, ClickAwayListener, Grid, makeStyles, Popover, Typography} from "@material-ui/core";
 import React, {useRef, useState} from "react";
 import {Link} from "react-router-dom";
-import {ArrowDropDown, ExpandMore} from "@material-ui/icons";
+import {ExpandMore} from "@material-ui/icons";
 
 const useStyle = makeStyles((theme) => ({
     menuDropDown: {

@@ -1,4 +1,4 @@
-import {Grid, makeStyles, Typography, Box} from "@material-ui/core";
+import {Box, Grid, makeStyles, Typography} from "@material-ui/core";
 import {Star} from "@material-ui/icons";
 
 const ruleMargin = 35;

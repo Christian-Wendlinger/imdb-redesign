@@ -30,6 +30,6 @@ export default function Photos({images}) {
                 </Grid>
             </Grid>
         </Grid>
-        
+
     );
 }

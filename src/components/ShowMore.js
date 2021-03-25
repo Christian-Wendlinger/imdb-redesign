@@ -3,6 +3,7 @@ import React from "react";
 
 export default function ShowMore({variant}) {
     return (
-        <Typography variant={variant} color={"primary"} style={{display: "inline", cursor: "pointer"}}>More »</Typography>
+        <Typography variant={variant} color={"primary"} style={{display: "inline", cursor: "pointer"}}>More
+            »</Typography>
     );
 }

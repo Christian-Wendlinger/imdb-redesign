@@ -12,7 +12,7 @@ import {createMuiTheme, CssBaseline, MuiThemeProvider} from "@material-ui/core";
 const theme = createMuiTheme({
     palette: {
         // Hintergrundfarbe
-        background:{
+        background: {
             default: "#303234",
         },
         // Textfarbe
@@ -57,7 +57,7 @@ const theme = createMuiTheme({
 const theme2 = createMuiTheme({
     palette: {
         // Hintergrundfarbe
-        background:{
+        background: {
             default: "#303234",
         },
         // Textfarbe
