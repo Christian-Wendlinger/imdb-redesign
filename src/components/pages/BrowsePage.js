@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import BrowseMovieListItem from "../listItems/BrowseMovieListItem";
 import {moviePosters} from "../../data/moviePosters";
 
+
 const useStyle = makeStyles({
     firstItem: {
         marginTop: 30,
