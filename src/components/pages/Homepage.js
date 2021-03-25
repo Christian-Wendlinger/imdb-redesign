@@ -154,7 +154,7 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Link to={"/born-today"} style={{textDecoration: "none"}}>
+                    <Link to={"/celebs"} style={{textDecoration: "none"}}>
                         <Typography variant={"h2"} color={"primary"} className={classes.headline}>
                             Born Today
                         </Typography>

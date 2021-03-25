@@ -4,26 +4,27 @@ import {Link} from "react-router-dom";
 
 const ruleMargin = 3;
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     balken: {
-        borderTop: "1px solid",
-        borderColor: "#5B5F63",
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
     addIcon: {
         fontSize: 25,
         cursor: "pointer",
-        color: "#F2F2F2"
+        color: theme.palette.text.primary,
+        marginBottom: -3
     },
     starIcon: {
         fontSize: 21,
-        marginRight: 3
+        marginRight: 5,
     },
     firstRow: {
-        marginTop: 17,
+        marginTop: 12
     }
-});
+}));
 
 export default function MoviePosterSlide({image, title, rating, year, link}) {
     const classes = useStyle();
@@ -35,18 +36,23 @@ export default function MoviePosterSlide({image, title, rating, year, link}) {
                 </Link>
             </Grid>
 
-            <Grid item container direction={"row"} justify={"space-between"} alignItems={"center"}
-                  className={classes.firstRow}>
-                <Grid container xs={6}>
+            <Grid item>
+                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"} className={classes.firstRow}>
                     <Grid item>
-                        <Star color={"primary"} className={classes.starIcon}/>
+                        <Grid container direction={"row"}>
+                            <Grid item>
+                                <Star color={"primary"} className={classes.starIcon}/>
+                            </Grid>
+
+                            <Grid item>
+                                <Typography variant={"h3"}>{rating}</Typography>
+                            </Grid>
+                        </Grid>
                     </Grid>
+
                     <Grid item>
-                        <Typography variant={"h3"}>{rating}</Typography>
+                        <AddBox className={classes.addIcon}/>
                     </Grid>
-                </Grid>
-                <Grid item>
-                    <AddBox className={classes.addIcon}/>
                 </Grid>
             </Grid>
 

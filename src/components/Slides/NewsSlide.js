@@ -2,10 +2,10 @@ import {Grid, makeStyles, Typography} from "@material-ui/core";
 
 const ruleMargin = 17;
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     balken: {
-        borderTop: "1px solid",
-        borderColor: "#5B5F63",
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
@@ -15,7 +15,7 @@ const useStyle = makeStyles({
     rightSide: {
         paddingRight: 40
     }
-});
+}));
 
 export default function NewsSlide({image, title, description, date, category, link}) {
     const classes = useStyle();

@@ -10,7 +10,7 @@ const useStyle = makeStyles({
     }
 });
 
-export default function BornTodayPage() {
+export default function CelebsPage() {
     // IMPORTANT! : Jump to top of the page when loading page
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -19,7 +19,7 @@ export default function BornTodayPage() {
     const classes = useStyle();
     return (
         <Container>
-            <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Born Today</Typography>
+            <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Celebs</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
                     <Paper style={{width: "100%"}}>test</Paper>

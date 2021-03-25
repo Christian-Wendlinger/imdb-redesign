@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import TopNewsPage from "./components/pages/TopNewsPage";
 import BrowsePage from "./components/pages/BrowsePage";
-import BornTodayPage from "./components/pages/BornTodayPage";
+import CelebsPage from "./components/pages/CelebsPage";
 import SoundOfMetal from "./components/pages/SoundOfMetal";
 import CastPage from "./components/pages/detailsPages/CastPage";
 import PhotosPage from "./components/pages/detailsPages/PhotosPage";
@@ -31,8 +31,8 @@ function App() {
                 <Route path={"/browse"} exact>
                     <BrowsePage/>
                 </Route>
-                <Route path={"/born-today"} exact>
-                    <BornTodayPage/>
+                <Route path={"/celebs"} exact>
+                    <CelebsPage/>
                 </Route>
                 <Route path={"/olivia-cooke"} exact>
                     <OliviaCooke/>

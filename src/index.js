@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'fontsource-roboto';
 import "../node_modules/video-react/dist/video-react.css";
 
@@ -27,7 +26,8 @@ const theme = createMuiTheme({
         // Dunkles (Header) Grau
         secondary: {
             main: "#232427"
-        }
+        },
+        balken: "#5B5F63"
     },
     typography: {
         h1: {

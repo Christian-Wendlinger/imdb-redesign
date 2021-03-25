@@ -56,7 +56,7 @@ export const bornToday = [
         born: "March 21, 1946 in Colwyn Bay, Wales, UK",
         description: "At a consistently lean 6' 2\", green-eyed Timothy Dalton may very well be one of the last of the dying breed of swashbuckling, classically trained Shakespearean actors who have forged simultaneous successful careers in theater, television and film. He has been comparison-shopped roundly for stepping into roles played by other actors, first ...",
         zodiacSign: "Aries",
-        knownFor: "James Bond 007 - Der Hauch des Todes, Hot Fuzz - Zwei abgewichste Profis, Flash Gordon, James Bond 007 - Lizenz zum Töten",
+        knownFor: "James Bond 007 - Der Hauch des Todes, Hot Fuzz - Zwei abgewichste Profis, Flash Gordon",
         largeImage: "https://m.media-amazon.com/images/M/MV5BNDE5NDA1OTA4NV5BMl5BanBnXkFtZTcwMDE3NDk0NA@@._V1_UX214_CR0,0,214,317_AL_.jpg"
     },
     {

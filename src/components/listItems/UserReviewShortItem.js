@@ -3,15 +3,15 @@ import {Star} from "@material-ui/icons";
 
 const ruleMargin = 35;
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     balken: {
-        borderTop: "1px solid",
-        borderColor: "#5B5F63"
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
     },
     starIcon: {
         fontSize: 25
     }
-});
+}));
 
 export default function UserReviewListItem({rating, title, text, lastItem}) {
     const classes = useStyle();
@@ -38,7 +38,7 @@ export default function UserReviewListItem({rating, title, text, lastItem}) {
                                 <Typography variant={"body1"} color={"text"}>
                                     <Box fontWeight="fontWeightBold">
                                         {title}
-                                     </Box>
+                                    </Box>
                                 </Typography>
                             </Grid>
 

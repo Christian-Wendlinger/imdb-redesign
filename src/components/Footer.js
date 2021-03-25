@@ -1,9 +1,9 @@
 import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {Facebook, Instagram, Launch, Twitter, YouTube} from "@material-ui/icons";
 
-const ustStyle = makeStyles({
+const ustStyle = makeStyles(theme =>({
     background: {
-        backgroundColor: "#232427"
+        backgroundColor: theme.palette.secondary.main
     },
     main: {
         marginTop: 50
@@ -13,9 +13,9 @@ const ustStyle = makeStyles({
     },
     link: {
         cursor: "pointer",
-        color: "white"
+        color: theme.palette.text.primary
     }
-});
+}));
 
 export default function Footer() {
     const classes = ustStyle();

@@ -3,17 +3,19 @@ import {Star} from "@material-ui/icons";
 
 const ruleMargin = 25;
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
     balken: {
-        borderTop: "1px solid",
-        borderColor: "#5B5F63",
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
     starIcon: {
-        fontSize: 21
+        fontSize: 19,
+        marginBottom: -3,
+        marginRight: 4
     }
-});
+}));
 
 export default function UserReviewListItem({rating, author, date, title, text, lastItem}) {
     const classes = useStyle();
@@ -24,7 +26,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     <Grid item>
                         <Grid container direction={"row"} alignItems={"center"} spacing={1}>
                             <Grid item>
-                                <Grid container direction={"row"} alignItems={"center"} spacing={1}>
+                                <Grid container direction={"row"} alignItems={"center"}>
                                     <Grid item>
                                         <Star color={"primary"} className={classes.starIcon}/>
                                     </Grid>
@@ -54,7 +56,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     </Grid>
 
                     <Grid item>
-                        <Typography variant={"h3"}>{title}</Typography>
+                        <Typography variant={"h3"} color={"primary"}>{title}</Typography>
                     </Grid>
 
                     <Grid item>

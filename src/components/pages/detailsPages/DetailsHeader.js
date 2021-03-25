@@ -5,10 +5,12 @@ import {Link} from "react-router-dom";
 const useStyle = makeStyles({
     addIcon: {
         fontSize: 28,
-        cursor: "pointer"
+        cursor: "pointer",
+        marginBottom: -3
     },
     starIcon: {
-        fontSize: 25
+        fontSize: 25,
+        marginBottom: -3
     }
 });
 
@@ -17,7 +19,7 @@ export default function DetailsHeader({movieTitle, year, rating, pageName, pageI
     return (
         [
             <Grid item>
-                <Grid container direction={"row"} justify={"space-between"}>
+                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"}>
                     <Grid item>
                         <Grid container direction={"row"} alignItems={"center"} spacing={1}>
                             <Grid item>
