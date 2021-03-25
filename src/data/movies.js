@@ -6,41 +6,6 @@ export const movies = [
         poster: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg",
         trailer: "https://imdb-video.media-imdb.com/vi2477703449/1434659607842-pgv4ql-1600972305252.mp4?Expires=1616616187&Signature=OEbxXtP-tHUVQGhiyX0wolY-vMbA-S3gSg98h~g3vPrOq7gEG4I91v3pt33v9RksD4rzJAtrsM7oIvzQ1rB6ufMNeP5B0Sbm3loSZL3rxTcyiL1ON6vLZPKGc401wxUg6A2MfA3Mr9Wy5OVmPCFyjuoVKN134jFqp7koEdj22QhVMDCpLya6JQCUR-34WZoKbkBanE6rosRkALMMXBeCfSJHiDYSkZl2InuO8OK~9jAReEdm99s02WVLwtDcBamjoJhFmbQZB4Cck4mmzT2z0vqxBujJec3xx3vh0x2SSFmft8bnrAWoLVxOV-x5JzislVYeFKNLeOlqsKIMgj1S~Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
         trailerPoster: "https://m.media-amazon.com/images/M/MV5BYzgzZjMyNmYtMDI1Yi00OWE3LWFmOGMtZTAwNGI4NTIxMjM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-        cast: [
-            {
-                name: "Riz Ahmed"
-            },
-            {
-                name: "Olivia Cooke"
-            },
-            {
-                name: "Paul Raci"
-            },
-            {
-                name: "Lauren Ridloff"
-            },
-            {
-                name: "Mathieu Amalric"
-            },
-            {
-                name: "Domenico Toledo"
-            },
-            {
-                name: "Chelsea Lee"
-            },
-            {
-                name: "Shaheem Sanchez"
-            },
-            {
-                name: "Chris Perfetti"
-            },
-            {
-                name: "Bill Thorpe"
-            },
-            {
-                name: "Michael Tow"
-            }
-        ],
         photos: [
             {
                 image: '/photos/soundOfMetalPictures/photo1.png',
@@ -66,11 +31,13 @@ export const movies = [
                 content: [
                     {
                         key: "Plot Summary",
-                        value: "»"
+                        value: "",
+                        more: true
                     },
                     {
                         key: "Plot Keywords",
-                        value: "bare chested male, deaf man, rock band, rock performance, band performance, drug addict, hearing dog, deaf community, deaf teaching »"
+                        value: "bare chested male, deaf man, rock band, rock performance, band performance, drug addict, hearing dog, deaf community, deaf teaching",
+                        more: true
                     }
                 ]
             },
@@ -79,19 +46,23 @@ export const movies = [
                 content: [
                     {
                         key: "Official Sites",
-                        value: "Barrister Babu"
+                        value: "Barrister Babu",
+                        more: true
                     },
                     {
                         key: "Country",
-                        value: "USA"
+                        value: "USA",
+                        more: false
                     },
                     {
                         key: "Language",
-                        value: "English | American Sign Language | French"
+                        value: "English | American Sign Language | French",
+                        more: false
                     },
                     {
                         key: "Filming Locations",
-                        value: "Hollywood Hits Theatre, Danvers, Massachusetts, USA"
+                        value: "Hollywood Hits Theatre, Danvers, Massachusetts, USA",
+                        more: false
                     }
                 ]
             },
@@ -100,7 +71,8 @@ export const movies = [
                 content: [
                     {
                         key: "Genres",
-                        value: "Drama | Music"
+                        value: "Drama | Music",
+                        more: true
                     }
                 ]
             },
@@ -109,7 +81,8 @@ export const movies = [
                 content: [
                     {
                         key: "Cumulative Worldwide Gross",
-                        value: "$11,656"
+                        value: "$11,656",
+                        more: false
                     }
                 ]
             },
@@ -118,11 +91,13 @@ export const movies = [
                 content: [
                     {
                         key: "Certificate",
-                        value: "12"
+                        value: "12",
+                        more: true
                     },
                     {
                         key: "Parents Guide",
-                        value: "»"
+                        value: "",
+                        more: true
                     }
                 ]
             }

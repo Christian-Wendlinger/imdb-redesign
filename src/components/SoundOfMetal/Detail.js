@@ -1,4 +1,5 @@
 import {Grid, Typography, Box, makeStyles} from "@material-ui/core";
+import ShowMore from "../ShowMore";
 
 const useStyle = makeStyles({
     balkengrau: {
@@ -12,21 +13,20 @@ export default function Detail({title, pairs, lastItem}) {
     return (
         [
         <Grid item>
-            <Grid container direction={"column"} spacing={2} alignItems={"flex-start"}>
+            <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                 <Grid item xs>
-                    <Typography variant={"body1"} color={"text"}>
+                    <Typography variant={"h3"} color={"text"}>
                         <Box fontWeight="fontWeightBold">
                         {title}
                         </Box>
                     </Typography>
                 </Grid>
                 <Grid item xs>
-                    <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
+                    <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                         {pairs.map(pair => {
                             return(
                                 <Grid item>
-                                    <Typography variant={"body1"} color={"text"}>{pair.key}: <Typography variant={"body1"} color={"text"} display={"inline"}>{pair.value}</Typography>
-                                    </Typography>
+                                    <Typography variant={"body1"} color={"text"}>{pair.key}: <Typography variant={"body1"} color={"text"} display={"inline"}>{pair.value} <Typography variant={"body1"} color={"primary"} style={{display: pair.more ? "inline" : "none"}}>More »</Typography></Typography></Typography>
                                 </Grid>
                             );
                         }

@@ -2,6 +2,7 @@ import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core"
 import {useEffect} from "react";
 import BrowseMovieListItem from "../listItems/BrowseMovieListItem";
 import {moviePosters} from "../../data/moviePosters";
+import SiderBrowse from "../Sidebars/SidebarBrowse";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -22,7 +23,7 @@ export default function BrowsePage() {
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Browse</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <Paper style={{width: "100%"}}>test</Paper>
+                    <SiderBrowse/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>

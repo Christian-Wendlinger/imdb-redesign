@@ -1,5 +1,6 @@
 import {Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Star} from "@material-ui/icons";
+import ShowMore from "../ShowMore";
 
 const ruleMargin = 25;
 
@@ -60,8 +61,9 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     </Grid>
 
                     <Grid item>
-                        <Typography variant={"body1"}>{text}</Typography>
+                        <Typography variant={"body1"}>{text} <ShowMore variant={"body1"}/></Typography>
                     </Grid>
+
                 </Grid>
             </Grid>,
             <Grid item style={{width: "100%", display: lastItem ? "none" : "block"}}>

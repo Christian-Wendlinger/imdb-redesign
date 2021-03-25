@@ -14,14 +14,12 @@ import Photos from "../SoundOfMetal/Photos";
 import MoviePosterSlide from "../Slides/MoviePosterSlide"
 import StarDetail from "../SoundOfMetal/StarDetails";
 import KnownForTabs from "../SoundOfMetal/KnownForTabs";
-import Videos from "../SoundOfMetal/Videos";
+import FilmographySlide from "../Slides/FilmographySlide";
 
 // main css (custom swiper style)
 import "../../main_style.css";
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 import {oliviaCooke} from "../../data/oliviaCooke"
-import {movies} from "../../data/movies";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -87,7 +85,7 @@ export default function OliviaCooke() {
         <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
-                        <Grid container direction={"column"} spacing={5}>
+                        <Grid container direction={"column"} spacing={4}>
 
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known For</Typography>
@@ -164,12 +162,11 @@ export default function OliviaCooke() {
 
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Personal Details</Typography>
-                                <Grid container direction={"column"} spacing={2}>
+                                <Grid container direction={"column"} spacing={0}>
                                     {oliviaCooke[0].personalDetails.map(detail => {
                                         return(
                                             <StarDetail 
-                                                key={detail.key}
-                                                value={detail.value}
+                                                pair={detail}
                                             />
                                         );
                                     })}
@@ -184,7 +181,7 @@ export default function OliviaCooke() {
 
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You Know</Typography>
-                                <Grid container direction={"column"} spacing={2}>
+                                <Grid container direction={"column"} spacing={0}>
                                     {oliviaCooke[0].didYouKnow.map((item, index) => {
                                             return(
                                                 <DidYouKnow 
@@ -202,24 +199,23 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} className={classes.headline}>
-                                    Filmography
-                                </Typography>
+                                <Typography variant={"h2"} className={classes.headline} color={"primary"}>Filmography</Typography>
                                 <KnownForTabs shuffle={() => setExplore([...oliviaCooke[0].knownFor].sort(() => Math.random() - 0.5))}/>
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
-                                    slidesPerView={4}
-                                    slidesPerGroup={4}
+                                    slidesPerView={6}
+                                    slidesPerGroup={6}
                                     className={"moviePosterSlider"}>
-                                    {oliviaCooke[0].knownFor.map(movie => {
+                                    {oliviaCooke[0].filmography[0].titles.map(movie => {
                                         return (
                                             <SwiperSlide>
-                                                <MoviePosterSlide
+                                                <FilmographySlide
                                                     image={movie.image}
                                                     rating={movie.rating}
                                                     title={movie.title}
                                                     year={movie.year}
+                                                    role={movie.role}
                                                     link={movie.link}/>
                                             </SwiperSlide>
                                         );
