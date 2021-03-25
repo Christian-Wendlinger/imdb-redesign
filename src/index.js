@@ -107,7 +107,7 @@ const theme2 = createMuiTheme({
 
 ReactDOM.render(
     <React.StrictMode>
-        <MuiThemeProvider theme={theme2}>
+        <MuiThemeProvider theme={theme}>
             <CssBaseline/>
             <App/>
         </MuiThemeProvider>
