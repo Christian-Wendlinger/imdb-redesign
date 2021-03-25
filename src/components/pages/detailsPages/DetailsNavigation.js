@@ -12,7 +12,7 @@ export default function DetailsNavigation({active, pageId}) {
                 return (
                     <Grid item>
                         <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
-                            <Typography variant={"body1"} color={active === index + 1 ? "primary" : ""}>
+                            <Typography variant={"h3"} color={active === index + 1 ? "primary" : ""}>
                                 {navItem}
                             </Typography>
                         </Link>

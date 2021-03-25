@@ -12,13 +12,13 @@ const useStyle = makeStyles({
         marginBottom: ruleMargin
     },
     subtitle: {
-        marginTop: 2
+        marginTop: 3
     },
     starIcon: {
-        fontSize: 20
+        fontSize: 19
     },
     addIcon: {
-        fontSize: 25,
+        fontSize: 24,
         cursor: "pointer",
         color: "#F2F2F2"
     }
@@ -85,7 +85,7 @@ export default function BrowseMovieListItem({
                                 <Grid container spacing={1} alignItems={"center"}>
                                     <Grid item>
                                         <Link to={link} style={{textDecoration: "none"}}>
-                                            <Typography variant={"body1"}
+                                            <Typography variant={"h3"}
                                                         color={"primary"}>{number}. {title}</Typography>
                                         </Link>
                                     </Grid>
@@ -112,7 +112,7 @@ export default function BrowseMovieListItem({
 
                             <Grid item xs>
                                 <Typography variant={"body2"}>Votes : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{votes}</Typography>
-                                <Typography variant={"body2"}>Gross : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{gross}</Typography>
+                                {gross !== undefined && <Typography variant={"body2"}>Gross : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{gross}</Typography>}
                             </Grid>
                         </Grid>
                     </Grid>

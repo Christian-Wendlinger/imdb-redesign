@@ -39,7 +39,6 @@ export const moviePosters = [
         director: "Shonda Rhimes",
         stars: "Ellen Pompeo, Chandra Wilson, James Pickens Jr.",
         votes: "253.914",
-        gross: "$ -",
         description: "A medical based drama centered around Meredith Grey, an aspiring surgeon and daughter of one of the best surgeons, Dr. Ellis Grey. Throughout the series, Meredith goes through professional and personal challenges along with fellow surgeons at Seattle Grace Hospital."
     },
     {
@@ -53,7 +52,6 @@ export const moviePosters = [
         director: "Jeff Davis",
         stars: "Matthew Gray Gubler, Kirsten Vangsness, A.J. Cook",
         votes: "163.228",
-        gross: "$ -",
         description: "Based in Quantico, Virginia, the Behavioral Analysis Unit (B.A.U.) is a subsection of the F.B.I. Called in by local Police departments to assist in solving crimes of a serial and/or extremely violent nature where the perpetrator is unknown (referred to by the Unit as the unknown subject or \"unsub\" for short), the B.A.U. uses the controversial scientific art of profiling to track and apprehend the unsub. Profiling entails coming up with basic characteristics of the unsub and the victims (referred to as the victimology), using evidence from the case and matching that information to historic precedents and psychological analyses as a means to solve the case."
     },
     {
@@ -67,7 +65,6 @@ export const moviePosters = [
         director: "Steven Knight",
         stars: "Cillian Murphy, Paul Anderson, Helen McCrory",
         votes: "357.853",
-        gross: "$ -",
         description: "Peaky Blinders is an English television crime drama set in 1920s Birmingham, England in the aftermath of World War I. The series, which was created by Steven Knight and produced by Caryn Mandabach Productions, Screen Yorkshire and Tiger Aspect Productions, follows the exploits of the Shelby crime family. Screen Yorkshire provided funding for the production through the Yorkshire Content Fund. It was the first production to receive funding from the Yorkshire Content Fund, which in turn made certain the majority of the show was filmed in Yorkshire as part of the deal."
     },
     {
@@ -81,7 +78,6 @@ export const moviePosters = [
         director: "David Kajganich, Max Borenstein, Alexander Woo",
         stars: "Jared Harris, Derek Mio, Tobias Menzies",
         votes: "38.144",
-        gross: "$ -",
         description: "Season 1: In 1847-8, the crew of a real life Royal Naval expedition (later known as Franklin's expedition) led by three captains, Sir John Franklin, Francis Crozier and James Fitzjames, is sent to find the Arctic's fabled treacherous Northwest Passage but instead discovers a monstrous polar bear-like predator, a cunning and vicious Gothic horror that stalks the ships in a desperate game of survival. However, it soon becomes clear that that's just the beginning of their troubles. As things worsen and civilized behavior disintegrates in favor of survival at any cost, the crew must simultaneously battle the elements, the supernatural and eventually - themselves. The captains' only ally in all of this becomes a mute Inuit woman, who lives as an outcast from her tribe but still follows their old animistic religion."
     },
     {
@@ -95,7 +91,6 @@ export const moviePosters = [
         director: "Eric Kripke",
         stars: "Jared Padalecki, Jensen Ackles, Jim Beaver",
         votes: "394.886",
-        gross: "$ -",
         description: "This television drama is about the two Winchester brothers, Sam and Dean, who were raised by their father, John, to hunt and kill all things that go \"bump in the night\" after his wife, Mary, was murdered by an evil supernatural being when the boys were young. 22 years later the brothers set out on a journey, fighting evil along the way, to find their recently missing father who, when they finally meet up with, reveals he knows what killed their mother, a demon and has found a way to track and kill it. Meanwhile, Sam starts to develop frightening abilities that include death visions, visions of people dying before it actually happens."
     },
     {
@@ -109,7 +104,6 @@ export const moviePosters = [
         director: "Brad Falchuk, Tim Minear, Ryan Murphys",
         stars: "Angela Bassett, Peter Krause, Oliver Stark",
         votes: "22.475",
-        gross: "$ -",
         description: "Explores the high-pressure experiences of police, paramedics and firefighters who are thrust into the most frightening, shocking and heart-stopping situations. They must try to balance saving people with solving problems in their own lives."
     },
     {
@@ -123,7 +117,6 @@ export const moviePosters = [
         director: "Tom Kapinos",
         stars: "Tom Ellis, Lauren German, Kevin Alejandro",
         votes: "236.660",
-        gross: "$ -",
         description: "Lucifer Morningstar, bored from his sulking life in hell, comes to live in Los Angeles. While there, he helps humanity with its miseries through his experience and telepathic abilities to bring people's deepest desires and thoughts out of them. While meeting with a Detective in his nightclub (Lux), a shootout involving him and the Detective leads him to become an LAPD consultant who tries to punish people for their crimes through law and justice."
     },
     {
@@ -137,7 +130,6 @@ export const moviePosters = [
         director: "Alex Gansa, Howard Gordon",
         stars: "Claire Danes, Mandy Patinkin, Damian Lewis",
         votes: "315.824",
-        gross: "$ -",
         description: "The winner of 6 Emmy Awards including Outstanding Drama Series, Homeland is an edge-of-your-seat sensation. Marine Sergeant Nicholas Brody is both a decorated hero and a serious threat. CIA officer Carrie Mathison is tops in her field despite being bipolar. The delicate dance these two complex characters perform, built on lies, suspicion, and desire, is at the heart of this gripping, emotional thriller in which nothing short of the fate of our nation is at stake."
     }
 ]

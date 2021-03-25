@@ -26,7 +26,8 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                             movieTitle={movieTitle}
                             year={year}
                             rating={rating}
-                            pageName={pageName}/>
+                            pageName={pageName}
+                            pageId={pageId}/>
 
                         <Grid item>
                             Hier Photos Komponente

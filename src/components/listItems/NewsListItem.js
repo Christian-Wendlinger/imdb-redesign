@@ -10,7 +10,7 @@ const useStyle = makeStyles({
         marginBottom: ruleMargin
     },
     subtitle: {
-        marginTop: 5
+        marginTop: 3
     }
 });
 
@@ -25,10 +25,10 @@ export default function NewsListItem({image, title, date, category, author, port
                     </Grid>
 
                     <Grid item xs={10}>
-                        <Grid container direction={"column"} spacing={3}>
+                        <Grid container direction={"column"} spacing={2}>
                             <Grid item xs>
                                 <a href={link} target={"_blank"} style={{textDecoration: "none"}}>
-                                    <Typography variant={"body1"} color={"primary"}>{title}</Typography>
+                                    <Typography variant={"h3"} color={"primary"}>{title}</Typography>
                                 </a>
                                 <Typography variant={"body2"}
                                             className={classes.subtitle}>{date}&nbsp;&nbsp;|&nbsp;&nbsp;{category}{author !== "-" &&

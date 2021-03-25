@@ -21,7 +21,7 @@ export default function BrowsePage() {
     return (
         <Container>
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Browse</Typography>
-            <Grid container spacing={6}>
+            <Grid container spacing={5}>
                 <Grid item container xs={3}>
                     <Paper style={{width: "100%"}}>test</Paper>
                 </Grid>

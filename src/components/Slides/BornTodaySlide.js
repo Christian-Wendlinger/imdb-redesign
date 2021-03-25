@@ -1,4 +1,4 @@
-import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {Grid, Typography} from "@material-ui/core";
 
 export default function BornTodaySlide({image, name, age}) {
     return (
@@ -7,7 +7,7 @@ export default function BornTodaySlide({image, name, age}) {
                 <img src={image} width={"100%"}/>
             </Grid>
             <Grid item>
-                <Typography variant={"body2"}>{name} ({age})</Typography>
+                <Typography variant={"body1"}>{name} ({age})</Typography>
             </Grid>
         </Grid>
     );

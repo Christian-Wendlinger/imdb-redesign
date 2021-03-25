@@ -1,7 +1,7 @@
 import {Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Star} from "@material-ui/icons";
 
-const ruleMargin = 35;
+const ruleMargin = 25;
 
 const useStyle = makeStyles({
     balken: {
@@ -11,7 +11,7 @@ const useStyle = makeStyles({
         marginBottom: ruleMargin
     },
     starIcon: {
-        fontSize: 25
+        fontSize: 21
     }
 });
 
@@ -36,7 +36,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                             </Grid>
 
                             <Grid item>
-                                <Typography variant={"body1"}>|</Typography>
+                                <Typography variant={"body1"}>&nbsp;|&nbsp;</Typography>
                             </Grid>
 
                             <Grid item>
@@ -44,7 +44,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                             </Grid>
 
                             <Grid item>
-                                <Typography variant={"body1"}>|</Typography>
+                                <Typography variant={"body1"}>&nbsp;|&nbsp;</Typography>
                             </Grid>
 
                             <Grid item>
@@ -54,11 +54,7 @@ export default function UserReviewListItem({rating, author, date, title, text, l
                     </Grid>
 
                     <Grid item>
-                        <Typography variant={"body1"} color={"text"}>
-                            <Box fontWeight="fontWeightBold">
-                                {title}
-                            </Box>
-                        </Typography>
+                        <Typography variant={"h3"}>{title}</Typography>
                     </Grid>
 
                     <Grid item>
