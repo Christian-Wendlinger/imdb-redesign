@@ -23,12 +23,13 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
         <Container>
             <Grid container spacing={6} className={classes.firstItem}>
                 <Grid item container xs={9}>
-                    <Grid container direction={"column"} spacing={5}>
+                    <Grid container direction={"column"} spacing={3}>
                         <DetailsHeader
                             movieTitle={movieTitle}
                             year={year}
                             rating={rating}
-                            pageName={pageName}/>
+                            pageName={pageName}
+                            pageId={pageId}/>
 
                         <Grid item>
                             <Grid container direction={"column"}>

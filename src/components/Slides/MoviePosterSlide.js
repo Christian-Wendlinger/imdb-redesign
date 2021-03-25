@@ -42,7 +42,7 @@ export default function MoviePosterSlide({image, title, rating, year, link}) {
                         <Star color={"primary"} className={classes.starIcon}/>
                     </Grid>
                     <Grid item>
-                        <Typography variant={"body1"}>{rating}</Typography>
+                        <Typography variant={"h3"}>{rating}</Typography>
                     </Grid>
                 </Grid>
                 <Grid item>
@@ -56,7 +56,7 @@ export default function MoviePosterSlide({image, title, rating, year, link}) {
 
             <Grid item>
                 <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
-                    <Typography variant={"body1"}>
+                    <Typography variant={"h3"}>
                         {title} ({year})
                     </Typography>
                 </Link>

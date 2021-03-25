@@ -32,11 +32,18 @@ const theme = createMuiTheme({
     typography: {
         h1: {
             fontSize: 30,
-            fontWeight: "bolder"
+            fontWeight: 600,
+            letterSpacing: "0.03em"
         },
         h2: {
-            fontSize: 20,
-            fontWeight: "bold"
+            fontSize: 22,
+            fontWeight: 600,
+            letterSpacing: "0.05em"
+        },
+        h3: {
+            fontSize: 16,
+            lineHeight: 1.5,
+            letterSpacing: "0.00938em"
         },
         body1: {
             fontSize: 14

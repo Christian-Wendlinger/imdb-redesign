@@ -1,5 +1,6 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox, Star} from "@material-ui/icons";
+import {Link} from "react-router-dom";
 
 const useStyle = makeStyles({
     addIcon: {
@@ -11,7 +12,7 @@ const useStyle = makeStyles({
     }
 });
 
-export default function DetailsHeader({movieTitle, year, rating, pageName}) {
+export default function DetailsHeader({movieTitle, year, rating, pageName, pageId}) {
     const classes = useStyle();
     return (
         [
@@ -20,7 +21,9 @@ export default function DetailsHeader({movieTitle, year, rating, pageName}) {
                     <Grid item>
                         <Grid container direction={"row"} alignItems={"center"} spacing={1}>
                             <Grid item>
-                                <Typography variant={"h2"}>{movieTitle} ({year})</Typography>
+                                <Link to={pageId ? `/movies/${pageId}` : undefined} style={{textDecoration: "none", color: "#F2F2F2"}}>
+                                    <Typography variant={"h2"}>{movieTitle} ({year})</Typography>
+                                </Link>
                             </Grid>
 
                             <Grid item>

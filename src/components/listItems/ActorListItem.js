@@ -1,4 +1,6 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
+import ShowMore from "../ShowMore";
+import {Link} from "react-router-dom";
 
 const ruleMargin = 15;
 
@@ -23,7 +25,8 @@ export default function ActorListItem({
                                           description,
                                           zodiacSign,
                                           knownFor,
-                                          lastItem
+                                          lastItem,
+                                          link
                                       }) {
     const classes = useStyle();
     return (
@@ -31,7 +34,9 @@ export default function ActorListItem({
             <Grid item>
                 <Grid container spacing={2}>
                     <Grid item xs={2}>
-                        <img src={image} width={"100%"}/>
+                        <Link to={link} style={{textDecoration: "none"}}>
+                            <img src={image} width={"100%"}/>
+                        </Link>
                     </Grid>
 
 
@@ -40,8 +45,10 @@ export default function ActorListItem({
                             <Grid item xs>
                                 <Grid container spacing={1} alignItems={"center"}>
                                     <Grid item>
-                                        <Typography variant={"body1"}
-                                                    color={"primary"}>{number !== undefined && number + "."} {name} {age !== undefined && `(${age})`}</Typography>
+                                        <Link to={link} style={{textDecoration: "none"}}>
+                                            <Typography variant={"h3"}
+                                                        color={"primary"}>{number !== undefined && number + "."} {name} {age !== undefined && `(${age})`}</Typography>
+                                        </Link>
                                     </Grid>
                                 </Grid>
 
@@ -59,7 +66,8 @@ export default function ActorListItem({
                             <Grid item xs>
                                 {zodiacSign !== undefined &&
                                 <Typography variant={"body2"}>Zodiac Sign : &nbsp;{zodiacSign}</Typography>}
-                                <Typography variant={"body2"}>Known For : &nbsp;&nbsp;&nbsp;{knownFor}</Typography>
+                                <Typography variant={"body2"}>Known For : &nbsp;&nbsp;&nbsp;{knownFor}&nbsp;&nbsp;
+                                    <ShowMore variant={"body2"}/></Typography>
                             </Grid>
                         </Grid>
                     </Grid>

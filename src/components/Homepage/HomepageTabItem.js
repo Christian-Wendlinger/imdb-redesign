@@ -10,7 +10,7 @@ export default function HomepageTabItem({name, active, onClick}) {
     const classes = useStyle();
     return (
         <Grid item className={classes.tabItem} onClick={onClick}>
-            <Typography variant={"body1"} color={active ? "primary" : ""}>{name}</Typography>
+            <Typography variant={"h3"} color={active ? "primary" : ""}>{name}</Typography>
         </Grid>
     );
 }

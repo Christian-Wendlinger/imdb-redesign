@@ -33,7 +33,7 @@ export default function NewsSlide({image, title, description, date, category, li
 
                         <Grid item>
                             <a href={link} style={{textDecoration: "none"}} target={"_blank"}>
-                                <Typography variant={"body1"} color={"primary"} className={classes.headline}>
+                                <Typography variant={"h3"} color={"primary"} className={classes.headline}>
                                     {title}
                                 </Typography>
                             </a>

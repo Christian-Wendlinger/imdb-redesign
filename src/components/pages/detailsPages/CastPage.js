@@ -28,7 +28,8 @@ export default function CastPage({movieTitle, year, rating, pageName, pageId}) {
                             movieTitle={movieTitle}
                             year={year}
                             rating={rating}
-                            pageName={pageName}/>
+                            pageName={pageName}
+                            pageId={pageId}/>
                         <Grid item>
                             <Grid container direction={"column"} spacing={2}>
                                 {cast.map((item, index) => {
