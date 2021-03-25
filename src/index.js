@@ -53,10 +53,61 @@ const theme = createMuiTheme({
         }
     }
 });
+// alternative Theme
+const theme2 = createMuiTheme({
+    palette: {
+        // Hintergrundfarbe
+        background:{
+            default: "#303234",
+        },
+        // Textfarbe
+        text: {
+            primary: "#F2F2F2"
+        },
+        // IMDB Orange
+        primary: {
+            main: "#F5C518"
+        },
+        // Dunkles (Header) Grau
+        secondary: {
+            main: "#232427"
+        }
+    },
+    typography: {
+        fontFamily: [
+            'Mulish',
+            'sans-serif'],
+        h1: {
+            fontSize: 30,
+            fontWeight: 600,
+            letterSpacing: "0.03em"
+        },
+        h2: {
+            fontSize: 22,
+            fontWeight: 600,
+            letterSpacing: "0.03em"
+        },
+        h3: {
+            fontSize: 16,
+            lineHeight: 1.5,
+            fontWeight: 400,
+            letterSpacing: "0.00938em"
+        },
+        body1: {
+            fontSize: 14,
+            letterSpacing: "0.020em",
+            lineHeight: "1.375em"
+        },
+        body2: {
+            fontSize: 12,
+            fontWeight: 400,
+        }
+    }
+});
 
 ReactDOM.render(
     <React.StrictMode>
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider theme={theme2}>
             <CssBaseline/>
             <App/>
         </MuiThemeProvider>

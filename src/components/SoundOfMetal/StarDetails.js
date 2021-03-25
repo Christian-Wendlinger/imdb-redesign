@@ -7,16 +7,23 @@ const useStyle = makeStyles({
     }
 });
 
-export default function StarDetail({key, value}) {
+export default function StarDetail({pair}) {
     const classes = useStyle();
     return (
         <Grid item>
-                    <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
-                        <Grid item>
-                             <Typography variant={"body1"} color={"text"}>{key}: <Typography variant={"body1"} color={"text"} display={"inline"}>{value}</Typography>
-                            </Typography>
-                        </Grid>
-                    </Grid>
+            <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
+                 <Grid item>
+                     <Grid container direction={"row"} spacing={3} alignItems={"flex-start"}>
+                         <Grid item>
+                            <Typography variant={"body1"} color={"text"}>{pair.key}: </Typography>
+                         </Grid>
+                         <Grid item>
+                            <Typography variant={"body1"} color={"text"}>{pair.value}</Typography>
+                         </Grid>
+                     </Grid>
+                    
+                </Grid>
+            </Grid>
         </Grid>
     )
 }

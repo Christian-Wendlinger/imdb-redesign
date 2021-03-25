@@ -15,7 +15,7 @@ export default function DidYouKnow({title, content, lastItem}) {
         <Grid item>
             <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                 <Grid item xs>
-                    <Typography variant={"body1"} color={"text"}><Box fontWeight="fontWeightBold">{title}</Box></Typography>
+                    <Typography variant={"h3"} color={"text"}><Box fontWeight="fontWeightBold">{title}</Box></Typography>
                 </Grid>
                 <Grid item xs>
                     <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>

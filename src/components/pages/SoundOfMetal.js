@@ -224,7 +224,7 @@ export default function SoundOfMetal() {
 
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You Know</Typography>
-                                <Grid container direction={"column"} spacing={1}>
+                                <Grid container direction={"column"} spacing={0}>
                                     {movies[0].didYouKnow.map((item, index) => {
                                             return(
                                                 <DidYouKnow 
