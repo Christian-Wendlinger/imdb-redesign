@@ -13,7 +13,7 @@ import {
     Typography,
     Accordion,
     AccordionSummary,
-    AccordionDetails
+    AccordionDetails,
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -27,13 +27,15 @@ const useStyle = makeStyles((theme) => ({
     },
 
     accordion: {
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.background.default,
+        padding: 0,
+        boxShadow : "none"
     },
 
     expand: {
-        color: theme.palette.text.primary
-        
-    }
+        color: theme.palette.text.primary        
+    } 
+
 }));
 
 const Genres1 = [
@@ -133,14 +135,14 @@ export default function SiderBrowse() {
 
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
-                        fullWidth
+                        className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
                         <Typography variant={"h3"}>Votes</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <TextField
@@ -164,8 +166,9 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
+                        className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
                         <Typography variant={"h3"}>Time Period</Typography>
@@ -318,14 +321,14 @@ export default function SiderBrowse() {
 
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                <Accordion className={classes.accordion} >
                     <AccordionSummary
-                        fullWidth
+                        className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
                         <Typography variant={"h3"}>Region</Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails className={classes.accordion}>
                         <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
                                 <FormControlLabel value="International" control={<Radio/>} label="International"
                                                 onChange={handleRadio}/>
