@@ -10,10 +10,14 @@ import {
     RadioGroup,
     Select,
     TextField,
-    Typography
+    Typography,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
-
+import SidebarPopover from "./SidebarPopover";
+import shadows from '@material-ui/core/styles/shadows';
 
 const ruleMargin = 15;
 
@@ -21,10 +25,74 @@ const useStyle = makeStyles((theme) => ({
     text: {
         color: theme.palette.text.primary
     },
-    box: {
-        backgroundColor: "#2A2C30"
+
+    accordion: {
+        backgroundColor: theme.palette.background.default
+    },
+
+    expand: {
+        color: theme.palette.text.primary
+        
     }
 }));
+
+const Genres1 = [
+    {text: "All"},
+    {text: "Sci-Fi"},
+    {text: "Action"},
+    {text: "Adventure"},
+    {text: "Animation"},
+    {text: "Comedy"},
+    {text: "Drama"},
+    {text: "Fantasy"},
+    {text: "Family"},
+    {text: "Thriller"}
+];
+
+const Genres2 = [
+    {text: "Short"},
+    {text: "Mystery"},
+    {text: "Horror"},
+    {text: "Romance"},
+    {text: "Crime"},
+    {text: "Talk-Show"},
+    {text: "Sport"},
+    {text: "Documentary"},
+    {text: "Music"},
+    {text: "History"}
+];
+
+const Genres3 = [
+    {text: "Reality-Tv"},
+    {text: "War"},
+    {text: "Western"},
+    {text: "Game-Show"},
+    {text: "News"},
+    {text: "Biography"},
+    {text: "Adult"},
+    {text: "Film-Noir"}
+];
+
+const TT1 = [
+    {text: "All"},
+    {text: "Movies"},
+    {text: "TV Shows"},
+    {text: "TV Episodes"},
+    {text: "Short Films"}
+];
+
+const TT2 = [
+    {text: "Feature Films"},
+    {text: "TV Movies"},
+    {text: "TV Shorts"},
+    {text: "Video Games"},
+    {text: "Video"}
+];
+
+const TT3 = [
+    {text: "TV Mini-Series"},
+    {text: "TV Specials"}
+];
 
 
 export default function SiderBrowse() {
@@ -51,47 +119,30 @@ export default function SiderBrowse() {
                 </Typography>
             </Grid>
             <Grid item>
-                <Grid container direction={"row"} justify={"space-between"}>
-                    <Grid item>
-                        <Typography variant={"h3"}>
-                            Genres
-                        </Typography>
-                    </Grid>
-                    <Grid item>
-                        <ExpandMore/>
-                    </Grid>
-                </Grid>
+                <SidebarPopover title={"Genres"} 
+                    itemsRow1={Genres1}
+                    itemsRow2={Genres2}
+                    itemsRow3={Genres3}/>
             </Grid>
             <Grid item>
-                <Grid container direction={"row"} justify={"space-between"}>
-                    <Grid item>
-                        <Typography variant={"h3"}>
-                            Title Type
-                        </Typography>
-                    </Grid>
-                    <Grid item>
-                        <ExpandMore/>
-                    </Grid>
-                </Grid>
+                <SidebarPopover title={"Title Type"} 
+                    itemsRow1={TT1}
+                    itemsRow2={TT2}
+                    itemsRow3={TT3}/>
             </Grid>
-            <Grid item>
-                <Grid container direction={"column"} spacing={2}>
-                    <Grid item>
-                        <Grid container direction={"row"} justify={"space-between"}>
-                            <Grid item>
-                                <Typography variant={"h3"}>
-                                    Votes
-                                </Typography>
-                            </Grid>
-                            <Grid item>
-                                <ExpandMore/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
 
-                    <Grid item>
-                        <Grid container direction={"row"} justify={"space-between"}>
-                            <Grid item xs={5}>
+
+            <Grid item>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                    <AccordionSummary
+                        fullWidth
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Votes</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Grid container direction={"row"} justify={"space-between"} spacing={2}>
+                            <Grid item xs={6}>
                                 <TextField
                                     id="Vote-min"
                                     label="Min. Votes"
@@ -99,7 +150,7 @@ export default function SiderBrowse() {
                                     variant="outlined"
                                 />
                             </Grid>
-                            <Grid item xs={5}>
+                            <Grid item xs={6}>
                                 <TextField
                                     id="Vote-min"
                                     label="Max. Votes"
@@ -108,31 +159,22 @@ export default function SiderBrowse() {
                                 />
                             </Grid>
                         </Grid>
-                    </Grid>
-
-                </Grid>
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
-            <Grid item>
-                <Grid container direction={"column"} spacing={2}>
-                    <Grid item>
-                        <Grid container direction={"row"} justify={"space-between"}>
-                            <Grid item>
-                                <Typography variant={"h3"}>
-                                    Time Period
-                                </Typography>
-                            </Grid>
-                            <Grid item>
-                                <ExpandMore/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
 
-                    <Grid item>
-                        <Grid container direction={"column"} spacing={2}>
+            <Grid item>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Time Period</Typography>
+                    </AccordionSummary>
+                    <Grid container direction={"column"} spacing={2}>
                             <Grid item>
-                                <Grid container direction={"row"} justify={"space-between"}>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                <Grid container direction={"row"} justify={"space-between"} spacing={2}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">From Year</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -152,8 +194,8 @@ export default function SiderBrowse() {
                                             </Select>
                                         </FormControl>
                                     </Grid>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">To Year</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -176,9 +218,9 @@ export default function SiderBrowse() {
                                 </Grid>
                             </Grid>
                             <Grid item>
-                                <Grid container direction={"row"} justify={"space-between"}>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                <Grid container direction={"row"} justify={"space-between"} spacing={2}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" className={classes.formControl} fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">From Month</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -198,8 +240,8 @@ export default function SiderBrowse() {
                                             </Select>
                                         </FormControl>
                                     </Grid>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" className={classes.formControl} fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">To Month</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -222,9 +264,9 @@ export default function SiderBrowse() {
                                 </Grid>
                             </Grid>
                             <Grid item>
-                                <Grid container direction={"row"} justify={"space-between"}>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                <Grid container direction={"row"} justify={"space-between"} spacing={2}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" className={classes.formControl} fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">From Day</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -244,8 +286,8 @@ export default function SiderBrowse() {
                                             </Select>
                                         </FormControl>
                                     </Grid>
-                                    <Grid item xs={5}>
-                                        <FormControl variant="outlined" className={classes.formControl}>
+                                    <Grid item xs={6}>
+                                        <FormControl variant="outlined" className={classes.formControl} fullWidth>
                                             <InputLabel id="demo-simple-select-outlined-label">To Day</InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-outlined-label"
@@ -268,35 +310,30 @@ export default function SiderBrowse() {
                                 </Grid>
                             </Grid>
                         </Grid>
-                    </Grid>
-
-                </Grid>
+                    <AccordionDetails>
+                        
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
 
 
             <Grid item>
-                <Grid container direction={"column"} spacing={2}>
-                    <Grid item>
-                        <Grid container direction={"row"} justify={"space-between"}>
-                            <Grid item>
-                                <Typography variant={"h3"}>
-                                    Region
-                                </Typography>
-                            </Grid>
-                            <Grid item>
-                                <ExpandMore/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20}>
+                    <AccordionSummary
+                        fullWidth
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Region</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
                         <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                            <FormControlLabel value="International" control={<Radio/>} label="International"
-                                              onChange={handleRadio}/>
-                            <FormControlLabel value="English" control={<Radio/>} label="English"/>
-                            <FormControlLabel value="Indian" control={<Radio/>} label="Indian"/>
+                                <FormControlLabel value="International" control={<Radio/>} label="International"
+                                                onChange={handleRadio}/>
+                                <FormControlLabel value="English" control={<Radio/>} label="English"/>
+                                <FormControlLabel value="Indian" control={<Radio/>} label="Indian"/>
                         </RadioGroup>
-                    </Grid>
-                </Grid>
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
         </Grid>
 
