@@ -1,7 +1,8 @@
 import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
 import React, {useEffect} from "react";
 import BrowseMovieNdListItem from "../listItems/BrowseMovieNdListItem";
-import {notDetailedMovies} from "../../data/notDetailedMovies";
+import {moviePosters} from "../../data/moviePosters";
+import SidebarBrowse from "../Sidebars/SidebarBrowse";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -35,11 +36,11 @@ export default function BrowseNdPage() {
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Browse</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <Paper style={{width: "100%"}}>test</Paper>
+                    <SidebarBrowse/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>
-                        {notDetailedMovies.map((item, index) => {
+                        {moviePosters.map((item, index) => {
                                 return (
                                     <BrowseMovieNdListItem
                                         number={index + 1}
@@ -49,7 +50,7 @@ export default function BrowseNdPage() {
                                         year={item.year}
                                         votes={item.votes}
                                         gross={item.gross}
-                                        lastItem={index === notDetailedMovies.length - 1}/>
+                                        lastItem={index === moviePosters.length - 1}/>
                                 );
                             }
                         )}

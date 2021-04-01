@@ -14,7 +14,8 @@ import {
     Accordion,
     AccordionSummary,
     AccordionDetails,
-    Button
+    Button,
+    Checkbox
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -42,66 +43,9 @@ const useStyle = makeStyles((theme) => ({
 
 }));
 
-const Genres1 = [
-    {text: "All"},
-    {text: "Sci-Fi"},
-    {text: "Action"},
-    {text: "Adventure"},
-    {text: "Animation"},
-    {text: "Comedy"},
-    {text: "Drama"},
-    {text: "Fantasy"},
-    {text: "Family"},
-    {text: "Thriller"}
-];
-
-const Genres2 = [
-    {text: "Short"},
-    {text: "Mystery"},
-    {text: "Horror"},
-    {text: "Romance"},
-    {text: "Crime"},
-    {text: "Talk-Show"},
-    {text: "Sport"},
-    {text: "Documentary"},
-    {text: "Music"},
-    {text: "History"}
-];
-
-const Genres3 = [
-    {text: "Reality-Tv"},
-    {text: "War"},
-    {text: "Western"},
-    {text: "Game-Show"},
-    {text: "News"},
-    {text: "Biography"},
-    {text: "Adult"},
-    {text: "Film-Noir"}
-];
-
-const TT1 = [
-    {text: "All"},
-    {text: "Movies"},
-    {text: "TV Shows"},
-    {text: "TV Episodes"},
-    {text: "Short Films"}
-];
-
-const TT2 = [
-    {text: "Feature Films"},
-    {text: "TV Movies"},
-    {text: "TV Shorts"},
-    {text: "Video Games"},
-    {text: "Video"}
-];
-
-const TT3 = [
-    {text: "TV Mini-Series"},
-    {text: "TV Specials"}
-];
 
 
-export default function SiderBrowse() {
+export default function SidebarTopNews() {
     const classes = useStyle();
 
     const [age, setAge] = React.useState('')
@@ -124,19 +68,6 @@ export default function SiderBrowse() {
                     Filter by
                 </Typography>
             </Grid>
-            <Grid item>
-                <SidebarPopover title={"Genres"} 
-                    itemsRow1={Genres1}
-                    itemsRow2={Genres2}
-                    itemsRow3={Genres3}/>
-            </Grid>
-            <Grid item>
-                <SidebarPopover title={"Title Type"} 
-                    itemsRow1={TT1}
-                    itemsRow2={TT2}
-                    itemsRow3={TT3}/>
-            </Grid>
-
 
             <Grid item>
                 <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
@@ -144,24 +75,67 @@ export default function SiderBrowse() {
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
-                        <Typography variant={"h3"}>Votes</Typography>
+                        <Typography variant={"h3"}>Category</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
-                        <Grid container direction={"row"} justify={"space-between"} spacing={2}>
-                            <Grid item xs={6}>
-                                <TextField
-                                    id="Vote-min"
-                                    label="Min. Votes"                                 
-                                    variant="outlined"
-                                />
+                        <Grid container direction={"column"}>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"All"}/>
                             </Grid>
-                            <Grid item xs={6}>
-                                <TextField
-                                    id="Vote-min"
-                                    label="Max. Votes"
-                                    variant="outlined"
-                                />
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"Variety"}/>
                             </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"Indiewire"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"TheW Wrap"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"Slash"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"TV Line"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<Checkbox color="default"/>} label={"The Portal"}/>
+                            </Grid>
+                        </Grid>
+                    </AccordionDetails>
+                </Accordion>
+            </Grid>
+
+            <Grid item>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                    <AccordionSummary
+                        className={classes.accordion}
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>News Portal</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={classes.accordion}>
+                        <Grid container direction={"column"}>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"All"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Variety"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Indiewire"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"TheW Wrap"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Slash"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"TV Line"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"The Portal"}/>
+                                </Grid>
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
@@ -198,31 +172,6 @@ export default function SiderBrowse() {
 
 
             <Grid item>
-                <Accordion className={classes.accordion} >
-                    <AccordionSummary
-                        className={classes.accordion}
-                        expandIcon={<ExpandMore className={classes.expand}/>}
-                        id="panel1a-header">
-                        <Typography variant={"h3"}>Region</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails className={classes.accordion}>
-                        <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                                <FormControlLabel value="International" control={<Radio/>} label="International"
-                                                onChange={handleRadio}/>
-                                <FormControlLabel value="English" control={<Radio/>} label="English"/>
-                                <FormControlLabel value="Indian" control={<Radio/>} label="Indian"/>
-                        </RadioGroup>
-                    </AccordionDetails>
-                </Accordion>
-            </Grid>
-
-            <Grid item>
-                <Typography variant={"h2"}>
-                    
-                </Typography>
-            </Grid>
-
-            <Grid item>
                 <Typography variant={"h2"}>
                     Sort by
                 </Typography>
@@ -242,9 +191,6 @@ export default function SiderBrowse() {
                             <em>None</em>
                         </MenuItem>
                         <MenuItem value={"Popularity"}>Popularity</MenuItem>
-                        <MenuItem value={"Rating"}>Rating</MenuItem>
-                        <MenuItem value={"Box Office"}>Box Office</MenuItem>
-                        <MenuItem value={"Runtime"}>Runtime</MenuItem>
                         <MenuItem value={"Alphabetic"}>Alphabetic</MenuItem>
                         <MenuItem value={"Number of Votes"}>Number of Votes</MenuItem>
                         <MenuItem value={"Release Date"}>Release Date</MenuItem>
@@ -259,6 +205,8 @@ export default function SiderBrowse() {
                                 <FormControlLabel value="Ascending" control={<Radio/>} label="Ascending"/>
                         </RadioGroup>
             </Grid>
+
+
 
             <Grid item>
                 <Button variant="outlined">

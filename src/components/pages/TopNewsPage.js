@@ -2,6 +2,7 @@ import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core"
 import {news} from "../../data/news";
 import NewsListItem from "../listItems/NewsListItem";
 import {useEffect} from "react";
+import SidebarTopNews from "../Sidebars/SidebarTopNews";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -22,7 +23,7 @@ export default function TopNewsPage() {
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Top News</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <Paper style={{width: "100%"}}>test</Paper>
+                    <SidebarTopNews/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={1}>

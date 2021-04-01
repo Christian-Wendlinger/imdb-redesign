@@ -9,16 +9,15 @@ import {
     Radio,
     RadioGroup,
     Select,
-    TextField,
     Typography,
     Accordion,
     AccordionSummary,
     AccordionDetails,
-    Button
+    Button,
+    Checkbox
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
-import shadows from '@material-ui/core/styles/shadows';
 
 const ruleMargin = 15;
 
@@ -90,25 +89,33 @@ export default function SidebarBornToday() {
             </Grid>
 
             <Grid item>
-                <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="YearFrom">Profession</InputLabel>
-                    <Select
-                        labelId="YearFrom"
-                        id="YearFrom"
-                        value={age}
-                        onChange={handleChange}
-                        label="Age"
-                    >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={"Actor"}>Actor</MenuItem>
-                        <MenuItem value={"Producer"}>Producer</MenuItem>
-                        <MenuItem value={"Writer"}>Writer</MenuItem>
-                        <MenuItem value={"Director"}>Director</MenuItem>
-                        <MenuItem value={"Soundtrack"}>Soundtrack</MenuItem>
-                    </Select>
-                </FormControl>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                    <AccordionSummary
+                        className={classes.accordion}
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Profession</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={classes.accordion}>
+                        <Grid container direction={"column"}>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Actor"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Producer"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Writer"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Director"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Soundtrack"}/>
+                                </Grid>
+                        </Grid>
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
 
             <Grid item>
@@ -117,7 +124,7 @@ export default function SidebarBornToday() {
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
-                        <Typography variant={"h3"}>Time Period</Typography>
+                        <Typography variant={"h3"}>Birth Year</Typography>
                     </AccordionSummary>
                     <Grid container direction={"column"} spacing={2}>
                             <Grid item>
