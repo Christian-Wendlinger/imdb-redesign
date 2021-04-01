@@ -14,6 +14,7 @@ import {
     Accordion,
     AccordionSummary,
     AccordionDetails,
+    Button
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -34,7 +35,11 @@ const useStyle = makeStyles((theme) => ({
 
     expand: {
         color: theme.palette.text.primary        
-    } 
+    }, 
+
+    select: {
+        backgroundColor: theme.palette.background.default
+    },
 
 }));
 
@@ -147,8 +152,7 @@ export default function SiderBrowse() {
                             <Grid item xs={6}>
                                 <TextField
                                     id="Vote-min"
-                                    label="Min. Votes"
-                                    type="password"
+                                    label="Min. Votes"                                 
                                     variant="outlined"
                                 />
                             </Grid>
@@ -156,7 +160,6 @@ export default function SiderBrowse() {
                                 <TextField
                                     id="Vote-min"
                                     label="Max. Votes"
-                                    type="password"
                                     variant="outlined"
                                 />
                             </Grid>
@@ -178,10 +181,10 @@ export default function SiderBrowse() {
                                 <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                                     <Grid item xs={6}>
                                         <FormControl variant="outlined" fullWidth>
-                                            <InputLabel id="demo-simple-select-outlined-label">From Year</InputLabel>
+                                            <InputLabel id="YearFrom">From Year</InputLabel>
                                             <Select
-                                                labelId="demo-simple-select-outlined-label"
-                                                id="demo-simple-select-outlined"
+                                                labelId="YearFrom"
+                                                id="YearFrom"
                                                 value={age}
                                                 onChange={handleChange}
                                                 label="Age"
@@ -338,6 +341,49 @@ export default function SiderBrowse() {
                     </AccordionDetails>
                 </Accordion>
             </Grid>
+
+            <Grid item>
+                <Typography variant={"h2"}>
+                    
+                </Typography>
+            </Grid>
+
+            <Grid item>
+                <Typography variant={"h2"}>
+                    Sort by
+                </Typography>
+            </Grid>
+
+            <Grid item>
+                <Accordion className={classes.accordion} >
+                    <AccordionSummary
+                        className={classes.accordion}
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Order</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={classes.accordion}>
+                        <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
+                                <FormControlLabel value="Descending" control={<Radio/>} label="Descending"
+                                                onChange={handleRadio}/>
+                                <FormControlLabel value="Ascending" control={<Radio/>} label="Ascending"/>
+                        </RadioGroup>
+                    </AccordionDetails>
+                </Accordion>
+            </Grid>
+
+            <Grid item>
+                <Typography variant={"h2"}>
+                    
+                </Typography>
+            </Grid>
+
+            <Grid item>
+                <Button variant="outlined">
+                    Apply
+                </Button>
+            </Grid>
+
         </Grid>
 
     );
