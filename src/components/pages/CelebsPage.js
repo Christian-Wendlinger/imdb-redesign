@@ -2,6 +2,7 @@ import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core"
 import {useEffect} from "react";
 import ActorListItem from "../listItems/ActorListItem";
 import {bornToday} from "../../data/bornToday";
+import SidebarBornToday from "../Sidebars/SidebarBornToday";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -22,7 +23,7 @@ export default function CelebsPage() {
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Celebs</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <Paper style={{width: "100%"}}>test</Paper>
+                    <SidebarBornToday/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>

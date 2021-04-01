@@ -355,27 +355,35 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} >
-                    <AccordionSummary
-                        className={classes.accordion}
-                        expandIcon={<ExpandMore className={classes.expand}/>}
-                        id="panel1a-header">
-                        <Typography variant={"h3"}>Order</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails className={classes.accordion}>
+                <FormControl variant="outlined" fullWidth>
+                    <InputLabel id="YearFrom">Sort</InputLabel>
+                    <Select
+                        labelId="YearFrom"
+                        id="YearFrom"
+                        value={age}
+                        onChange={handleChange}
+                        label="Age"
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={2000}>Popularity</MenuItem>
+                        <MenuItem value={2001}>Rating</MenuItem>
+                        <MenuItem value={2002}>Box Office</MenuItem>
+                        <MenuItem value={2003}>Runtime</MenuItem>
+                        <MenuItem value={2004}>Alphabetic</MenuItem>
+                        <MenuItem value={2001}>Number of Votes</MenuItem>
+                        <MenuItem value={2002}>Release Date</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
+
+            <Grid item>
                         <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
                                 <FormControlLabel value="Descending" control={<Radio/>} label="Descending"
                                                 onChange={handleRadio}/>
                                 <FormControlLabel value="Ascending" control={<Radio/>} label="Ascending"/>
                         </RadioGroup>
-                    </AccordionDetails>
-                </Accordion>
-            </Grid>
-
-            <Grid item>
-                <Typography variant={"h2"}>
-                    
-                </Typography>
             </Grid>
 
             <Grid item>
