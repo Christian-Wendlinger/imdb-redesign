@@ -35,13 +35,13 @@ const useStyle = makeStyles({
         marginBottom: 30
     },
     balken: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#d89d2a",
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
     balkengrau: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63",
         marginTop: 7,
         marginBottom: 7
@@ -61,7 +61,6 @@ export default function OliviaCooke() {
     return (
 
         <div>
-
             <div className={classes.head}>
                 <Container>
                     <Grid container spacing={5}>

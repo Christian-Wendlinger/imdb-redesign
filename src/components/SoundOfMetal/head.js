@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player'
 
 const useStyle = makeStyles({
     balken: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63",
         marginTop: 17,
         marginBottom: 17
@@ -69,7 +69,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                                                           style={{display: "inline"}}>More »</Typography>
                             </Typography>
                         </Grid>
-
+                    
                         <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
                             <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
                         </Grid>

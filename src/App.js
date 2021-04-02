@@ -16,7 +16,7 @@ import OliviaCooke from "./components/pages/OliviaCooke";
 function App() {
     return (
         <Router>
-            <Header/>
+            <Header />
             <Switch>
                 <Route path={"/"} exact>
                     <Homepage/>

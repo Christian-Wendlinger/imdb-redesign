@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // import Swiper core and required modules
@@ -12,7 +12,7 @@ import CastSlide from "../Slides/CastSlide";
 import MoreLikeThis from "../SoundOfMetal/MoreLikeThis";
 import Editorial from "../SoundOfMetal/Editorial";
 import Detail from "../SoundOfMetal/Detail";
-import UserReviewListItem from "../listItems/UserReviewListItem";
+import UserReviewShortItem from "../listItems/UserReviewShortItem";
 import DidYouKnow from "../SoundOfMetal/DidYouKnow";
 import Photos from "../SoundOfMetal/Photos";
 import ShowMore from "../ShowMore";
@@ -38,13 +38,13 @@ const useStyle = makeStyles({
         marginBottom: 30
     },
     balken: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#d89d2a",
         marginTop: ruleMargin,
         marginBottom: ruleMargin
     },
     balkengrau: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63",
         marginTop: 7,
         marginBottom: 7
@@ -60,26 +60,26 @@ export default function SoundOfMetal() {
 
     const classes = useStyle();
     return (
-        <div style={{zIndex: -1, position: "relative"}}>
+        <div>
             <div className={classes.head}>
-                <Container>
-                    <Grid container spacing={5}>
-                        <Grid item xs>
-                            {movies.map(movie => {
-                                return (
-                                    <Head
-                                        poster={movie.poster}
-                                        trailer={movie.trailer}
-                                        trailerPoster={movie.trailerPoster}
-                                        title={movie.title}
-                                        informations={movie.informations}
-                                        description={movie.plotSummary}
-                                    />
-                                );
-                            })}
+                    <Container>
+                        <Grid container spacing={5}>
+                            <Grid item xs>
+                                {movies.map(movie => {
+                                    return (
+                                        <Head
+                                            poster={movie.poster}
+                                            trailer={movie.trailer}
+                                            trailerPoster={movie.trailerPoster}
+                                            title={movie.title}
+                                            informations={movie.informations}
+                                            description={movie.plotSummary}
+                                        />
+                                    );
+                                })}
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Container>
+                    </Container>
             </div>
 
             <Container>
@@ -93,8 +93,9 @@ export default function SoundOfMetal() {
                                                 className={classes.headline}>Cast</Typography>
                                 </Link>
 
-                                <Swiper
+                                <Swiper 
                                     navigation
+                                    simulateTouch={false}
                                     spaceBetween={16}
                                     slidesPerView={5}
                                     slidesPerGroup={5}>
@@ -169,7 +170,7 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"}
                                             className={classes.headline}>Details</Typography>
-                                <Grid container direction={"column"} spacing={0}>
+                                <Grid container direction={"column"} spacing={1}>
                                     {movies[0].details.map((detail, index) => {
                                         return (
                                             <Detail
@@ -193,27 +194,21 @@ export default function SoundOfMetal() {
                                                 className={classes.headline}>Reviews</Typography>
                                 </Link>
 
-                                <Grid container direction={"column"}>
-                                    <UserReviewListItem
+                                <Grid container direction={"column"} spacing={1}>
+                                    <UserReviewShortItem
                                         rating={movies[0].reviews[0].rating}
-                                        author={movies[0].reviews[0].author}
-                                        date={movies[0].reviews[0].date}
                                         title={movies[0].reviews[0].title}
                                         text={movies[0].reviews[0].text}
                                         lastItem={false}
                                     />
-                                    <UserReviewListItem
+                                    <UserReviewShortItem
                                         rating={movies[0].reviews[1].rating}
-                                        author={movies[0].reviews[1].author}
-                                        date={movies[0].reviews[1].date}
                                         title={movies[0].reviews[1].title}
                                         text={movies[0].reviews[1].text}
                                         lastItem={false}
                                     />
-                                    <UserReviewListItem
+                                    <UserReviewShortItem
                                         rating={movies[0].reviews[2].rating}
-                                        author={movies[0].reviews[2].author}
-                                        date={movies[0].reviews[2].date}
                                         title={movies[0].reviews[2].title}
                                         text={movies[0].reviews[2].text}
                                         lastItem={true}
@@ -228,7 +223,7 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You
                                     Know</Typography>
-                                <Grid container direction={"column"} spacing={0}>
+                                <Grid container direction={"column"} spacing={1}>
                                     {movies[0].didYouKnow.map((item, index) => {
                                         return (
                                             <DidYouKnow

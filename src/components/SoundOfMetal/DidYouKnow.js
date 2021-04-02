@@ -3,7 +3,7 @@ import ShowMore from "../ShowMore";
 
 const useStyle = makeStyles({
     balkengrau: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63"
     }
 });

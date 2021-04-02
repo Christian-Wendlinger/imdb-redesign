@@ -7,7 +7,7 @@ const ruleMargin = 3;
 
 const useStyle = makeStyles({
     balken: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63",
         marginTop: ruleMargin,
         marginBottom: ruleMargin

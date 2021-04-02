@@ -50,6 +50,7 @@ const community = [
 export default function Header() {
     const classes = useStyle();
     return (
+        <div style={{position: "relative", zIndex: 2}}>
         <Box boxShadow={10}>
             <nav className={classes.nav}>
                 <Container>
@@ -120,6 +121,7 @@ export default function Header() {
                 </Container>
             </nav>
         </Box>
+        </div>
     )
         ;
 }

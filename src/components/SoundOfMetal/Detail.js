@@ -2,7 +2,7 @@ import {Box, Grid, makeStyles, Typography} from "@material-ui/core";
 
 const useStyle = makeStyles({
     balkengrau: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63"
     }
 });

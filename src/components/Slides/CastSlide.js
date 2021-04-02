@@ -1,7 +1,7 @@
 import {Grid, Typography} from "@material-ui/core";
 import {Link} from "react-router-dom";
 
-export default function BornTodaySlide({image, name, role, link}) {
+export default function CastSlide({image, name, role, link}) {
     return (
         <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
             <Grid item>
