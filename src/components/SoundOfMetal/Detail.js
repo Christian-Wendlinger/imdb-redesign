@@ -28,7 +28,7 @@ export default function Detail({title, pairs, lastItem}) {
                                             <Typography variant={"body1"} color={"text"}>{pair.key}: <Typography
                                                 variant={"body1"} color={"text"} display={"inline"}>{pair.value} <Typography
                                                 variant={"body1"} color={"primary"}
-                                                style={{display: pair.more ? "inline" : "none"}}>More
+                                                style={{display: pair.more ? "inline" : "none", cursor: "pointer"}}>More
                                                 »</Typography></Typography></Typography>
                                         </Grid>
                                     );

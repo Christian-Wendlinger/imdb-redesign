@@ -10,26 +10,37 @@ export const oliviaCooke = [
                 title: "Ready Player One",
                 image: "https://m.media-amazon.com/images/M/MV5BY2JiYTNmZTctYTQ1OC00YjU4LWEwMjYtZjkwY2Y5MDI0OTU3XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_.jpg",
                 rating: "7,4",
-                year: "2018"
+                year: "2018",
+                role: "Art3mis/Samantha"
             },
             {
                 title: "Ich und Earl und das Mädchen",
                 image: "https://m.media-amazon.com/images/M/MV5BNTA1NzUzNjY4MV5BMl5BanBnXkFtZTgwNDU0MDI0NTE@._V1_.jpg",
                 rating: "7,7",
-                year: "2015"
+                year: "2015",
+                role: "Rachel"
             },
             {
                 title: "Sound of Metal",
                 image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
                 rating: "7,8",
                 year: "2019",
-                link: "/movies/tt5363618"
+                link: "/movies/tt5363618",
+                role: "Lou"
             },
             {
                 title: "Vollblüter",
                 image: "https://m.media-amazon.com/images/M/MV5BMTczOTIxNDMxOV5BMl5BanBnXkFtZTgwMDk5OTg4NDM@._V1_.jpg",
                 rating: "6,7",
-                year: "2017"
+                year: "2017",
+                role: "Amanda"
+            },
+            {
+                title: "The Signal",
+                image: "https://m.media-amazon.com/images/M/MV5BNzA4Mjg0ZGEtZjQ5OC00NWQwLTljZmQtNDJmYmEwMDBiNDJiXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_.jpg",
+                rating: "6,1",
+                year: "2014",
+                role: "Haley"
             }
         ],
         poster: "https://m.media-amazon.com/images/M/MV5BOTVkNzI2ZDEtZGEzNy00ZGI0LTkxNDktYTFjZWUyODgyODQ1XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_.jpg",

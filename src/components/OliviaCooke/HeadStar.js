@@ -3,7 +3,7 @@ import {Grid, makeStyles, Typography} from "@material-ui/core";
 
 const useStyle = makeStyles({
     balken: {
-        borderTop: "1px solid",
+        borderTop: "1px",
         borderColor: "#5B5F63",
         marginTop: 17,
         marginBottom: 17
@@ -27,7 +27,7 @@ export default function Head({poster, name, jobs, born, description}) {
                 <Grid item xs={3}>
                     <img src={poster} width={"100%"}/>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={6}>
                     <Grid container direction={"column"}>
                         <Grid item>
                             <Typography variant={"h1"} color={"text"} className={classes.headline}>

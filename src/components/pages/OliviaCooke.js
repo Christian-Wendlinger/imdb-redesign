@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // import Swiper core and required modules
@@ -7,13 +7,12 @@ import SwiperCore, {Navigation} from 'swiper';
 // swiper css
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import HeadStar from "../SoundOfMetal/HeadStar";
+import HeadStar from "../OliviaCooke/HeadStar";
 import Editorial from "../SoundOfMetal/Editorial";
 import DidYouKnow from "../SoundOfMetal/DidYouKnow";
 import Photos from "../SoundOfMetal/Photos";
-import MoviePosterSlide from "../Slides/MoviePosterSlide"
-import StarDetail from "../SoundOfMetal/StarDetails";
-import KnownForTabs from "../SoundOfMetal/KnownForTabs";
+import KnownFor from "../OliviaCooke/KnowFor";
+import KnownForTabs from "../OliviaCooke/KnownForTabs";
 import FilmographySlide from "../Slides/FilmographySlide";
 
 // main css (custom swiper style)
@@ -62,6 +61,7 @@ export default function OliviaCooke() {
 
         <div>
             <div className={classes.head}>
+                <Box boxShadow={5}>
                 <Container>
                     <Grid container spacing={5}>
                         <Grid item xs>
@@ -79,36 +79,31 @@ export default function OliviaCooke() {
                         </Grid>
                     </Grid>
                 </Container>
+                </Box>
             </div>
 
             <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
-                        <Grid container direction={"column"} spacing={4}>
+                        <Grid container direction={"column"} spacing={3}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known
-                                    For</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known For</Typography>
 
-                                <Swiper
-                                    navigation
-                                    spaceBetween={16}
-                                    slidesPerView={4}
-                                    slidesPerGroup={4}>
-                                    {oliviaCooke[0].knownFor.map(title => {
-                                        return (
-                                            <SwiperSlide>
-                                                <MoviePosterSlide
+                                    <Grid container direction={"row"} spacing={2}>
+                                        {oliviaCooke[0].knownFor.map(title => {
+                                            return (
+                                                <KnownFor
                                                     image={title.image}
                                                     title={title.title}
                                                     rating={title.rating}
                                                     year={title.year}
-                                                    link=""
+                                                    link={title.link}
+                                                    role={title.role}
                                                 />
-                                            </SwiperSlide>
-                                        );
-                                    })}
-                                </Swiper>
+                                            );
+                                        })}
+                                    </Grid>
                             </Grid>
 
                             <Grid item style={{width: "100%"}}>
@@ -165,16 +160,42 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Personal
                                     Details</Typography>
-                                <Grid container direction={"column"} spacing={0}>
-                                    {oliviaCooke[0].personalDetails.map(detail => {
-                                        return (
-                                            <StarDetail
-                                                pair={detail}
-                                            />
-                                        );
-                                    })}
+                                        
+                                        <Grid container direction={"row"} spacing={2}>
+                                            <Grid item>
+                                                <Grid container direction={"column"} spacing={0}>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[0].key}: </Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[1].key}: </Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[2].key}: </Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[3].key}: </Typography>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
 
-                                </Grid>
+                                            <Grid item>
+                                                <Grid container direction={"column"} spacing={0}>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[0].value}</Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[1].value}</Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[2].value}</Typography>
+                                                    </Grid>
+                                                    <Grid item>
+                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[3].value}</Typography>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
                             </Grid>
 
                             <Grid item style={{width: "100%"}}>
@@ -248,7 +269,7 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related
                                     News</Typography>
-                                <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
+                                <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                                     <Grid item xs>
                                         <Typography variant={"body2"} color={"text"}>John Boyega’s ‘Naked Singularity’
                                             to Open San Francisco Film Fest <Typography variant={"body2"}
@@ -284,7 +305,7 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial
                                     Lists</Typography>
-                                <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
+                                <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                                     <Grid item xs>
                                         <Editorial
                                             image="https://m.media-amazon.com/images/M/MV5BNzllMDdiZTctZmE2OC00NjFhLThkM2MtMjI1ZjEzYWZhY2MyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX86_CR0,0,86,86_AL_.jpg"

@@ -53,20 +53,20 @@ export default function MoviePosterSlide({image, title, rating, year, role, link
                 </Grid>
             </Grid>
 
-            <Grid item>
-                <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
-                    <Typography variant={"body1"}>
-                        {title} ({year})
-                    </Typography>
-                </Link>
-            </Grid>
-
             <Grid item style={{width: "100%"}}>
                 <hr className={classes.balken}/>
             </Grid>
 
             <Grid item>
-                <Typography variant={"body2"}>as {role}</Typography>
+                    <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
+                        <Typography variant={"body1"}>
+                            {title} ({year})
+                        </Typography>
+                    </Link>
+            </Grid>
+
+            <Grid item>
+                <Typography variant={"body2"} style={{color: "#8d8e8f"}}>as {role}</Typography>
             </Grid>
         </Grid>
     );

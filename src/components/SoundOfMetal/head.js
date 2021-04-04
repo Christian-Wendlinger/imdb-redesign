@@ -2,7 +2,7 @@ import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox} from "@material-ui/icons";
 import React from 'react';
 import ReactPlayer from 'react-player'
-
+import ShowMore from "../ShowMore";
 
 const useStyle = makeStyles({
     balken: {
@@ -40,7 +40,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                 <Grid item xs={3}>
                     <img src={poster} width={"100%"}/>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={6}>
                     <Grid container direction={"column"}>
                         <Grid item>
                             <Typography variant={"h1"} color={"text"} className={classes.headline}>
@@ -65,8 +65,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
 
                         <Grid item>
                             <Typography variant={"body1"}>
-                                {description} <Typography variant={"body1"} color={"primary"}
-                                                          style={{display: "inline"}}>More »</Typography>
+                                {description} <ShowMore variant={"body1"}/>
                             </Typography>
                         </Grid>
                     

@@ -11,7 +11,7 @@ export default function CastSlide({image, name, role, link}) {
             </Grid>
             <Grid item>
                 <Typography variant={"h3"} color={"text"}>{name}</Typography>
-                <Typography variant={"body2"}>as {role}</Typography>
+                <Typography variant={"body2"} style={{color: "#8d8e8f"}}>as {role}</Typography>
             </Grid>
         </Grid>
     );

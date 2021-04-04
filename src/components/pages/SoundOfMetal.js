@@ -62,6 +62,7 @@ export default function SoundOfMetal() {
     return (
         <div>
             <div className={classes.head}>
+                <Box boxShadow={5}>
                     <Container>
                         <Grid container spacing={5}>
                             <Grid item xs>
@@ -80,12 +81,13 @@ export default function SoundOfMetal() {
                             </Grid>
                         </Grid>
                     </Container>
+                </Box>
             </div>
 
             <Container>
                 <Grid container spacing={5}>
                     <Grid item xs={9}>
-                        <Grid container direction={"column"} spacing={4}>
+                        <Grid container direction={"column"} spacing={3}>
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/cast" style={{textDecoration: "none"}}>
@@ -244,14 +246,12 @@ export default function SoundOfMetal() {
                                 <Typography variant={"h2"} color={"primary"}
                                             className={classes.headline}>Questions</Typography>
                                 <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is
-                                    empty. Add the first question. <Typography variant={"body1"} color={"primary"}
-                                                                               display={"inline"}>More
-                                        »</Typography></Typography>
+                                    empty. Add the first question. <ShowMore variant={"body1"}/></Typography>
                             </Grid>
 
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Contribute to
                                     this Page »</Typography>
                             </Grid>
 
