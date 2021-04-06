@@ -151,7 +151,7 @@ export default function SoundOfMetal() {
                                             spaceBetween={16}
                                             slidesPerView={1}
                                             slidesPerGroup={1}>
-                                            {movies[0].photos.map(photos => {
+                                            {movies[0].videos.map(photos => {
                                                 return (
                                                     <SwiperSlide>
                                                         <Photos

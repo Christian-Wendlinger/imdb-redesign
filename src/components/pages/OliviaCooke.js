@@ -14,6 +14,7 @@ import Photos from "../SoundOfMetal/Photos";
 import KnownFor from "../OliviaCooke/KnowFor";
 import KnownForTabs from "../OliviaCooke/KnownForTabs";
 import FilmographySlide from "../Slides/FilmographySlide";
+import ShowMore from "../ShowMore";
 
 // main css (custom swiper style)
 import "../../main_style.css";
@@ -255,7 +256,7 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Contribute to
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Contribute to
                                     this Page »</Typography>
                             </Grid>
 
@@ -272,19 +273,15 @@ export default function OliviaCooke() {
                                 <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                                     <Grid item xs>
                                         <Typography variant={"body2"} color={"text"}>John Boyega’s ‘Naked Singularity’
-                                            to Open San Francisco Film Fest <Typography variant={"body2"}
-                                                                                        color={"primary"}
-                                                                                        display={"inline"}>More
-                                                »</Typography></Typography>
+                                            to Open San Francisco Film Fest <ShowMore variant={"body2"}/>
+                                        </Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
                                     </Grid>
                                     <Grid item xs>
                                         <Typography variant={"body2"} color={"text"}>Three More ‘Game of Thrones’
-                                            Spinoffs in the Works at HBO <Typography variant={"body2"} color={"primary"}
-                                                                                     display={"inline"}>More
-                                                »</Typography></Typography>
+                                            Spinoffs in the Works at HBO <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                     <Grid item style={{width: "100%"}}>
                                         <hr className={classes.balkengrau}/>
@@ -292,8 +289,7 @@ export default function OliviaCooke() {
                                     <Grid item xs>
                                         <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Actor –
                                             Chadwick Boseman Remains the Academy Favorite for ‘Ma Rainey’s Black
-                                            Bottom’ <Typography variant={"body2"} color={"primary"} display={"inline"}>More
-                                                »</Typography></Typography>
+                                            Bottom’ <ShowMore variant={"body2"}/></Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>

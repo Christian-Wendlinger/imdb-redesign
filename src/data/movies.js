@@ -24,7 +24,42 @@ export const movies = [
                 image6: '/photos/soundOfMetalPictures/photo12.png'
             },
         ],
-        videos: "",
+        photos2: [
+            {
+                image: '/photos/soundOfMetalPictures/photo13.png',
+                image2: '/photos/soundOfMetalPictures/photo14.jpg',
+                image3: '/photos/soundOfMetalPictures/photo15.jpg',
+                image4: '/photos/soundOfMetalPictures/photo16.jpg',
+                image5: '/photos/soundOfMetalPictures/photo17.jpg',
+                image6: '/photos/soundOfMetalPictures/photo18.jpg'
+            },
+            {
+                image: '/photos/soundOfMetalPictures/photo19.png',
+                image2: '/photos/soundOfMetalPictures/photo20.jpg',
+                image3: '/photos/soundOfMetalPictures/photo21.jpg',
+                image4: '/photos/soundOfMetalPictures/photo22.jpg',
+                image5: '/photos/soundOfMetalPictures/photo23.jpg',
+                image6: '/photos/soundOfMetalPictures/photo24.jpg'
+            },
+        ],
+        videos: [
+            {
+                image: '/photos/soundOfMetalPictures/video1.png',
+                image2: '/photos/soundOfMetalPictures/video2.png',
+                image3: '/photos/soundOfMetalPictures/video3.png',
+                image4: '/photos/soundOfMetalPictures/video4.png',
+                image5: '/photos/soundOfMetalPictures/video5.png',
+                image6: '/photos/soundOfMetalPictures/video6.png'
+            },
+            {
+                image: '/photos/soundOfMetalPictures/video7.png',
+                image2: '/photos/soundOfMetalPictures/video8.png',
+                image3: '',
+                image4: '',
+                image5: '',
+                image6: ''
+            },
+        ],
         details: [
             {
                 title: "Plot",

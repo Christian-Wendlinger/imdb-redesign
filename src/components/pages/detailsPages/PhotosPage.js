@@ -2,6 +2,14 @@ import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {useEffect} from "react";
 import DetailsHeader from "./DetailsHeader";
 import DetailsNavigation from "./DetailsNavigation";
+import {Swiper, SwiperSlide} from "swiper/react";
+
+// import Swiper core and required modules
+import SwiperCore, {Navigation} from 'swiper';
+import Photos from "../../SoundOfMetal/Photos";
+// main css (custom swiper style)
+import "../../../main_style.css";
+import {movies} from "../../../data/movies";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -29,9 +37,26 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                             pageName={pageName}
                             pageId={pageId}/>
 
-                        <Grid item>
-                            <Grid container direction={"column"} spacing={1}>
-                                Hier Fotos hin
+                        <Grid item xs>
+                            <Grid container direction={"row"} spacing={1}>
+                                <Grid item xs>
+                                    {movies[0].photos.map(photos => {
+                                        return (
+                                            <Photos
+                                                images={photos}
+                                            />
+                                        );
+                                    })}
+                                </Grid>
+                                <Grid item xs>
+                                    {movies[0].photos2.map(photos => {
+                                        return (
+                                            <Photos
+                                                images={photos}
+                                            />
+                                        );
+                                    })}
+                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>

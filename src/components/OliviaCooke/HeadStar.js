@@ -1,5 +1,5 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
-
+import ShowMore from "../ShowMore";
 
 const useStyle = makeStyles({
     balken: {
@@ -54,8 +54,7 @@ export default function Head({poster, name, jobs, born, description}) {
 
                         <Grid item>
                             <Typography variant={"body1"}>
-                                {description} <Typography variant={"body1"} color={"primary"}
-                                                          style={{display: "inline"}}>More »</Typography>
+                                {description} <ShowMore variant={"body1"}/>
                             </Typography>
                         </Grid>
 
