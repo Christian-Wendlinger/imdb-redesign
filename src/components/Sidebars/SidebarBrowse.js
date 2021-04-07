@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../main_style.css";
 import {
     FormControl,
     FormControlLabel,
@@ -14,12 +15,63 @@ import {
     Accordion,
     AccordionSummary,
     AccordionDetails,
-    Button
+    Button,
+    withStyles,
+    NativeSelect
+    
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
 
 const ruleMargin = 15;
+
+const CssTextField = withStyles({
+    root: {
+      '& label.Mui-focused': {
+        color: "#F5C518",
+      },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: "#232427",
+        },
+        '&:hover fieldset': {
+          borderColor: "#5B5F63",
+        },
+      },
+    },
+  })(TextField);
+
+
+  const CssSelect = withStyles({
+    root: {
+      '& label.Mui-focused': {
+        color: "#F5C518",
+      },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: "#232427",
+        },
+        '&:hover fieldset': {
+          borderColor: "#5B5F63",
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: "#F5C518",
+        },
+      },
+    },
+  })(Select);
+
+
+  const GreyRadio = withStyles({
+    root: {
+      color: "#131314",
+      '&$checked': {
+        color: "#131314",
+      },
+    },
+    checked: {},
+  })((props) => <Radio color="default" {...props} />);
+
 
 const useStyle = makeStyles((theme) => ({
     text: {
@@ -37,7 +89,9 @@ const useStyle = makeStyles((theme) => ({
     }, 
 
     select: {
-        backgroundColor: theme.palette.background.default
+        "& ul": {
+            backgroundColor: "#232427",
+        },
     },
 
 }));
@@ -112,35 +166,29 @@ export default function SiderBrowse() {
 
     const [value, setValue] = React.useState("International");
 
-    const handleRadio = (event) => {
-        setValue(event.target.value);
-    };
-
 
     return (
-        <Grid container direction={"column"} spacing={5}>
+        <Grid container direction={"column"} spacing={3}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
                 </Typography>
             </Grid>
-            <Grid item>
                 <SidebarPopover title={"Genres"} 
                     itemsRow1={Genres1}
                     itemsRow2={Genres2}
                     itemsRow3={Genres3}/>
-            </Grid>
-            <Grid item>
+            
                 <SidebarPopover title={"Title Type"} 
                     itemsRow1={TT1}
                     itemsRow2={TT2}
                     itemsRow3={TT3}/>
-            </Grid>
+            
 
 
-            <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
-                    <AccordionSummary
+            <Grid item  style={{marginTop: -5}}>
+                <Accordion className={classes.accordion}>
+                    <AccordionSummary                    
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
@@ -149,15 +197,16 @@ export default function SiderBrowse() {
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
-                                <TextField
+                                <CssTextField
                                     id="Vote-min"
                                     label="Min. Votes"                                 
                                     variant="outlined"
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
-                                    id="Vote-min"
+                                <CssTextField
+                                    className={classes.select}
+                                    id="Vote-max"
                                     label="Max. Votes"
                                     variant="outlined"
                                 />
@@ -168,7 +217,7 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -178,14 +227,14 @@ export default function SiderBrowse() {
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
-                                <TextField
+                                <CssTextField
                                     id="From Date"
                                     label="From Date"                                 
                                     variant="outlined"
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
+                                <CssTextField
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
@@ -206,11 +255,10 @@ export default function SiderBrowse() {
                         <Typography variant={"h3"}>Region</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
-                        <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                                <FormControlLabel value="International" control={<Radio/>} label="International"
-                                                onChange={handleRadio}/>
-                                <FormControlLabel value="English" control={<Radio/>} label="English"/>
-                                <FormControlLabel value="Indian" control={<Radio/>} label="Indian"/>
+                        <RadioGroup aria-label="Region" name="Radio1">
+                                <FormControlLabel value="International" control={<GreyRadio/>} label="International"/>
+                                <FormControlLabel value="English" control={<GreyRadio/>} label="English"/>
+                                <FormControlLabel value="Indian" control={<GreyRadio/>} label="Indian"/>
                         </RadioGroup>
                     </AccordionDetails>
                 </Accordion>
@@ -231,32 +279,30 @@ export default function SiderBrowse() {
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
                     <InputLabel id="YearFrom">Sort</InputLabel>
-                    <Select
+                    <CssSelect
+                        MenuProps={{ classes: { paper: classes.select } }}
+                        className={classes.select}
                         labelId="YearFrom"
                         id="YearFrom"
                         value={age}
                         onChange={handleChange}
                         label="Age"
                     >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={"Popularity"}>Popularity</MenuItem>
-                        <MenuItem value={"Rating"}>Rating</MenuItem>
-                        <MenuItem value={"Box Office"}>Box Office</MenuItem>
-                        <MenuItem value={"Runtime"}>Runtime</MenuItem>
-                        <MenuItem value={"Alphabetic"}>Alphabetic</MenuItem>
-                        <MenuItem value={"Number of Votes"}>Number of Votes</MenuItem>
-                        <MenuItem value={"Release Date"}>Release Date</MenuItem>
-                    </Select>
+                        <MenuItem value={"Popularity"} >Popularity</MenuItem>
+                        <MenuItem value={"Rating"} >Rating</MenuItem>
+                        <MenuItem value={"Box Office"} >Box Office</MenuItem>
+                        <MenuItem value={"Runtime"} >Runtime</MenuItem>
+                        <MenuItem value={"Alphabetic"} >Alphabetic</MenuItem>
+                        <MenuItem value={"Number of Votes"} >Number of Votes</MenuItem>
+                        <MenuItem value={"Release Date"} >Release Date</MenuItem>
+                    </CssSelect>
                 </FormControl>
             </Grid>
 
             <Grid item>
-                        <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                                <FormControlLabel value="Descending" control={<Radio/>} label="Descending"
-                                                onChange={handleRadio}/>
-                                <FormControlLabel value="Ascending" control={<Radio/>} label="Ascending"/>
+                        <RadioGroup aria-label="Sort" name="Radio2">
+                                <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"/>
+                                <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                         </RadioGroup>
             </Grid>
 
