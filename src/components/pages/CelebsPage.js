@@ -1,8 +1,9 @@
 import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import ActorListItem from "../listItems/ActorListItem";
 import {bornToday} from "../../data/bornToday";
 import SidebarBornToday from "../Sidebars/SidebarBornToday";
+import {moviePosters} from "../../data/moviePosters";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -17,17 +18,24 @@ export default function CelebsPage() {
         window.scrollTo(0, 0)
     }, [])
 
+    const [celebs, setCelebs] = useState([...bornToday]);
+
+    const shuffle = () => {
+        let newCelebs = [...celebs].sort(() => Math.random() - 0.5);
+        setCelebs(newCelebs);
+    }
+
     const classes = useStyle();
     return (
         <Container>
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Celebs</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <SidebarBornToday/>
+                    <SidebarBornToday shuffle={shuffle}/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>
-                        {bornToday.map((item, index) => {
+                        {celebs.map((item, index) => {
                                 return (
                                     <ActorListItem
                                         number={index + 1}

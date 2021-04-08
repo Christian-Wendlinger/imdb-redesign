@@ -1,5 +1,5 @@
 import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import BrowseMovieListItem from "../listItems/BrowseMovieListItem";
 import {moviePosters} from "../../data/moviePosters";
 import SidebarBrowse from "../Sidebars/SidebarBrowse";
@@ -17,17 +17,24 @@ export default function BrowsePage() {
         window.scrollTo(0, 0)
     }, [])
 
+    const [movies, setMovies] = useState([...moviePosters]);
+
+    const shuffle = () => {
+        let newMovies = [...movies].sort(() => Math.random() - 0.5);
+        setMovies(newMovies);
+    }
+
     const classes = useStyle();
     return (
         <Container>
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Browse</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <SidebarBrowse/>
+                    <SidebarBrowse shuffle={shuffle}/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={2}>
-                        {moviePosters.map((item, index) => {
+                        {movies.map((item, index) => {
                                 return (
                                     <BrowseMovieListItem
                                         image={item.image}

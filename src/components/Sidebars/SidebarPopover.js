@@ -1,6 +1,15 @@
-import {Box, ClickAwayListener, Grid, makeStyles, Popover, Typography, Checkbox,FormControlLabel, withStyles} from "@material-ui/core";
+import {
+    Box,
+    Checkbox,
+    ClickAwayListener,
+    FormControlLabel,
+    Grid,
+    makeStyles,
+    Popover,
+    Typography,
+    withStyles
+} from "@material-ui/core";
 import React, {useRef, useState} from "react";
-import {Link} from "react-router-dom";
 import {ArrowDropDown, ArrowDropUp} from "@material-ui/icons";
 
 const useStyle = makeStyles((theme) => ({
@@ -26,13 +35,13 @@ const useStyle = makeStyles((theme) => ({
 
 const GreyCheckbox = withStyles({
     root: {
-      color: "#131314",
-      '&$checked': {
-        color: "#F5C518",
-      },
+        color: "#131314",
+        '&$checked': {
+            color: "#F5C518",
+        },
     },
     checked: {},
-  })((props) => <Checkbox color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
 export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3}) {
     const classes = useStyle();
@@ -43,98 +52,132 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
     const popoverEnter = () => setOpenedPopover(true);
     const popoverLeave = () => setOpenedPopover(false);
 
-    const [checked, setChecked] = React.useState(true);
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
-      };
+    const checks = []
+    if (itemsRow1 !== undefined){
+        checks.push(itemsRow1.map(item => item.checked))
+    }
+    if (itemsRow2 !== undefined){
+        checks.push(itemsRow2.map(item => item.checked))
+    }
+    if (itemsRow3 !== undefined){
+        checks.push(itemsRow3.map(item => item.checked))
+    }
+
+    const [checked, setChecked] = useState(checks);
 
     return (
         <ClickAwayListener onClickAway={popoverLeave}>
-            <Grid item style={{marginBottom: 10, backgroundColor: openedPopover ? "#25272a": ""}} ref={popoverAnchor} style={{marginBottom: 18}}>
-                    <Grid container
-                        className={classes.pointer}
-                        direction={"row"} 
-                        justify={"space-between"}
-                        onClick={openedPopover ? popoverLeave : popoverEnter}>
+            <Grid item style={{marginBottom: 10, backgroundColor: openedPopover ? "#25272a" : ""}} ref={popoverAnchor}
+                  style={{marginBottom: 18}}>
+                <Grid container
+                      className={classes.pointer}
+                      direction={"row"}
+                      justify={"space-between"}
+                      onClick={openedPopover ? popoverLeave : popoverEnter}>
 
-                        <Grid item>
-                            <Typography variant={"h3"}>{title}</Typography>
-                        </Grid>
-
-                        <Grid item>
-                            { openedPopover ? <ArrowDropUp className={classes.navArrow}/> : <ArrowDropDown className={classes.navArrow}/>}
-                        </Grid>
+                    <Grid item>
+                        <Typography variant={"h3"}>{title}</Typography>
                     </Grid>
 
-                    <Popover
-                        className={classes.popover}
-                        classes={{
-                            paper: classes.popoverContent,
-                        }}
-                        open={openedPopover}
-                        anchorEl={popoverAnchor.current}
-                        anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'left',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
-                        }}>
-                        <Box p={2} className={classes.menuDropDown}>
-                            <Grid container spacing={2}>
+                    <Grid item>
+                        {openedPopover ? <ArrowDropUp className={classes.navArrow}/> :
+                            <ArrowDropDown className={classes.navArrow}/>}
+                    </Grid>
+                </Grid>
+
+                <Popover
+                    className={classes.popover}
+                    classes={{
+                        paper: classes.popoverContent,
+                    }}
+                    open={openedPopover}
+                    anchorEl={popoverAnchor.current}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'left',
+                    }}>
+                    <Box p={2} className={classes.menuDropDown}>
+                        <Grid container spacing={2}>
+                            <Grid item>
+                                {itemsRow1.map((item, index) => {
+                                    return (
+                                        <Grid item>
+                                            <FormControlLabel control={<GreyCheckbox color="default"/>}
+                                                              label={item.text}
+                                                              checked={checked[0][index]}
+                                                              onChange={() => {
+                                                                  // update internally
+                                                                  checks[0][index] = !checks[0][index];
+                                                                  setChecked(checks);
+
+                                                                  // update permanently
+                                                                  item.checked = !item.checked;
+                                                              }}/>
+                                        </Grid>
+                                    );
+                                })}
+                            </Grid>
+
+                            {itemsRow2 !== undefined &&
+                            [
+                                <Grid item/>,
                                 <Grid item>
                                     <Grid container direction={"column"}>
-                                        <Grid item>
-                                            <FormControlLabel 
-                                                control={<GreyCheckbox checked={checked} onChange={handleChange}/>} label={"All"}/>
-                                        </Grid>
-                                        {itemsRow1.map(item => {
+                                        {itemsRow2.map((item,index) => {
                                             return (
-                                                    <Grid item>
-                                                        <FormControlLabel control={<GreyCheckbox color="default"/>} label={item.text}/>
-                                                    </Grid>
+                                                <Grid item>
+                                                    <FormControlLabel control={<GreyCheckbox color="default"/>}
+                                                                      label={item.text}
+                                                                      checked={checked[1][index]}
+                                                                      onChange={() => {
+                                                                          // update internally
+                                                                          checks[1][index] = !checks[1][index];
+                                                                          setChecked(checks);
+
+                                                                          // update permanently
+                                                                          item.checked = !item.checked;
+                                                                      }}/>
+                                                </Grid>
                                             );
                                         })}
                                     </Grid>
                                 </Grid>
+                            ]
+                            }
 
-                                {itemsRow2 !== undefined &&
-                                [
-                                    <Grid item/>,
-                                    <Grid item>
-                                        <Grid container direction={"column"}>
-                                            {itemsRow2.map(item => {
-                                                return (
-                                                    <Grid item>
-                                                        <FormControlLabel control={<GreyCheckbox color="default"/>} label={item.text}/>
-                                                    </Grid>
-                                                );
-                                            })}
-                                        </Grid>
+                            {itemsRow3 !== undefined &&
+                            [
+                                <Grid item/>,
+                                <Grid item>
+                                    <Grid container direction={"column"}>
+                                        {itemsRow3.map((item, index) => {
+                                            return (
+                                                <Grid item>
+                                                    <FormControlLabel control={<GreyCheckbox color="default"/>}
+                                                                      label={item.text}
+                                                                      checked={checked[2][index]}
+                                                                      onChange={() => {
+                                                                          // update internally
+                                                                          checks[2][index] = !checks[2][index];
+                                                                          setChecked(checks);
+
+                                                                          // update permanently
+                                                                          item.checked = !item.checked;
+                                                                      }}/>
+                                                </Grid>
+                                            );
+                                        })}
                                     </Grid>
-                                ]
-                                }
-                                
-                                {itemsRow3 !== undefined &&
-                                [
-                                    <Grid item/>,
-                                    <Grid item>
-                                        <Grid container direction={"column"}>
-                                            {itemsRow3.map(item => {
-                                                return (
-                                                    <Grid item>
-                                                        <FormControlLabel control={<GreyCheckbox color="default"/>} label={item.text}/>
-                                                    </Grid>
-                                                );
-                                            })}
-                                        </Grid>
-                                    </Grid>
-                                ]
-                                }
-                            </Grid>
-                        </Box>
-                    </Popover>
+                                </Grid>
+                            ]
+                            }
+                        </Grid>
+                    </Box>
+                </Popover>
             </Grid>
         </ClickAwayListener>
     );

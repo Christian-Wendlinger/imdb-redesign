@@ -97,8 +97,8 @@ const useStyle = makeStyles((theme) => ({
     },
 
     expand: {
-        color: theme.palette.text.primary        
-    }, 
+        color: theme.palette.text.primary
+    },
 
     select: {
         backgroundColor: theme.palette.background.default
@@ -107,28 +107,29 @@ const useStyle = makeStyles((theme) => ({
 }));
 
 const ZS1 = [
-    {text: "Capricon"},
-    {text: "Aquarius"},
-    {text: "Pisces"},
-    {text: "Aries"},
-    {text: "Taurus"}
+    {text: "All", checked: true},
+    {text: "Capricon", checked: false},
+    {text: "Aquarius", checked: false},
+    {text: "Pisces", checked: false},
+    {text: "Aries", checked: false},
+    {text: "Taurus", checked: false}
 ];
 
 const ZS2 = [
-    {text: "Gemini"},
-    {text: "Cancer"},
-    {text: "Leo"},
-    {text: "Virgo"},
-    {text: "Libra"}
+    {text: "Gemini", checked: false},
+    {text: "Cancer", checked: false},
+    {text: "Leo", checked: false},
+    {text: "Virgo", checked: false},
+    {text: "Libra", checked: false}
 ];
 
 const ZS3 = [
-    {text: "Scorpio"},
-    {text: "Sagittarius"}
+    {text: "Scorpio", checked: false},
+    {text: "Sagittarius", checked: false}
 ];
 
 
-export default function SidebarBornToday() {
+export default function SidebarBornToday({shuffle}) {
     const classes = useStyle();
 
     const [age, setAge] = React.useState('')
@@ -202,7 +203,7 @@ export default function SidebarBornToday() {
                             <Grid item xs={6}>
                                 <CssTextField
                                     id="From Date"
-                                    label="From Date"                                 
+                                    label="From Date"
                                     variant="outlined"
                                 />
                             </Grid>
@@ -218,16 +219,16 @@ export default function SidebarBornToday() {
                 </Accordion>
             </Grid>
 
-            
-            <SidebarPopover title={"Zodiac Sign"} 
+
+            <SidebarPopover title={"Zodiac Sign"}
                 itemsRow1={ZS1}
                 itemsRow2={ZS2}
                 itemsRow3={ZS3}/>
-            
+
 
             <Grid item>
                 <Typography variant={"h2"}>
-                    
+
                 </Typography>
             </Grid>
 
@@ -266,7 +267,7 @@ export default function SidebarBornToday() {
             </Grid>
 
             <Grid item>
-                <GreyButton variant="outlined">
+                <GreyButton variant="outlined" onClick={shuffle}>
                     Apply
                 </GreyButton>
             </Grid>
