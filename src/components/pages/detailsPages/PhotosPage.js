@@ -1,4 +1,5 @@
 import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
+import Pagination from "@material-ui/lab/Pagination";
 import {useEffect} from "react";
 import DetailsHeader from "./DetailsHeader";
 import DetailsNavigation from "./DetailsNavigation";
@@ -53,7 +54,7 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                 </Grid>
 
                 <Grid item xs={9}>
-                    <Grid container direction={"column"} spacing={3}>
+                    <Grid container direction={"column"} spacing={4}>
                         <DetailsHeader
                             movieTitle={movieTitle}
                             year={year}
@@ -82,6 +83,10 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                                     })}
                                 </Grid>
                             </Grid>
+                        </Grid>
+
+                        <Grid container alignItems="center" justify="center">
+                            <Pagination count={5} color="primary" size="large"/>
                         </Grid>
                     </Grid>
                 </Grid>

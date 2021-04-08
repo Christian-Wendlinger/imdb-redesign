@@ -1,5 +1,6 @@
 import {Container, Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import {Swiper, SwiperSlide} from "swiper/react";
+import Pagination from "@material-ui/lab/Pagination";
 
 // import Swiper core and required modules
 import SwiperCore, {Navigation} from 'swiper';
@@ -272,23 +273,16 @@ export default function SoundOfMetal() {
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
                                     More Like This
                                 </Typography>
-                                <Swiper
-                                    navigation
-                                    spaceBetween={16}
-                                    slidesPerView={3}
-                                    slidesPerGroup={3}>
-                                    {movies[0].moreLikeThis.map(more => {
-                                        return (
-                                            <SwiperSlide>
-                                                <MoreLikeThis
-                                                    image={more.image}
-                                                    image2={more.image2}
-                                                />
-                                            </SwiperSlide>
-                                        );
-                                    })}
-                                </Swiper>
+                                <MoreLikeThis
+                                    images={movies[0].moreLikeThis[0]}
+                                />
                             </Grid>
+                            <Grid item xs>
+                                <Grid container alignItems="center" justify="center">
+                                    <Pagination count={3} color="primary" size="small"/>
+                                </Grid>
+                            </Grid>
+                            
 
                             <Grid item style={{width: "100%"}}>
                                 <hr className={classes.balken}/>
