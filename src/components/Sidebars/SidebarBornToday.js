@@ -14,12 +14,76 @@ import {
     AccordionSummary,
     AccordionDetails,
     Button,
-    Checkbox
+    Checkbox,
+    withStyles,
+    TextField
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
 
 const ruleMargin = 15;
+
+const CssTextField = withStyles({
+    root: {
+      '& label.Mui-focused': {
+        color: "#F5C518",
+      },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: "#232427",
+        },
+        //'&:hover fieldset': {
+        //  borderColor: "#5B5F63",
+        //},
+      },
+    },
+  })(TextField);
+
+  const CssSelect = withStyles({
+    root: {
+      '& label.Mui-focused': {
+        color: "#F5C518",
+      },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: "#232427",
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: "#F5C518",
+        },
+      },
+    },
+  })(Select);
+
+const GreyCheckbox = withStyles({
+    root: {
+      color: "#131314",
+      '&$checked': {
+        color: "#F5C518",
+      },
+    },
+    checked: {},
+  })((props) => <Checkbox color="default" {...props} />);
+
+  const GreyRadio = withStyles({
+    root: {
+      color: "#131314",
+      '&$checked': {
+        color: "#131314",
+      },
+    },
+    checked: {},
+  })((props) => <Radio color="default" {...props} />);
+
+  const GreyButton = withStyles((theme) => ({
+    root: {
+      color: "#F2F2F2",
+      backgroundColor: "#25272a",
+      '&:hover': {
+        backgroundColor: "#25272a",
+      },
+    },
+  }))(Button);
 
 const useStyle = makeStyles((theme) => ({
     text: {
@@ -72,23 +136,27 @@ export default function SidebarBornToday() {
     const handleChange = (event) => {
         setAge(event.target.value);
     };
-
-    const [value, setValue] = React.useState("International");
+    const [value, setValue] = React.useState("Descending");
 
     const handleRadio = (event) => {
         setValue(event.target.value);
     };
 
+    const [checked, setChecked] = React.useState(true);
+    const handleChecked = (event) => {
+        setChecked(event.target.checked);
+      };
+
 
     return (
-        <Grid container direction={"column"} spacing={5}>
+        <Grid container direction={"column"} spacing={3}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
                 </Typography>
             </Grid>
 
-            <Grid item>
+            <Grid item style={{marginTop: -12}}>
                 <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
@@ -98,91 +166,64 @@ export default function SidebarBornToday() {
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
-                                <Grid item>
-                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Actor"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Producer"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Writer"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Director"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<Checkbox color="default"/>} label={"Soundtrack"}/>
-                                </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Actor"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Producer"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Writer"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Director"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Soundtrack"}/>
+                            </Grid>
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
             </Grid>
 
-            <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+            <Grid item style={{marginBottom: 12}}>
+            <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
-                        <Typography variant={"h3"}>Birth Year</Typography>
+                        <Typography variant={"h3"}>Birth Date</Typography>
                     </AccordionSummary>
-                    <Grid container direction={"column"} spacing={2}>
-                            <Grid item>
-                                <Grid container direction={"row"} justify={"space-between"} spacing={2}>
-                                    <Grid item xs={6}>
-                                        <FormControl variant="outlined" fullWidth>
-                                            <InputLabel id="YearFrom">From Year</InputLabel>
-                                            <Select
-                                                labelId="YearFrom"
-                                                id="YearFrom"
-                                                value={age}
-                                                onChange={handleChange}
-                                                label="Age"
-                                            >
-                                                <MenuItem value="">
-                                                    <em>None</em>
-                                                </MenuItem>
-                                                <MenuItem value={2000}>2000</MenuItem>
-                                                <MenuItem value={2001}>2001</MenuItem>
-                                                <MenuItem value={2002}>2002</MenuItem>
-                                                <MenuItem value={2003}>2003</MenuItem>
-                                                <MenuItem value={2004}>2004</MenuItem>
-                                            </Select>
-                                        </FormControl>
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <FormControl variant="outlined" fullWidth>
-                                            <InputLabel id="demo-simple-select-outlined-label">To Year</InputLabel>
-                                            <Select
-                                                labelId="demo-simple-select-outlined-label"
-                                                id="demo-simple-select-outlined"
-                                                value={age}
-                                                onChange={handleChange}
-                                                label="Age"
-                                            >
-                                                <MenuItem value="">
-                                                    <em>None</em>
-                                                </MenuItem>
-                                                <MenuItem value={2000}>2000</MenuItem>
-                                                <MenuItem value={2001}>2001</MenuItem>
-                                                <MenuItem value={2002}>2002</MenuItem>
-                                                <MenuItem value={2003}>2003</MenuItem>
-                                                <MenuItem value={2004}>2004</MenuItem>
-                                            </Select>
-                                        </FormControl>
-                                    </Grid>
-                                </Grid>
+                    <AccordionDetails className={classes.accordion}>
+                        <Grid container direction={"row"} justify={"space-between"} spacing={2}>
+                            <Grid item xs={6}>
+                                <CssTextField
+                                    id="From Date"
+                                    label="From Date"                                 
+                                    variant="outlined"
+                                />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <CssTextField
+                                    id="To Date"
+                                    label="To Date"
+                                    variant="outlined"
+                                />
                             </Grid>
                         </Grid>
+                    </AccordionDetails>
                 </Accordion>
             </Grid>
 
-            <Grid item>
-                <SidebarPopover title={"Zodiac Sign"} 
-                    itemsRow1={ZS1}
-                    itemsRow2={ZS2}
-                    itemsRow3={ZS3}/>
-            </Grid>
+            
+            <SidebarPopover title={"Zodiac Sign"} 
+                itemsRow1={ZS1}
+                itemsRow2={ZS2}
+                itemsRow3={ZS3}/>
+            
 
             <Grid item>
                 <Typography variant={"h2"}>
@@ -190,7 +231,7 @@ export default function SidebarBornToday() {
                 </Typography>
             </Grid>
 
-            <Grid item>
+            <Grid item style={{marginTop: -12}}>
                 <Typography variant={"h2"}>
                     Sort by
                 </Typography>
@@ -198,37 +239,36 @@ export default function SidebarBornToday() {
 
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="YearFrom">Sort</InputLabel>
-                    <Select
+                    <InputLabel id="SortBy">Sort</InputLabel>
+                    <CssSelect
+                        defaultValue={"Popularity"}
+                        MenuProps={{ classes: { paper: classes.select } }}
+                        className={classes.select}
                         labelId="YearFrom"
                         id="YearFrom"
-                        value={age}
                         onChange={handleChange}
-                        label="Age"
+                        label="Sort"
                     >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={"Popularity"}>Popularity</MenuItem>
-                        <MenuItem value={"Alphabetic"}>Alphabetic</MenuItem>
-                        <MenuItem value={"Birth Date"}>Birth Date</MenuItem>
-                        <MenuItem value={"Death Date"}>Death Date</MenuItem>
-                    </Select>
+                        <MenuItem value={"Popularity"} >Popularity</MenuItem>
+                        <MenuItem value={"Alphabetic"} >Alphabetic</MenuItem>
+                        <MenuItem value={"Number of Votes"} >Birth Date</MenuItem>
+                        <MenuItem value={"Release Date"} >Death Date</MenuItem>
+                    </CssSelect>
                 </FormControl>
             </Grid>
 
             <Grid item>
-                        <RadioGroup aria-label="Region" name="Radio1" alue={value} onChange={handleChange}>
-                                <FormControlLabel value="Descending" control={<Radio/>} label="Descending"
-                                                onChange={handleRadio}/>
-                                <FormControlLabel value="Ascending" control={<Radio/>} label="Ascending"/>
-                        </RadioGroup>
+            <RadioGroup aria-label="Asc/Desc" name="Radio1" value={value} onChange={handleRadio}>
+                        <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
+                                        onChange={handleRadio}/>
+                        <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
+                </RadioGroup>
             </Grid>
 
             <Grid item>
-                <Button variant="outlined">
+                <GreyButton variant="outlined">
                     Apply
-                </Button>
+                </GreyButton>
             </Grid>
 
         </Grid>

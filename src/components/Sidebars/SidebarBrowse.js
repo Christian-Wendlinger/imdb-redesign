@@ -209,7 +209,7 @@ export default function SiderBrowse() {
             
 
 
-            <Grid item  style={{marginTop: -5}}>
+            <Grid item  style={{marginTop: -12}}>
                 <Accordion className={classes.accordion}>
                     <AccordionSummary                    
                         className={classes.accordion}
@@ -303,7 +303,7 @@ export default function SiderBrowse() {
 
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="YearFrom">Sort</InputLabel>
+                    <InputLabel id="SortBy">Sort</InputLabel>
                     <CssSelect
                         defaultValue={"Popularity"}
                         MenuProps={{ classes: { paper: classes.select } }}
