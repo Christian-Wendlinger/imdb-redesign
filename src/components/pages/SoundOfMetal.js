@@ -90,9 +90,10 @@ export default function SoundOfMetal() {
                         <Grid container direction={"column"} spacing={3}>
 
                             <Grid item xs>
-                                <Link to="/movies/tt5363618/cast" style={{textDecoration: "none"}}>
-                                    <Typography variant={"h2"} color={"primary"}
-                                                className={classes.headline}>Cast</Typography>
+                                <Link to="/movies/tt5363618/cast" style={{textDecoration: "none", cursor: "pointer"}}>
+                                    <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                                        Cast
+                                    </Typography>
                                 </Link>
 
                                 <Swiper 
@@ -123,9 +124,10 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
                                     <Grid item xs={6}>
-                                        <Link to="/movies/tt5363618/photos" style={{textDecoration: "none"}}>
-                                            <Typography variant={"h2"} color={"primary"}
-                                                        className={classes.headline}>Photos</Typography>
+                                        <Link to="/movies/tt5363618/photos" style={{textDecoration: "none", cursor: "pointer"}}>
+                                            <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                                                Photos
+                                            </Typography>
                                         </Link>
                                         <Swiper
                                             navigation
@@ -144,8 +146,9 @@ export default function SoundOfMetal() {
                                         </Swiper>
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <Typography variant={"h2"} color={"primary"}
-                                                    className={classes.headline}>Videos</Typography>
+                                        <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                            Videos
+                                        </Typography>
                                         <Swiper
                                             navigation
                                             spaceBetween={16}
@@ -170,8 +173,9 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"}
-                                            className={classes.headline}>Details</Typography>
+                                <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}} className={classes.headline}>
+                                    Details
+                                </Typography>
                                 <Grid container direction={"column"} spacing={1}>
                                     {movies[0].details.map((detail, index) => {
                                         return (
@@ -192,8 +196,9 @@ export default function SoundOfMetal() {
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/user-reviews" style={{textDecoration: "none"}}>
-                                    <Typography variant={"h2"} color={"primary"}
-                                                className={classes.headline}>Reviews</Typography>
+                                    <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}} className={classes.headline}>
+                                        Reviews
+                                    </Typography>
                                 </Link>
 
                                 <Grid container direction={"column"} spacing={1}>
@@ -223,8 +228,9 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Did You
-                                    Know</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                    Did You Know
+                                </Typography>
                                 <Grid container direction={"column"} spacing={1}>
                                     {movies[0].didYouKnow.map((item, index) => {
                                         return (
@@ -243,8 +249,9 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"}
-                                            className={classes.headline}>Questions</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                    Questions
+                                </Typography>
                                 <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is
                                     empty. Add the first question. <ShowMore variant={"body1"}/></Typography>
                             </Grid>
@@ -262,8 +269,9 @@ export default function SoundOfMetal() {
                     <Grid item xs={3}>
                         <Grid container direction={"column"} spacing={2}>
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>More Like
-                                    This</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                    More Like This
+                                </Typography>
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
@@ -287,8 +295,9 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Related
-                                    News</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                    Related News
+                                </Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
                                         <Typography variant={"body2"} color={"text"}>Oscars Predictions: Best Picture –
@@ -319,8 +328,9 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Editorial
-                                    Lists</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                    Editorial Lists
+                                </Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
                                     <Grid item xs>
                                         <Editorial

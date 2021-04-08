@@ -22,6 +22,23 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
     return (
         <Container className={classes.firstItem}>
             <Grid container spacing={5}>
+                
+                <Grid item container xs={3}>
+                    <Grid container direction={"column"}>
+                        <Grid item>
+                            <Grid container direction={"column"} spacing={3}>
+                                <Grid item>
+                                    <Typography variant={"h2"}>Navigation</Typography>
+                                </Grid>
+
+                                <Grid item>
+                                    <DetailsNavigation active={5} pageId={pageId}/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
                 <Grid item xs={9}>
                     <Grid container direction={"column"} spacing={3}>
                         <DetailsHeader
@@ -47,21 +64,7 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
                     </Grid>
                 </Grid>
 
-                <Grid item container xs={3}>
-                    <Grid container direction={"column"}>
-                        <Grid item>
-                            <Grid container direction={"column"} spacing={3}>
-                                <Grid item>
-                                    <Typography variant={"h2"}>Navigation</Typography>
-                                </Grid>
-
-                                <Grid item>
-                                    <DetailsNavigation active={5} pageId={pageId}/>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
+                
             </Grid>
         </Container>
     );
