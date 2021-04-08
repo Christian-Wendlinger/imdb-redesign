@@ -16,3 +16,7 @@
 .moviePosterSlider .swiper-button-prev {
     top: 38%;
 }
+
+.MuiMenu-paper{
+    background-color: aqua;
+}
