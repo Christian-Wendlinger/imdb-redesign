@@ -6,7 +6,7 @@ import {ExpandLess, ExpandMore, ArrowDropDown, ArrowDropUp} from "@material-ui/i
 const useStyle = makeStyles((theme) => ({
     menuDropDown: {
         boxShadow: "none",
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: "#25272a ",
     },
     pointer: {
         cursor: "pointer"
@@ -50,7 +50,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
 
     return (
         <ClickAwayListener onClickAway={popoverLeave}>
-            <Grid item style={{marginBottom: 10, backgroundColor: openedPopover ? "#232427": ""}} ref={popoverAnchor}>
+            <Grid item style={{marginBottom: 10, backgroundColor: openedPopover ? "#25272a": ""}} ref={popoverAnchor}>
                     <Grid container
                         className={classes.pointer}
                         direction={"row"} 
@@ -85,6 +85,11 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
                             <Grid container spacing={2}>
                                 <Grid item>
                                     <Grid container direction={"column"}>
+                                        <Grid item>
+                                            <FormControlLabel 
+                                                control={<GreyCheckbox checked={checked} onChange={handleChange}/>} 
+                                                label={"All"}/>
+                                        </Grid>
                                         {itemsRow1.map(item => {
                                             return (
                                                     <Grid item>

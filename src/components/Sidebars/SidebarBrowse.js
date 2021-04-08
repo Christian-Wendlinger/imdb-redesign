@@ -16,8 +16,7 @@ import {
     AccordionSummary,
     AccordionDetails,
     Button,
-    withStyles,
-    NativeSelect
+    withStyles
     
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
@@ -34,9 +33,9 @@ const CssTextField = withStyles({
         '& fieldset': {
           borderColor: "#232427",
         },
-        '&:hover fieldset': {
-          borderColor: "#5B5F63",
-        },
+        //'&:hover fieldset': {
+        //  borderColor: "#5B5F63",
+        //},
       },
     },
   })(TextField);
@@ -50,9 +49,6 @@ const CssTextField = withStyles({
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
           borderColor: "#232427",
-        },
-        '&:hover fieldset': {
-          borderColor: "#5B5F63",
         },
         '&.Mui-focused fieldset': {
           borderColor: "#F5C518",
@@ -71,6 +67,18 @@ const CssTextField = withStyles({
     },
     checked: {},
   })((props) => <Radio color="default" {...props} />);
+
+
+
+  const GreyButton = withStyles((theme) => ({
+    root: {
+      color: "#F2F2F2",
+      backgroundColor: "#25272a",
+      '&:hover': {
+        backgroundColor: "#25272a",
+      },
+    },
+  }))(Button);
 
 
 const useStyle = makeStyles((theme) => ({
@@ -96,8 +104,10 @@ const useStyle = makeStyles((theme) => ({
 
 }));
 
+const c1 = {text: "All"};
+
+
 const Genres1 = [
-    {text: "All"},
     {text: "Sci-Fi"},
     {text: "Action"},
     {text: "Adventure"},
@@ -133,8 +143,10 @@ const Genres3 = [
     {text: "Film-Noir"}
 ];
 
+
+const c2 = {text: "All"};
+
 const TT1 = [
-    {text: "All"},
     {text: "Movies"},
     {text: "TV Shows"},
     {text: "TV Episodes"},
@@ -164,7 +176,16 @@ export default function SiderBrowse() {
         setAge(event.target.value);
     };
 
-    const [value, setValue] = React.useState("International");
+    const [value1, setValue1] = React.useState('International');
+    const [value2, setValue2] = React.useState('Descending');
+
+    const handleRadio1 = (event) => {
+      setValue1(event.target.value);
+    };
+
+    const handleRadio2 = (event) => {
+        setValue2(event.target.value);
+      };
 
 
     return (
@@ -177,12 +198,14 @@ export default function SiderBrowse() {
                 <SidebarPopover title={"Genres"} 
                     itemsRow1={Genres1}
                     itemsRow2={Genres2}
-                    itemsRow3={Genres3}/>
+                    itemsRow3={Genres3}
+                    first={c1}/>
             
                 <SidebarPopover title={"Title Type"} 
                     itemsRow1={TT1}
                     itemsRow2={TT2}
-                    itemsRow3={TT3}/>
+                    itemsRow3={TT3}
+                    first={c2}/>
             
 
 
@@ -255,11 +278,13 @@ export default function SiderBrowse() {
                         <Typography variant={"h3"}>Region</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
-                        <RadioGroup aria-label="Region" name="Radio1">
-                                <FormControlLabel value="International" control={<GreyRadio/>} label="International"/>
-                                <FormControlLabel value="English" control={<GreyRadio/>} label="English"/>
-                                <FormControlLabel value="Indian" control={<GreyRadio/>} label="Indian"/>
-                        </RadioGroup>
+                        <FormControl component="fieldset">
+                            <RadioGroup aria-label="Region" name="Radio1" value={value1} onChange={handleRadio1}>
+                                    <FormControlLabel value="International" control={<GreyRadio/>} label="International"/>
+                                    <FormControlLabel value="English" control={<GreyRadio/>} label="English"/>
+                                    <FormControlLabel value="Indian" control={<GreyRadio/>} label="Indian"/>
+                            </RadioGroup>
+                        </FormControl>
                     </AccordionDetails>
                 </Accordion>
             </Grid>
@@ -280,13 +305,13 @@ export default function SiderBrowse() {
                 <FormControl variant="outlined" fullWidth>
                     <InputLabel id="YearFrom">Sort</InputLabel>
                     <CssSelect
+                        defaultValue={"Popularity"}
                         MenuProps={{ classes: { paper: classes.select } }}
                         className={classes.select}
                         labelId="YearFrom"
                         id="YearFrom"
-                        value={age}
                         onChange={handleChange}
-                        label="Age"
+                        label="Sort"
                     >
                         <MenuItem value={"Popularity"} >Popularity</MenuItem>
                         <MenuItem value={"Rating"} >Rating</MenuItem>
@@ -300,16 +325,18 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                        <RadioGroup aria-label="Sort" name="Radio2">
-                                <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"/>
-                                <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
-                        </RadioGroup>
+                <FormControl component="fieldset">
+                    <RadioGroup aria-label="Sort" name="Radio2" value={value2} onChange={handleRadio2}>
+                            <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"/>
+                            <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
+                    </RadioGroup>
+                </FormControl>
             </Grid>
 
             <Grid item>
-                <Button variant="outlined">
+                <GreyButton variant="outlined">
                     Apply
-                </Button>
+                </GreyButton>
             </Grid>
 
         </Grid>
