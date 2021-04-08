@@ -30,7 +30,7 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#131314",
         },
         //'&:hover fieldset': {
         //  borderColor: "#5B5F63",
@@ -46,7 +46,7 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#25272a",
         },
         '&.Mui-focused fieldset': {
           borderColor: "#F5C518",
@@ -101,7 +101,7 @@ const useStyle = makeStyles((theme) => ({
     },
 
     select: {
-        backgroundColor: theme.palette.background.default
+        backgroundColor: "#25272a"
     },
 
 }));

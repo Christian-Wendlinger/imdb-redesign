@@ -30,7 +30,7 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#131314",
         },
         //'&:hover fieldset': {
         //  borderColor: "#5B5F63",
@@ -56,7 +56,7 @@ const GreyCheckbox = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#131314",
         },
         '&.Mui-focused fieldset': {
           borderColor: "#F5C518",
@@ -89,7 +89,11 @@ const GreyCheckbox = withStyles({
 
 const useStyle = makeStyles((theme) => ({
     text: {
-        color: theme.palette.text.primary
+        color: "#F2F2F2"
+    },
+
+    input: {
+        color: 'F2F2F2'
     },
 
     accordion: {
@@ -103,7 +107,7 @@ const useStyle = makeStyles((theme) => ({
     }, 
 
     select: {
-        backgroundColor: theme.palette.background.default
+        backgroundColor: "#25272a",
     },
 
 }));
@@ -145,7 +149,7 @@ export default function SidebarTopNews() {
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
                         id="panel1a-header">
-                        <Typography variant={"h3"}>Genres</Typography>
+                        <Typography variant={"h3"}>Category</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
@@ -153,22 +157,16 @@ export default function SidebarTopNews() {
                                 <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
                             </Grid>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Variety"}/>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Movie"}/>
                             </Grid>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indiewire"}/>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TV Show"}/>
                             </Grid>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TheW Wrap"}/>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Celibrity"}/>
                             </Grid>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Slash"}/>
-                            </Grid>
-                            <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TV Line"}/>
-                            </Grid>
-                            <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Portal"}/>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indie"}/>
                             </Grid>
                         </Grid>
                     </AccordionDetails>
@@ -223,6 +221,8 @@ export default function SidebarTopNews() {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    className={classes.text}
+                                    InputProps={{ classesName: classes.input,}}
                                     id="From Date"
                                     label="From Date"                                 
                                     variant="outlined"
