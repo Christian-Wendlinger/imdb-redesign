@@ -1,7 +1,7 @@
 import {Box, ClickAwayListener, Grid, makeStyles, Popover, Typography, Checkbox,FormControlLabel, withStyles} from "@material-ui/core";
 import React, {useRef, useState} from "react";
 import {Link} from "react-router-dom";
-import {ExpandLess, ExpandMore, ArrowDropDown, ArrowDropUp} from "@material-ui/icons";
+import {ArrowDropDown, ArrowDropUp} from "@material-ui/icons";
 
 const useStyle = makeStyles((theme) => ({
     menuDropDown: {
@@ -50,7 +50,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
 
     return (
         <ClickAwayListener onClickAway={popoverLeave}>
-            <Grid item style={{marginBottom: 10, backgroundColor: openedPopover ? "#25272a": ""}} ref={popoverAnchor}>
+            <Grid item style={{marginBottom: 18, backgroundColor: openedPopover ? "#25272a": ""}} ref={popoverAnchor}>
                     <Grid container
                         className={classes.pointer}
                         direction={"row"} 
@@ -87,8 +87,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
                                     <Grid container direction={"column"}>
                                         <Grid item>
                                             <FormControlLabel 
-                                                control={<GreyCheckbox checked={checked} onChange={handleChange}/>} 
-                                                label={"All"}/>
+                                                control={<GreyCheckbox checked={checked} onChange={handleChange}/>} label={"All"}/>
                                         </Grid>
                                         {itemsRow1.map(item => {
                                             return (
