@@ -31,7 +31,7 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#131314",
         },
         //'&:hover fieldset': {
         //  borderColor: "#5B5F63",
@@ -48,7 +48,7 @@ const CssTextField = withStyles({
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: "#232427",
+          borderColor: "#131314",
         },
         '&.Mui-focused fieldset': {
           borderColor: "#F5C518",
@@ -97,9 +97,9 @@ const useStyle = makeStyles((theme) => ({
     }, 
 
     select: {
-        "& ul": {
-            backgroundColor: "#232427",
-        },
+        
+            backgroundColor: "#25272a",
+        
     },
 
 }));
@@ -221,6 +221,7 @@ export default function SiderBrowse() {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    className={classes.select}
                                     id="Vote-min"
                                     label="Min. Votes"                                 
                                     variant="outlined"
