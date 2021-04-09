@@ -25,19 +25,19 @@ const ruleMargin = 15;
 
 const CssTextField = withStyles({
     root: {
-        '& label.Mui-focused': {
-            color: "#F5C518",
+      '& label.Mui-focused': {
+        color: "#F5C518",
+      },
+     // '& .MuiOutlinedInput-root': {
+     //   '& fieldset': {
+     //     borderColor: "#131314",
         },
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                borderColor: "#232427",
-            },
-            //'&:hover fieldset': {
-            //  borderColor: "#5B5F63",
-            //},
-        },
-    },
-})(TextField);
+        //'&:hover fieldset': {
+        //  borderColor: "#5B5F63",
+        //},
+    //  },
+   // },
+  })(TextField);
 
 
 const CssSelect = withStyles({
@@ -81,7 +81,7 @@ const GreyButton = withStyles((theme) => ({
 
 const useStyle = makeStyles((theme) => ({
     text: {
-        color: theme.palette.text.primary
+        backgroundColor: "#25272a",
     },
 
     accordion: {
@@ -95,9 +95,17 @@ const useStyle = makeStyles((theme) => ({
     },
 
     select: {
-        "& ul": {
-            backgroundColor: "#232427",
-        },
+        backgroundColor: "#25272a"
+    },
+
+    icon: {
+        fill: "#F2F2F2",
+        fontSize: 32,
+        marginTop: -5,
+    },
+
+    input: {
+        color: '#828282'
     },
 
 }));
@@ -215,6 +223,8 @@ export default function SiderBrowse({shuffle}) {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}                                
                                     id="Vote-min"
                                     label="Min. Votes"
                                     variant="outlined"
@@ -222,7 +232,8 @@ export default function SiderBrowse({shuffle}) {
                             </Grid>
                             <Grid item xs={6}>
                                 <CssTextField
-                                    className={classes.select}
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}
                                     id="Vote-max"
                                     label="Max. Votes"
                                     variant="outlined"
@@ -245,6 +256,8 @@ export default function SiderBrowse({shuffle}) {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}                                
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
@@ -252,6 +265,8 @@ export default function SiderBrowse({shuffle}) {
                             </Grid>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}                                
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
@@ -297,15 +312,18 @@ export default function SiderBrowse({shuffle}) {
 
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="SortBy">Sort</InputLabel>
                     <CssSelect
                         defaultValue={"Popularity"}
                         MenuProps={{classes: {paper: classes.select}}}
                         className={classes.select}
+                        inputProps={{
+                            classes: {
+                                icon: classes.icon,
+                            },
+                        }}
                         labelId="YearFrom"
                         id="YearFrom"
                         onChange={handleChange}
-                        label="Sort"
                     >
                         <MenuItem value={"Popularity"}>Popularity</MenuItem>
                         <MenuItem value={"Rating"}>Rating</MenuItem>

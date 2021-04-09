@@ -3,9 +3,21 @@ import {
     Grid,
     makeStyles,
     Typography,
-    Button
+    Button,
+    withStyles
 } from "@material-ui/core";
 import SidebarPopover from "./SidebarPopover";
+
+
+const GreyButton = withStyles((theme) => ({
+    root: {
+        color: "#F2F2F2",
+        backgroundColor: "#25272a",
+        '&:hover': {
+            backgroundColor: "#25272a",
+        },
+    },
+}))(Button);
 
 
 const useStyle = makeStyles((theme) => ({
@@ -90,9 +102,9 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <Button variant="outlined">
+                <GreyButton variant="outlined">
                     Apply
-                </Button>
+                </GreyButton>
             </Grid>
 
         </Grid>

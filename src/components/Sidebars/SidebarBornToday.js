@@ -3,7 +3,6 @@ import {
     FormControl,
     FormControlLabel,
     Grid,
-    InputLabel,
     makeStyles,
     MenuItem,
     Radio,
@@ -28,15 +27,15 @@ const CssTextField = withStyles({
       '& label.Mui-focused': {
         color: "#F5C518",
       },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: "#131314",
+     // '& .MuiOutlinedInput-root': {
+     //   '& fieldset': {
+     //     borderColor: "#131314",
         },
         //'&:hover fieldset': {
         //  borderColor: "#5B5F63",
         //},
-      },
-    },
+    //  },
+   // },
   })(TextField);
 
   const CssSelect = withStyles({
@@ -87,7 +86,7 @@ const GreyCheckbox = withStyles({
 
 const useStyle = makeStyles((theme) => ({
     text: {
-        color: theme.palette.text.primary
+        backgroundColor: "#25272a",
     },
 
     accordion: {
@@ -104,6 +103,15 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: "#25272a"
     },
 
+    icon: {
+        fill: "#F2F2F2",
+        fontSize: 32,
+        marginTop: -5,
+    },
+
+    input: {
+        color: '#828282'
+    },
 }));
 
 const ZS1 = [
@@ -111,23 +119,22 @@ const ZS1 = [
     {text: "Capricon", checked: false},
     {text: "Aquarius", checked: false},
     {text: "Pisces", checked: false},
-    {text: "Aries", checked: false},
-    {text: "Taurus", checked: false}
+    {text: "Aries", checked: false}
 ];
 
 const ZS2 = [
+    {text: "Taurus", checked: false},
     {text: "Gemini", checked: false},
     {text: "Cancer", checked: false},
     {text: "Leo", checked: false},
-    {text: "Virgo", checked: false},
-    {text: "Libra", checked: false}
+    {text: "Virgo", checked: false}
 ];
 
 const ZS3 = [
+    {text: "Libra", checked: false},
     {text: "Scorpio", checked: false},
     {text: "Sagittarius", checked: false}
 ];
-
 
 export default function SidebarBornToday({shuffle}) {
     const classes = useStyle();
@@ -202,6 +209,8 @@ export default function SidebarBornToday({shuffle}) {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
@@ -209,6 +218,8 @@ export default function SidebarBornToday({shuffle}) {
                             </Grid>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
@@ -240,15 +251,18 @@ export default function SidebarBornToday({shuffle}) {
 
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="SortBy">Sort</InputLabel>
                     <CssSelect
                         defaultValue={"Popularity"}
                         MenuProps={{ classes: { paper: classes.select } }}
+                        inputProps={{
+                            classes: {
+                                icon: classes.icon,
+                            },
+                        }}
                         className={classes.select}
                         labelId="YearFrom"
                         id="YearFrom"
                         onChange={handleChange}
-                        label="Sort"
                     >
                         <MenuItem value={"Popularity"} >Popularity</MenuItem>
                         <MenuItem value={"Alphabetic"} >Alphabetic</MenuItem>

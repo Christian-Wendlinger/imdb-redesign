@@ -3,7 +3,6 @@ import {
     FormControl,
     FormControlLabel,
     Grid,
-    InputLabel,
     makeStyles,
     MenuItem,
     Radio,
@@ -28,15 +27,15 @@ const CssTextField = withStyles({
       '& label.Mui-focused': {
         color: "#F5C518",
       },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: "#131314",
+     // '& .MuiOutlinedInput-root': {
+     //   '& fieldset': {
+     //     borderColor: "#131314",
         },
         //'&:hover fieldset': {
         //  borderColor: "#5B5F63",
         //},
-      },
-    },
+    //  },
+   // },
   })(TextField);
 
 const GreyCheckbox = withStyles({
@@ -89,11 +88,11 @@ const GreyCheckbox = withStyles({
 
 const useStyle = makeStyles((theme) => ({
     text: {
-        color: "#F2F2F2"
+        backgroundColor: "#25272a",
     },
 
     input: {
-        color: 'F2F2F2'
+        color: '#828282'
     },
 
     accordion: {
@@ -108,6 +107,12 @@ const useStyle = makeStyles((theme) => ({
 
     select: {
         backgroundColor: "#25272a",
+    },
+
+    icon: {
+        fill: "#F2F2F2",
+        fontSize: 32,
+        marginTop: -5,
     },
 
 }));
@@ -163,7 +168,7 @@ export default function SidebarTopNews({shuffle}) {
                                 <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TV Show"}/>
                             </Grid>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Celibrity"}/>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Celebrity"}/>
                             </Grid>
                             <Grid item>
                                 <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indie"}/>
@@ -193,7 +198,7 @@ export default function SidebarTopNews({shuffle}) {
                                     <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indiewire"}/>
                                 </Grid>
                                 <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TheW Wrap"}/>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Wrap"}/>
                                 </Grid>
                                 <Grid item>
                                     <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Slash"}/>
@@ -221,8 +226,8 @@ export default function SidebarTopNews({shuffle}) {
                         <Grid container direction={"row"} justify={"space-between"} spacing={2}>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
                                     className={classes.text}
-                                    InputProps={{ classesName: classes.input,}}
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
@@ -230,6 +235,8 @@ export default function SidebarTopNews({shuffle}) {
                             </Grid>
                             <Grid item xs={6}>
                                 <CssTextField
+                                    InputLabelProps={{className: classes.input}}
+                                    className={classes.text}
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
@@ -254,15 +261,18 @@ export default function SidebarTopNews({shuffle}) {
 
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="SortBy">Sort</InputLabel>
                     <CssSelect
                         defaultValue={"Popularity"}
                         MenuProps={{ classes: { paper: classes.select } }}
                         className={classes.select}
+                        inputProps={{
+                            classes: {
+                                icon: classes.icon,
+                            },
+                        }}
                         labelId="YearFrom"
                         id="YearFrom"
                         onChange={handleChange}
-                        label="Sort"
                     >
                         <MenuItem value={"Popularity"} >Popularity</MenuItem>
                         <MenuItem value={"Release Date"} >Alphabetic</MenuItem>
