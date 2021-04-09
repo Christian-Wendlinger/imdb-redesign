@@ -1,7 +1,7 @@
 import {Box, ClickAwayListener, Grid, makeStyles, Popover, Typography} from "@material-ui/core";
 import React, {useRef, useState} from "react";
 import {Link} from "react-router-dom";
-import {ExpandMore} from "@material-ui/icons";
+import {ExpandLess, ExpandMore} from "@material-ui/icons";
 
 const useStyle = makeStyles((theme) => ({
     menuDropDown: {
@@ -45,7 +45,7 @@ export default function NavPopover({title, itemsRow1, itemsRow2}) {
                     </Grid>
 
                     <Grid item>
-                        <ExpandMore fontSize={"small"} className={classes.navArrow}/>
+                        {openedPopover ? <ExpandLess fontSize={"small"} className={classes.navArrow}/> : <ExpandMore fontSize={"small"} className={classes.navArrow}/>}
                     </Grid>
                 </Grid>
 
