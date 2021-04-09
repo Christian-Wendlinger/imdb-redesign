@@ -8,7 +8,6 @@ import {
     FormControl,
     FormControlLabel,
     Grid,
-    InputLabel,
     makeStyles,
     MenuItem,
     Radio,
@@ -16,7 +15,8 @@ import {
     Select,
     TextField,
     Typography,
-    withStyles
+    withStyles,
+    Checkbox
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -55,6 +55,16 @@ const CssSelect = withStyles({
         },
     },
 })(Select);
+
+const GreyCheckbox = withStyles({
+    root: {
+      color: "#131314",
+      '&$checked': {
+        color: "#F5C518",
+      },
+    },
+    checked: {},
+  })((props) => <Checkbox color="default" {...props} />);
 
 
 const GreyRadio = withStyles({
@@ -190,6 +200,11 @@ export default function SiderBrowse({shuffle}) {
         setValue2(event.target.value);
     };
 
+    const [checked, setChecked] = React.useState(true);
+    const handleChecked = (event) => {
+        setChecked(event.target.checked);
+      };
+
 
     return (
         <Grid container direction={"column"} spacing={3}>
@@ -272,6 +287,45 @@ export default function SiderBrowse({shuffle}) {
                                     variant="outlined"
                                 />
                             </Grid>
+                        </Grid>
+                    </AccordionDetails>
+                </Accordion>
+            </Grid>
+
+            <Grid item>
+                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                    <AccordionSummary
+                        className={classes.accordion}
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Streaming Service</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={classes.accordion}>
+                        <Grid container direction={"column"}>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Prime Video"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Filmtastic"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MGM"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Starzplay"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MUBI"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"BBC Player"}/>
+                                </Grid>
+                                <Grid item>
+                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Sony"}/>
+                                </Grid>
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
