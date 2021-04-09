@@ -346,9 +346,20 @@ export default function SiderBrowse({shuffle}) {
             </Grid>
 
             <Grid item>
-                <GreyButton variant="outlined" onClick={shuffle}>
-                    Apply
-                </GreyButton>
+                <Grid container direction={"row"} spacing="2">
+                    <Grid item>
+                        <GreyButton variant="outlined" onClick={shuffle}>
+                            Apply
+                        </GreyButton>
+                    </Grid>
+
+                    <Grid item>
+                        <GreyButton variant="outlined">
+                            Reset
+                        </GreyButton>
+                    </Grid>
+                    
+                </Grid>
             </Grid>
 
         </Grid>

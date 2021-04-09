@@ -102,9 +102,20 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <GreyButton variant="outlined">
-                    Apply
-                </GreyButton>
+                <Grid container direction={"row"} spacing="2">
+                    <Grid item>
+                        <GreyButton variant="outlined">
+                            Apply
+                        </GreyButton>
+                    </Grid>
+
+                    <Grid item>
+                        <GreyButton variant="outlined">
+                            Reset
+                        </GreyButton>
+                    </Grid>
+                    
+                </Grid>
             </Grid>
 
         </Grid>
