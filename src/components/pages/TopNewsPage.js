@@ -1,8 +1,9 @@
 import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
 import {news} from "../../data/news";
 import NewsListItem from "../listItems/NewsListItem";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import SidebarTopNews from "../Sidebars/SidebarTopNews";
+import {moviePosters} from "../../data/moviePosters";
 
 const useStyle = makeStyles({
     firstItem: {
@@ -17,17 +18,24 @@ export default function TopNewsPage() {
         window.scrollTo(0, 0)
     }, [])
 
+    const [topNews, setNews] = useState([...news]);
+
+    const shuffle = () => {
+        let newMovies = [...topNews].sort(() => Math.random() - 0.5);
+        setNews(newMovies);
+    }
+
     const classes = useStyle();
     return (
         <Container>
             <Typography variant={"h1"} color={"primary"} className={classes.firstItem}>Top News</Typography>
             <Grid container spacing={5}>
                 <Grid item container xs={3}>
-                    <SidebarTopNews/>
+                    <SidebarTopNews shuffle={shuffle}/>
                 </Grid>
                 <Grid item container xs={9}>
                     <Grid container direction={"column"} spacing={1}>
-                        {news.map((item, index) => {
+                        {topNews.map((item, index) => {
                                 return (
                                     <NewsListItem
                                         image={item.image}

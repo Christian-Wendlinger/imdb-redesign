@@ -36,14 +36,14 @@ const useStyle = makeStyles(theme => ({
 export default function MainSlide({image, title, rating, age, runtime, genres, year, description, creator, stars}) {
     const classes = useStyle();
     return (
-        <div className={classes.rightSide}>
+        <div>
             <Grid container spacing={2}>
                 <Grid item xs={6} style={{cursor: "pointer"}}>
                     <img src={image} width={"100%"}/>
                 </Grid>
 
                 <Grid item xs={6}>
-                    <Grid container direction={"column"}>
+                    <Grid container direction={"column"}className={classes.rightSide}>
                         <Grid item>
                             <Grid container direction={"row"} spacing={1} alignItems={"center"}
                                   className={classes.headlineRow}>

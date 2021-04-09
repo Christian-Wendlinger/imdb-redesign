@@ -10,7 +10,7 @@ export const moviePosters = [
         director: "Darius Marder, Abraham Marder",
         stars: "Riz Ahmed, Olivia Cooke, Paul Raci",
         votes: "45.695",
-        gross: "$ 148,476",
+        gross: "$ 148.476",
         description: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing. He goes to a pharmacy in order to figure out what is happening to him. The pharmacist refers him to a doctor that Ruben is able to see immediately. The doctor performs a hearing test and determines Ruben can only successfully hear 20-30 percent of words and his hearing will continue to deteriorate rapidly.",
         link: "/movies/tt5363618"
     },
@@ -25,7 +25,7 @@ export const moviePosters = [
         director: "John Landis",
         stars: "Eddie Murphy, Paul Bates, Garcelle Beauvais",
         votes: "187.647",
-        gross: "$ 288,752,301",
+        gross: "$ 288.752.301",
         description: "Immersed in luxury and riches, the courteous blue blood and refined heir apparent to Africa's prosperous kingdom of Zamunda, Prince Akeem, summons up the courage to reject an arranged marriage proposal on his twenty-first birthday. Bent on finding true love, the young aristocrat along with his trusted valet, Semmi, find themselves in the strange and unknown urban jungle of New York City's Queens, trying to mingle with their neighbours by posing as humble exchange students.",
     },
     {

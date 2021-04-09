@@ -103,8 +103,8 @@ const useStyle = makeStyles((theme) => ({
     },
 
     expand: {
-        color: theme.palette.text.primary        
-    }, 
+        color: theme.palette.text.primary
+    },
 
     select: {
         backgroundColor: "#25272a",
@@ -114,7 +114,7 @@ const useStyle = makeStyles((theme) => ({
 
 
 
-export default function SidebarTopNews() {
+export default function SidebarTopNews({shuffle}) {
     const classes = useStyle();
 
     const [age, setAge] = React.useState('')
@@ -224,7 +224,7 @@ export default function SidebarTopNews() {
                                     className={classes.text}
                                     InputProps={{ classesName: classes.input,}}
                                     id="From Date"
-                                    label="From Date"                                 
+                                    label="From Date"
                                     variant="outlined"
                                 />
                             </Grid>
@@ -242,7 +242,7 @@ export default function SidebarTopNews() {
 
             <Grid item>
                 <Typography variant={"h2"}>
-                    
+
                 </Typography>
             </Grid>
 
@@ -282,7 +282,7 @@ export default function SidebarTopNews() {
 
 
             <Grid item>
-                <GreyButton variant="outlined">
+                <GreyButton variant="outlined" onClick={shuffle}>
                     Apply
                 </GreyButton>
             </Grid>
