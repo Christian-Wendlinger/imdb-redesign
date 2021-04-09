@@ -100,10 +100,14 @@ export default function Homepage() {
                 </Grid>
 
                 <Grid item xs>
-                    <Typography variant={"h2"} className={classes.headline}>
-                        Explore what's streaming
-                    </Typography>
+                    <Link to={"/browse"} style={{textDecoration: "none"}}>
+                        <Typography variant={"h2"} color={"primary"} className={classes.headline}>
+                            Explore what's streaming
+                        </Typography>
+                    </Link>
+
                     <HomeTabs shuffle={() => setExplore([...moviePosters].sort(() => Math.random() - 0.5))}/>
+
                     <Swiper
                         simulateTouch={false}
                         navigation
