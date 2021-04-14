@@ -48,7 +48,9 @@ export default function Homepage() {
         <Container>
             <Grid container direction={"column"} spacing={5} className={classes.firstItem}>
                 <Grid item xs>
-                    <Typography variant={"h2"} className={classes.headline}>Featured</Typography>
+                    <Link to={""} style={{textDecoration: "none"}}>
+                        <Typography variant={"h2"} className={classes.headline} color={"primary"}>Featured</Typography>
+                    </Link>
                     <Swiper navigation loop simulateTouch={false}>
                         {detailedMovieData.map(movie => {
                             return (

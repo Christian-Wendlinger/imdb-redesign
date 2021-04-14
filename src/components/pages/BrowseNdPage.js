@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import React, {useEffect} from "react";
 import BrowseMovieNdListItem from "../listItems/BrowseMovieNdListItem";
 import {moviePosters} from "../../data/moviePosters";

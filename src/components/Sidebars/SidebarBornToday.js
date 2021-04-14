@@ -1,5 +1,10 @@
 import React from 'react';
 import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Button,
+    Checkbox,
     FormControl,
     FormControlLabel,
     Grid,
@@ -8,14 +13,9 @@ import {
     Radio,
     RadioGroup,
     Select,
+    TextField,
     Typography,
-    Accordion,
-    AccordionSummary,
-    AccordionDetails,
-    Button,
-    Checkbox,
-    withStyles,
-    TextField
+    withStyles
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -24,65 +24,65 @@ const ruleMargin = 15;
 
 const CssTextField = withStyles({
     root: {
-      '& label.Mui-focused': {
-        color: "#F5C518",
-      },
-     // '& .MuiOutlinedInput-root': {
-     //   '& fieldset': {
-     //     borderColor: "#131314",
+        '& label.Mui-focused': {
+            color: "#F5C518",
         },
-        //'&:hover fieldset': {
-        //  borderColor: "#5B5F63",
-        //},
-    //  },
-   // },
-  })(TextField);
-
-  const CssSelect = withStyles({
-    root: {
-      '& label.Mui-focused': {
-        color: "#F5C518",
-      },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: "#25272a",
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: "#F5C518",
-        },
-      },
+        // '& .MuiOutlinedInput-root': {
+        //   '& fieldset': {
+        //     borderColor: "#131314",
     },
-  })(Select);
+    //'&:hover fieldset': {
+    //  borderColor: "#5B5F63",
+    //},
+    //  },
+    // },
+})(TextField);
+
+const CssSelect = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: "#F5C518",
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: "#25272a",
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: "#F5C518",
+            },
+        },
+    },
+})(Select);
 
 const GreyCheckbox = withStyles({
     root: {
-      color: "#131314",
-      '&$checked': {
-        color: "#F5C518",
-      },
-    },
-    checked: {},
-  })((props) => <Checkbox color="default" {...props} />);
-
-  const GreyRadio = withStyles({
-    root: {
-      color: "#131314",
-      '&$checked': {
         color: "#131314",
-      },
+        '&$checked': {
+            color: "#F5C518",
+        },
     },
     checked: {},
-  })((props) => <Radio color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
-  const GreyButton = withStyles((theme) => ({
+const GreyRadio = withStyles({
     root: {
-      color: "#F2F2F2",
-      backgroundColor: "#25272a",
-      '&:hover': {
-        backgroundColor: "#25272a",
-      },
+        color: "#131314",
+        '&$checked': {
+            color: "#131314",
+        },
     },
-  }))(Button);
+    checked: {},
+})((props) => <Radio color="default" {...props} />);
+
+const GreyButton = withStyles((theme) => ({
+    root: {
+        color: "#F2F2F2",
+        backgroundColor: "#25272a",
+        '&:hover': {
+            backgroundColor: "#25272a",
+        },
+    },
+}))(Button);
 
 const useStyle = makeStyles((theme) => ({
     text: {
@@ -92,7 +92,7 @@ const useStyle = makeStyles((theme) => ({
     accordion: {
         backgroundColor: theme.palette.background.default,
         padding: 0,
-        boxShadow : "none"
+        boxShadow: "none"
     },
 
     expand: {
@@ -153,7 +153,7 @@ export default function SidebarBornToday({shuffle}) {
     const [checked, setChecked] = React.useState(true);
     const handleChecked = (event) => {
         setChecked(event.target.checked);
-      };
+    };
 
 
     return (
@@ -165,7 +165,7 @@ export default function SidebarBornToday({shuffle}) {
             </Grid>
 
             <Grid item style={{marginTop: -12}}>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -175,7 +175,8 @@ export default function SidebarBornToday({shuffle}) {
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>}
+                                                  label={"All"}/>
                             </Grid>
                             <Grid item>
                                 <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Actor"}/>
@@ -198,7 +199,7 @@ export default function SidebarBornToday({shuffle}) {
             </Grid>
 
             <Grid item style={{marginBottom: 12}}>
-            <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -232,9 +233,9 @@ export default function SidebarBornToday({shuffle}) {
 
 
             <SidebarPopover title={"Zodiac Sign"}
-                itemsRow1={ZS1}
-                itemsRow2={ZS2}
-                itemsRow3={ZS3}/>
+                            itemsRow1={ZS1}
+                            itemsRow2={ZS2}
+                            itemsRow3={ZS3}/>
 
 
             <Grid item>
@@ -253,7 +254,7 @@ export default function SidebarBornToday({shuffle}) {
                 <FormControl variant="outlined" fullWidth>
                     <CssSelect
                         defaultValue={"Popularity"}
-                        MenuProps={{ classes: { paper: classes.select } }}
+                        MenuProps={{classes: {paper: classes.select}}}
                         inputProps={{
                             classes: {
                                 icon: classes.icon,
@@ -264,19 +265,19 @@ export default function SidebarBornToday({shuffle}) {
                         id="YearFrom"
                         onChange={handleChange}
                     >
-                        <MenuItem value={"Popularity"} >Popularity</MenuItem>
-                        <MenuItem value={"Alphabetic"} >Alphabetic</MenuItem>
-                        <MenuItem value={"Number of Votes"} >Birth Date</MenuItem>
-                        <MenuItem value={"Release Date"} >Death Date</MenuItem>
+                        <MenuItem value={"Popularity"}>Popularity</MenuItem>
+                        <MenuItem value={"Alphabetic"}>Alphabetic</MenuItem>
+                        <MenuItem value={"Number of Votes"}>Birth Date</MenuItem>
+                        <MenuItem value={"Release Date"}>Death Date</MenuItem>
                     </CssSelect>
                 </FormControl>
             </Grid>
 
             <Grid item>
-            <RadioGroup aria-label="Asc/Desc" name="Radio1" value={value} onChange={handleRadio}>
-                        <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
-                                        onChange={handleRadio}/>
-                        <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
+                <RadioGroup aria-label="Asc/Desc" name="Radio1" value={value} onChange={handleRadio}>
+                    <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
+                                      onChange={handleRadio}/>
+                    <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                 </RadioGroup>
             </Grid>
 
@@ -293,7 +294,7 @@ export default function SidebarBornToday({shuffle}) {
                             Reset
                         </GreyButton>
                     </Grid>
-                    
+
                 </Grid>
             </Grid>
 

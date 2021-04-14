@@ -91,7 +91,7 @@ export default function PhotosPage({movieTitle, year, rating, pageName, pageId})
                     </Grid>
                 </Grid>
 
-                
+
             </Grid>
         </Container>
     );

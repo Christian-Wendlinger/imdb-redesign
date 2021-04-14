@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    Grid,
-    makeStyles,
-    Typography,
-    Button,
-    withStyles
-} from "@material-ui/core";
+import {Button, Grid, makeStyles, Typography, withStyles} from "@material-ui/core";
 import SidebarPopover from "./SidebarPopover";
 
 
@@ -25,8 +19,8 @@ const useStyle = makeStyles((theme) => ({
         color: theme.palette.text.primary
     },
     expand: {
-        color: theme.palette.text.primary        
-    }, 
+        color: theme.palette.text.primary
+    },
 
     select: {
         backgroundColor: theme.palette.background.default
@@ -86,19 +80,19 @@ export default function SiderBrowse() {
                 </Typography>
             </Grid>
             <Grid item>
-                <SidebarPopover title={"Type"} 
-                    itemsRow1={Type1}
-                    itemsRow2={Type2}/>
+                <SidebarPopover title={"Type"}
+                                itemsRow1={Type1}
+                                itemsRow2={Type2}/>
             </Grid>
             <Grid item>
-                <SidebarPopover title={"Person"} 
-                    itemsRow1={Person1}
-                    itemsRow2={Person2}/>
+                <SidebarPopover title={"Person"}
+                                itemsRow1={Person1}
+                                itemsRow2={Person2}/>
             </Grid>
             <Grid item>
-                <SidebarPopover title={"Theme"} 
-                    itemsRow1={Theme1}
-                    itemsRow2={Theme2}/>
+                <SidebarPopover title={"Theme"}
+                                itemsRow1={Theme1}
+                                itemsRow2={Theme2}/>
             </Grid>
 
             <Grid item>
@@ -114,7 +108,7 @@ export default function SiderBrowse() {
                             Reset
                         </GreyButton>
                     </Grid>
-                    
+
                 </Grid>
             </Grid>
 

@@ -53,13 +53,13 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
     const popoverLeave = () => setOpenedPopover(false);
 
     const checks = []
-    if (itemsRow1 !== undefined){
+    if (itemsRow1 !== undefined) {
         checks.push(itemsRow1.map(item => item.checked))
     }
-    if (itemsRow2 !== undefined){
+    if (itemsRow2 !== undefined) {
         checks.push(itemsRow2.map(item => item.checked))
     }
-    if (itemsRow3 !== undefined){
+    if (itemsRow3 !== undefined) {
         checks.push(itemsRow3.map(item => item.checked))
     }
 
@@ -85,6 +85,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
                 </Grid>
 
                 <Popover
+                    elevation={0}
                     className={classes.popover}
                     classes={{
                         paper: classes.popoverContent,
@@ -126,7 +127,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
                                 <Grid item/>,
                                 <Grid item>
                                     <Grid container direction={"column"}>
-                                        {itemsRow2.map((item,index) => {
+                                        {itemsRow2.map((item, index) => {
                                             return (
                                                 <Grid item>
                                                     <FormControlLabel control={<GreyCheckbox color="default"/>}

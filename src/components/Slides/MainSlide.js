@@ -43,7 +43,7 @@ export default function MainSlide({image, title, rating, age, runtime, genres, y
                 </Grid>
 
                 <Grid item xs={6}>
-                    <Grid container direction={"column"}className={classes.rightSide}>
+                    <Grid container direction={"column"} className={classes.rightSide}>
                         <Grid item>
                             <Grid container direction={"row"} spacing={1} alignItems={"center"}
                                   className={classes.headlineRow}>

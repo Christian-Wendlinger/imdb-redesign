@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Typography, Box} from "@material-ui/core";
+import {Box, Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {Swiper, SwiperSlide} from "swiper/react";
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -97,7 +97,7 @@ export default function SoundOfMetal() {
                                     </Typography>
                                 </Link>
 
-                                <Swiper 
+                                <Swiper
                                     navigation
                                     simulateTouch={false}
                                     spaceBetween={16}
@@ -125,7 +125,8 @@ export default function SoundOfMetal() {
                             <Grid item xs>
                                 <Grid container direction={"row"} spacing={5} alignItems={"flex-start"}>
                                     <Grid item xs={6}>
-                                        <Link to="/movies/tt5363618/photos" style={{textDecoration: "none", cursor: "pointer"}}>
+                                        <Link to="/movies/tt5363618/photos"
+                                              style={{textDecoration: "none", cursor: "pointer"}}>
                                             <Typography variant={"h2"} color={"primary"} className={classes.headline}>
                                                 Photos
                                             </Typography>
@@ -147,7 +148,8 @@ export default function SoundOfMetal() {
                                         </Swiper>
                                     </Grid>
                                     <Grid item xs={6}>
-                                        <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                        <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                                    style={{cursor: "pointer"}}>
                                             Videos
                                         </Typography>
                                         <Swiper
@@ -174,7 +176,8 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}} className={classes.headline}>
+                                <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}}
+                                            className={classes.headline}>
                                     Details
                                 </Typography>
                                 <Grid container direction={"column"} spacing={1}>
@@ -197,7 +200,8 @@ export default function SoundOfMetal() {
 
                             <Grid item xs>
                                 <Link to="/movies/tt5363618/user-reviews" style={{textDecoration: "none"}}>
-                                    <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}} className={classes.headline}>
+                                    <Typography variant={"h2"} color={"primary"} style={{cursor: "pointer"}}
+                                                className={classes.headline}>
                                         Reviews
                                     </Typography>
                                 </Link>
@@ -229,7 +233,8 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>
                                     Did You Know
                                 </Typography>
                                 <Grid container direction={"column"} spacing={1}>
@@ -250,7 +255,8 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>
                                     Questions
                                 </Typography>
                                 <Typography variant={"body1"} color={"text"} className={classes.headline}>This FAQ is
@@ -259,7 +265,8 @@ export default function SoundOfMetal() {
 
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Contribute to
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Contribute to
                                     this Page »</Typography>
                             </Grid>
 
@@ -270,7 +277,8 @@ export default function SoundOfMetal() {
                     <Grid item xs={3}>
                         <Grid container direction={"column"} spacing={2}>
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>
                                     More Like This
                                 </Typography>
                                 <MoreLikeThis
@@ -282,14 +290,15 @@ export default function SoundOfMetal() {
                                     <Pagination count={3} color="primary" size="small"/>
                                 </Grid>
                             </Grid>
-                            
+
 
                             <Grid item style={{width: "100%"}}>
                                 <hr className={classes.balken}/>
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>
                                     Related News
                                 </Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>
@@ -322,7 +331,8 @@ export default function SoundOfMetal() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>
                                     Editorial Lists
                                 </Typography>
                                 <Grid container direction={"column"} spacing={1} alignItems={"flex-start"}>

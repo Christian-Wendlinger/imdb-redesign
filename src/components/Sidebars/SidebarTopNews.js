@@ -1,5 +1,10 @@
 import React from 'react';
 import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Button,
+    Checkbox,
     FormControl,
     FormControlLabel,
     Grid,
@@ -10,11 +15,6 @@ import {
     Select,
     TextField,
     Typography,
-    Accordion,
-    AccordionSummary,
-    AccordionDetails,
-    Button,
-    Checkbox,
     withStyles
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
@@ -24,66 +24,65 @@ const ruleMargin = 15;
 
 const CssTextField = withStyles({
     root: {
-      '& label.Mui-focused': {
-        color: "#F5C518",
-      },
-     // '& .MuiOutlinedInput-root': {
-     //   '& fieldset': {
-     //     borderColor: "#131314",
+        '& label.Mui-focused': {
+            color: "#F5C518",
         },
-        //'&:hover fieldset': {
-        //  borderColor: "#5B5F63",
-        //},
+        // '& .MuiOutlinedInput-root': {
+        //   '& fieldset': {
+        //     borderColor: "#131314",
+    },
+    //'&:hover fieldset': {
+    //  borderColor: "#5B5F63",
+    //},
     //  },
-   // },
-  })(TextField);
+    // },
+})(TextField);
 
 const GreyCheckbox = withStyles({
     root: {
-      color: "#131314",
-      '&$checked': {
-        color: "#F5C518",
-      },
-    },
-    checked: {},
-  })((props) => <Checkbox color="default" {...props} />);
-
-  const CssSelect = withStyles({
-    root: {
-      '& label.Mui-focused': {
-        color: "#F5C518",
-      },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: "#131314",
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: "#F5C518",
-        },
-      },
-    },
-  })(Select);
-
-  const GreyRadio = withStyles({
-    root: {
-      color: "#131314",
-      '&$checked': {
         color: "#131314",
-      },
+        '&$checked': {
+            color: "#F5C518",
+        },
     },
     checked: {},
-  })((props) => <Radio color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
-  const GreyButton = withStyles((theme) => ({
+const CssSelect = withStyles({
     root: {
-      color: "#F2F2F2",
-      backgroundColor: "#25272a",
-      '&:hover': {
-        backgroundColor: "#25272a",
-      },
+        '& label.Mui-focused': {
+            color: "#F5C518",
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: "#131314",
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: "#F5C518",
+            },
+        },
     },
-  }))(Button);
+})(Select);
 
+const GreyRadio = withStyles({
+    root: {
+        color: "#131314",
+        '&$checked': {
+            color: "#131314",
+        },
+    },
+    checked: {},
+})((props) => <Radio color="default" {...props} />);
+
+const GreyButton = withStyles((theme) => ({
+    root: {
+        color: "#F2F2F2",
+        backgroundColor: "#25272a",
+        '&:hover': {
+            backgroundColor: "#25272a",
+        },
+    },
+}))(Button);
 
 
 const useStyle = makeStyles((theme) => ({
@@ -98,7 +97,7 @@ const useStyle = makeStyles((theme) => ({
     accordion: {
         backgroundColor: theme.palette.background.default,
         padding: 0,
-        boxShadow : "none"
+        boxShadow: "none"
     },
 
     expand: {
@@ -116,7 +115,6 @@ const useStyle = makeStyles((theme) => ({
     },
 
 }));
-
 
 
 export default function SidebarTopNews({shuffle}) {
@@ -137,7 +135,7 @@ export default function SidebarTopNews({shuffle}) {
     const [checked, setChecked] = React.useState(true);
     const handleChecked = (event) => {
         setChecked(event.target.checked);
-      };
+    };
 
 
     return (
@@ -149,7 +147,7 @@ export default function SidebarTopNews({shuffle}) {
             </Grid>
 
             <Grid item style={{marginTop: -12}}>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -159,7 +157,8 @@ export default function SidebarTopNews({shuffle}) {
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
                             <Grid item>
-                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>}
+                                                  label={"All"}/>
                             </Grid>
                             <Grid item>
                                 <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Movie"}/>
@@ -179,7 +178,7 @@ export default function SidebarTopNews({shuffle}) {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -188,34 +187,35 @@ export default function SidebarTopNews({shuffle}) {
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Variety"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indiewire"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Wrap"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Slash"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TV Line"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Portal"}/>
-                                </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>}
+                                                  label={"All"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Variety"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Indiewire"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Wrap"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Slash"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"TV Line"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"The Portal"}/>
+                            </Grid>
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -263,7 +263,7 @@ export default function SidebarTopNews({shuffle}) {
                 <FormControl variant="outlined" fullWidth>
                     <CssSelect
                         defaultValue={"Popularity"}
-                        MenuProps={{ classes: { paper: classes.select } }}
+                        MenuProps={{classes: {paper: classes.select}}}
                         className={classes.select}
                         inputProps={{
                             classes: {
@@ -274,18 +274,18 @@ export default function SidebarTopNews({shuffle}) {
                         id="YearFrom"
                         onChange={handleChange}
                     >
-                        <MenuItem value={"Popularity"} >Popularity</MenuItem>
-                        <MenuItem value={"Release Date"} >Release Date</MenuItem>
-                        <MenuItem value={"Alphabetic"} >Alphabetic</MenuItem>
+                        <MenuItem value={"Popularity"}>Popularity</MenuItem>
+                        <MenuItem value={"Release Date"}>Release Date</MenuItem>
+                        <MenuItem value={"Alphabetic"}>Alphabetic</MenuItem>
                     </CssSelect>
                 </FormControl>
             </Grid>
 
             <Grid item>
                 <RadioGroup aria-label="Asc/Desc" name="Radio1" value={value} onChange={handleRadio}>
-                        <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
-                                        onChange={handleRadio}/>
-                        <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
+                    <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
+                                      onChange={handleRadio}/>
+                    <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                 </RadioGroup>
             </Grid>
 
@@ -303,7 +303,7 @@ export default function SidebarTopNews({shuffle}) {
                             Reset
                         </GreyButton>
                     </Grid>
-                    
+
                 </Grid>
             </Grid>
 

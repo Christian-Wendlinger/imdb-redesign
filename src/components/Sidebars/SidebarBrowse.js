@@ -5,6 +5,7 @@ import {
     AccordionDetails,
     AccordionSummary,
     Button,
+    Checkbox,
     FormControl,
     FormControlLabel,
     Grid,
@@ -15,8 +16,7 @@ import {
     Select,
     TextField,
     Typography,
-    withStyles,
-    Checkbox
+    withStyles
 } from "@material-ui/core";
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
@@ -25,19 +25,19 @@ const ruleMargin = 15;
 
 const CssTextField = withStyles({
     root: {
-      '& label.Mui-focused': {
-        color: "#F5C518",
-      },
-     // '& .MuiOutlinedInput-root': {
-     //   '& fieldset': {
-     //     borderColor: "#131314",
+        '& label.Mui-focused': {
+            color: "#F5C518",
         },
-        //'&:hover fieldset': {
-        //  borderColor: "#5B5F63",
-        //},
+        // '& .MuiOutlinedInput-root': {
+        //   '& fieldset': {
+        //     borderColor: "#131314",
+    },
+    //'&:hover fieldset': {
+    //  borderColor: "#5B5F63",
+    //},
     //  },
-   // },
-  })(TextField);
+    // },
+})(TextField);
 
 
 const CssSelect = withStyles({
@@ -58,13 +58,13 @@ const CssSelect = withStyles({
 
 const GreyCheckbox = withStyles({
     root: {
-      color: "#131314",
-      '&$checked': {
-        color: "#F5C518",
-      },
+        color: "#131314",
+        '&$checked': {
+            color: "#F5C518",
+        },
     },
     checked: {},
-  })((props) => <Checkbox color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
 
 const GreyRadio = withStyles({
@@ -203,7 +203,7 @@ export default function SiderBrowse({shuffle}) {
     const [checked, setChecked] = React.useState(true);
     const handleChecked = (event) => {
         setChecked(event.target.checked);
-      };
+    };
 
 
     return (
@@ -239,7 +239,7 @@ export default function SiderBrowse({shuffle}) {
                             <Grid item xs={6}>
                                 <CssTextField
                                     InputLabelProps={{className: classes.input}}
-                                    className={classes.text}                                
+                                    className={classes.text}
                                     id="Vote-min"
                                     label="Min. Votes"
                                     variant="outlined"
@@ -272,7 +272,7 @@ export default function SiderBrowse({shuffle}) {
                             <Grid item xs={6}>
                                 <CssTextField
                                     InputLabelProps={{className: classes.input}}
-                                    className={classes.text}                                
+                                    className={classes.text}
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
@@ -281,7 +281,7 @@ export default function SiderBrowse({shuffle}) {
                             <Grid item xs={6}>
                                 <CssTextField
                                     InputLabelProps={{className: classes.input}}
-                                    className={classes.text}                                
+                                    className={classes.text}
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
@@ -293,7 +293,7 @@ export default function SiderBrowse({shuffle}) {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m = {0} boxShadow={20} className={classes.accordion}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -302,30 +302,31 @@ export default function SiderBrowse({shuffle}) {
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Prime Video"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Filmtastic"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MGM"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Starzplay"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MUBI"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"BBC Player"}/>
-                                </Grid>
-                                <Grid item>
-                                    <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Sony"}/>
-                                </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>}
+                                                  label={"All"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Prime Video"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Filmtastic"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MGM"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Starzplay"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"MUBI"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"BBC Player"}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox color="default"/>} label={"Sony"}/>
+                            </Grid>
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
@@ -412,7 +413,7 @@ export default function SiderBrowse({shuffle}) {
                             Reset
                         </GreyButton>
                     </Grid>
-                    
+
                 </Grid>
             </Grid>
 

@@ -45,7 +45,8 @@ export default function NavPopover({title, itemsRow1, itemsRow2}) {
                     </Grid>
 
                     <Grid item>
-                        {openedPopover ? <ExpandLess fontSize={"small"} className={classes.navArrow}/> : <ExpandMore fontSize={"small"} className={classes.navArrow}/>}
+                        {openedPopover ? <ExpandLess fontSize={"small"} className={classes.navArrow}/> :
+                            <ExpandMore fontSize={"small"} className={classes.navArrow}/>}
                     </Grid>
                 </Grid>
 

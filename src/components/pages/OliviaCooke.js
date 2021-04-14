@@ -1,4 +1,4 @@
-import {Container, Grid, makeStyles, Typography, Box} from "@material-ui/core";
+import {Box, Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // import Swiper core and required modules
@@ -63,23 +63,23 @@ export default function OliviaCooke() {
         <div>
             <div className={classes.head}>
                 <Box boxShadow={5}>
-                <Container>
-                    <Grid container spacing={5}>
-                        <Grid item xs>
-                            {oliviaCooke.map(star => {
-                                return (
-                                    <HeadStar
-                                        poster={star.poster}
-                                        name={star.name}
-                                        jobs={star.jobs}
-                                        born={star.born}
-                                        description={star.description}
-                                    />
-                                );
-                            })}
+                    <Container>
+                        <Grid container spacing={5}>
+                            <Grid item xs>
+                                {oliviaCooke.map(star => {
+                                    return (
+                                        <HeadStar
+                                            poster={star.poster}
+                                            name={star.name}
+                                            jobs={star.jobs}
+                                            born={star.born}
+                                            description={star.description}
+                                        />
+                                    );
+                                })}
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Container>
+                    </Container>
                 </Box>
             </div>
 
@@ -89,22 +89,23 @@ export default function OliviaCooke() {
                         <Grid container direction={"column"} spacing={3}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known For</Typography>
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}>Known
+                                    For</Typography>
 
-                                    <Grid container direction={"row"} spacing={2}>
-                                        {oliviaCooke[0].knownFor.map(title => {
-                                            return (
-                                                <KnownFor
-                                                    image={title.image}
-                                                    title={title.title}
-                                                    rating={title.rating}
-                                                    year={title.year}
-                                                    link={title.link}
-                                                    role={title.role}
-                                                />
-                                            );
-                                        })}
-                                    </Grid>
+                                <Grid container direction={"row"} spacing={2}>
+                                    {oliviaCooke[0].knownFor.map(title => {
+                                        return (
+                                            <KnownFor
+                                                image={title.image}
+                                                title={title.title}
+                                                rating={title.rating}
+                                                year={title.year}
+                                                link={title.link}
+                                                role={title.role}
+                                            />
+                                        );
+                                    })}
+                                </Grid>
                             </Grid>
 
                             <Grid item style={{width: "100%"}}>
@@ -161,42 +162,50 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Typography variant={"h2"} color={"primary"} className={classes.headline}>Personal
                                     Details</Typography>
-                                        
-                                        <Grid container direction={"row"} spacing={2}>
-                                            <Grid item>
-                                                <Grid container direction={"column"} spacing={0}>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[0].key}: </Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[1].key}: </Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[2].key}: </Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[3].key}: </Typography>
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid>
 
+                                <Grid container direction={"row"} spacing={2}>
+                                    <Grid item>
+                                        <Grid container direction={"column"} spacing={0}>
                                             <Grid item>
-                                                <Grid container direction={"column"} spacing={0}>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[0].value}</Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[1].value}</Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[2].value}</Typography>
-                                                    </Grid>
-                                                    <Grid item>
-                                                        <Typography variant={"body1"} color={"text"}>{oliviaCooke[0].personalDetails[3].value}</Typography>
-                                                    </Grid>
-                                                </Grid>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[0].key}: </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[1].key}: </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[2].key}: </Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[3].key}: </Typography>
                                             </Grid>
                                         </Grid>
+                                    </Grid>
+
+                                    <Grid item>
+                                        <Grid container direction={"column"} spacing={0}>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[0].value}</Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[1].value}</Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[2].value}</Typography>
+                                            </Grid>
+                                            <Grid item>
+                                                <Typography variant={"body1"}
+                                                            color={"text"}>{oliviaCooke[0].personalDetails[3].value}</Typography>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
                             </Grid>
 
                             <Grid item style={{width: "100%"}}>
@@ -256,7 +265,8 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Contribute to
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Contribute to
                                     this Page »</Typography>
                             </Grid>
 

@@ -68,7 +68,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                                 {description} <ShowMore variant={"body1"}/>
                             </Typography>
                         </Grid>
-                    
+
                         <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
                             <ReactPlayer url={trailer} controls={true} light={trailerPoster}/>
                         </Grid>

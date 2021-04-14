@@ -22,7 +22,7 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
     return (
         <Container className={classes.firstItem}>
             <Grid container spacing={5}>
-                
+
                 <Grid item container xs={3}>
                     <Grid container direction={"column"}>
                         <Grid item>
@@ -64,7 +64,7 @@ export default function UserReviewsPage({movieTitle, year, rating, pageName, pag
                     </Grid>
                 </Grid>
 
-                
+
             </Grid>
         </Container>
     );

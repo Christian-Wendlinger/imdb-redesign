@@ -69,7 +69,7 @@ export default function CastPage({movieTitle, year, rating, pageName, pageId}) {
                     </Grid>
                 </Grid>
 
-                
+
             </Grid>
         </Container>
     );

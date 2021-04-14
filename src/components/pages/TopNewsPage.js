@@ -1,9 +1,8 @@
-import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
+import {Container, Grid, makeStyles, Typography} from "@material-ui/core";
 import {news} from "../../data/news";
 import NewsListItem from "../listItems/NewsListItem";
 import {useEffect, useState} from "react";
 import SidebarTopNews from "../Sidebars/SidebarTopNews";
-import {moviePosters} from "../../data/moviePosters";
 
 const useStyle = makeStyles({
     firstItem: {

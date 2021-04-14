@@ -58,11 +58,11 @@ export default function MoviePosterSlide({image, title, rating, year, role, link
             </Grid>
 
             <Grid item>
-                    <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
-                        <Typography variant={"body1"}>
-                            {title} ({year})
-                        </Typography>
-                    </Link>
+                <Link to={link} style={{textDecoration: "none", color: "#F2F2F2"}}>
+                    <Typography variant={"body1"}>
+                        {title} ({year})
+                    </Typography>
+                </Link>
             </Grid>
 
             <Grid item>
