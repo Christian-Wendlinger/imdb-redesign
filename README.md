@@ -1,3 +1,5 @@
-# Redesign für IMDb.com
+# Redesign for IMDb.com
+A team of students creates redesign for https://www.imdb.com/. The site is modernized, made consistent and the structure and user interactions are redefined.
 
-Hier entwickelt ein Team aus Studenten ein Redesign für die Webseite https://www.imdb.com/.
+# Information
+This project is focused on design and principles so only dummy data is used.
