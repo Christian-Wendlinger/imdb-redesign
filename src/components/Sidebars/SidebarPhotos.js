@@ -56,7 +56,6 @@ const useStyle = makeStyles((theme) => ({
 
 
 const Type = [
-    {text: "All"},
     {text: "Still Frame"},
     {text: "Event"},
     {text: "Publicity"},
@@ -96,6 +95,11 @@ const Theme2 = [
 export default function SiderBrowse() {
     const classes = useStyle();
 
+    const [checked, setChecked] = React.useState(true);
+    const handleChecked = (event) => {
+        setChecked(event.target.checked);
+    };
+
     return (
         <Grid container direction={"column"} spacing={3}>
             <Grid item>
@@ -117,10 +121,13 @@ export default function SiderBrowse() {
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordion}>
                         <Grid container direction={"column"}>
+                            <Grid item>
+                                <FormControlLabel control={<GreyCheckbox checked={checked} onChange={handleChecked}/>} label={"All"}/>
+                            </Grid>
                             {Type.map(item => {
                                 return(
                                     <Grid item>
-                                        <FormControlLabel control={<GreyCheckbox checked={item.text === "All"}/>} label={item.text}/>
+                                        <FormControlLabel control={<GreyCheckbox/>} label={item.text}/>
                                     </Grid>
                                 );
                             })}
