@@ -58,7 +58,7 @@ export const cast = [
     {
         image: '/photos/soundOfMetalPictures/Chelsea Lee.png',
         name: "Chelsea Lee",
-        description: "Chelsea Lee is an actress, known for Sound of Metal (2019) and The Button (2016).",
+        description: "Chelsea Lee is an actress, known for Sound of Metal (2019) and The Button (2016). After graduating from Georgetown University in 2012, where she was recruited to play Division One Women's Golf.",
         knownFor: "Sound of Metal, The Button",
         role: "Jenn",
         largeImage: "https://m.media-amazon.com/images/M/MV5BNTE3MDJiNGYtNjNhZC00ZmExLTgwY2QtZjg3NzgyZGMwOTU5XkEyXkFqcGdeQXVyOTQ5ODg4MjI@._V1_UX214_CR0,0,214,317_AL_.jpg"
@@ -67,7 +67,7 @@ export const cast = [
     {
         image: '/photos/soundOfMetalPictures/Shaheem Sanchez.png',
         name: "Shaheem Sanchez",
-        description: "Shaheem Sanchez is an actor, known for Sound of Metal (2019) and CL: I Quit 180327 (2019).",
+        description: "Shaheem Sanchez is an actor, known for Sound of Metal (2019) and CL: I Quit 180327 (2019). After graduating from Georgetown University in 2012, where he was recruited to play Division One Women's Golf.",
         knownFor: "Sound of Metal, CL: I Quit 180327",
         role: "Shaheem",
         largeImage: "https://m.media-amazon.com/images/M/MV5BNWZkOThlNjktNzZjNi00M2M5LWIwN2EtMzExY2RmN2ZkOTg5XkEyXkFqcGdeQXVyNTEyOTYxMTY@._V1_UY317_CR54,0,214,317_AL_.jpg"
