@@ -48,7 +48,7 @@ export default function BrowseMovieListItem({
         [
             <Grid item>
                 <Grid container direction={"row"} spacing={2}>
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                         <Grid container direction={"column"}>
                             <Grid item>
                                 <Link to={link}>
@@ -56,7 +56,7 @@ export default function BrowseMovieListItem({
                                 </Link>
                             </Grid>
 
-                            <Grid item xs style={{marginTop: 3}}>
+                            <Grid item xs>
                                 <Grid container direction={"row"} alignItems={"center"} justify={"space-between"}>
                                     <Grid item>
                                         <Grid container direction={"row"}>
@@ -77,7 +77,7 @@ export default function BrowseMovieListItem({
                                             </Grid>
 
                                             <Grid item>
-                                                <Typography variant={"body1"}>&nbsp;Rate this</Typography>
+                                                <Typography variant={"body1"}>&nbsp;Rate</Typography>
                                             </Grid>
                                         </Grid>
                                     </Grid>
@@ -86,7 +86,7 @@ export default function BrowseMovieListItem({
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={7}>
+                    <Grid item xs={10}>
                         <Grid container direction={"column"} spacing={2}>
                             <Grid item>
                                 <Grid container spacing={1} alignItems={"center"}>

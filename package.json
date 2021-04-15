@@ -1,6 +1,6 @@
 {
   "name": "imdb-redesign",
-  "version": "1.0.0",
+  "version": "1.0.1a",
   "homepage": ".",
   "private": true,
   "dependencies": {

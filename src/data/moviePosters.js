@@ -11,7 +11,7 @@ export const moviePosters = [
         stars: "Riz Ahmed, Olivia Cooke, Paul Raci",
         votes: "45.695",
         gross: "$ 148.476",
-        description: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing. He goes to a pharmacy in order to figure out what is happening to him. The pharmacist refers him to a doctor that Ruben is able to see immediately. The doctor performs a hearing test and determines Ruben can only successfully hear 20-30 percent of words and his hearing will continue to deteriorate rapidly.",
+        description: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing.",
         link: "/movies/tt5363618"
     },
     {
@@ -26,7 +26,7 @@ export const moviePosters = [
         stars: "Eddie Murphy, Paul Bates, Garcelle Beauvais",
         votes: "187.647",
         gross: "$ 288.752.301",
-        description: "Immersed in luxury and riches, the courteous blue blood and refined heir apparent to Africa's prosperous kingdom of Zamunda, Prince Akeem, summons up the courage to reject an arranged marriage proposal on his twenty-first birthday. Bent on finding true love, the young aristocrat along with his trusted valet, Semmi, find themselves in the strange and unknown urban jungle of New York City's Queens, trying to mingle with their neighbours by posing as humble exchange students.",
+        description: "Immersed in luxury and riches, the courteous blue blood and refined heir apparent to Africa's prosperous kingdom of Zamunda, Prince Akeem, summons up the courage to reject an arranged marriage proposal on his twenty-first birthday. Bent on finding true love, the young aristocrat along with his trusted valet, Semmi, find themselves in the strange and unknown urban jungle of New York City's Queens.",
     },
     {
         image: '/photos/movieTitles/CriminalMinds.jpg',
@@ -39,7 +39,7 @@ export const moviePosters = [
         director: "Jeff Davis",
         stars: "Matthew Gray Gubler, Kirsten Vangsness, A.J. Cook",
         votes: "163.228",
-        description: "Based in Quantico, Virginia, the Behavioral Analysis Unit (B.A.U.) is a subsection of the F.B.I. Called in by local Police departments to assist in solving crimes of a serial and/or extremely violent nature where the perpetrator is unknown (referred to by the Unit as the unknown subject or \"unsub\" for short), the B.A.U. uses the controversial scientific art of profiling to track and apprehend the unsub. Profiling entails coming up with basic characteristics of the unsub and the victims (referred to as the victimology), using evidence from the case and matching that information to historic precedents and psychological analyses as a means to solve the case."
+        description: "Based in Quantico, Virginia, the Behavioral Analysis Unit (B.A.U.) is a subsection of the F.B.I. Called in by local Police departments to assist in solving crimes of a serial and/or extremely violent nature where the perpetrator is unknown (referred to by the Unit as the unknown subject or \"unsub\" for short), the B.A.U. uses the controversial scientific art of profiling to track and apprehend the unsub."
     },
     {
         image: '/photos/movieTitles/PeakyBlinders.jpg',
@@ -52,7 +52,7 @@ export const moviePosters = [
         director: "Steven Knight",
         stars: "Cillian Murphy, Paul Anderson, Helen McCrory",
         votes: "357.853",
-        description: "Peaky Blinders is an English television crime drama set in 1920s Birmingham, England in the aftermath of World War I. The series, which was created by Steven Knight and produced by Caryn Mandabach Productions, Screen Yorkshire and Tiger Aspect Productions, follows the exploits of the Shelby crime family. Screen Yorkshire provided funding for the production through the Yorkshire Content Fund. It was the first production to receive funding from the Yorkshire Content Fund, which in turn made certain the majority of the show was filmed in Yorkshire as part of the deal."
+        description: "Peaky Blinders is an English television crime drama set in 1920s Birmingham, England in the aftermath of World War I. The series, which was created by Steven Knight and produced by Caryn Mandabach Productions, Screen Yorkshire and Tiger Aspect Productions, follows the exploits of the Shelby crime family. Screen Yorkshire provided funding for the production through the Yorkshire Content Fund."
     },
     {
         image: '/photos/movieTitles/TheTerror.jpg',
@@ -65,7 +65,7 @@ export const moviePosters = [
         director: "David Kajganich, Max Borenstein, Alexander Woo",
         stars: "Jared Harris, Derek Mio, Tobias Menzies",
         votes: "38.144",
-        description: "Season 1: In 1847-8, the crew of a real life Royal Naval expedition (later known as Franklin's expedition) led by three captains, Sir John Franklin, Francis Crozier and James Fitzjames, is sent to find the Arctic's fabled treacherous Northwest Passage but instead discovers a monstrous polar bear-like predator, a cunning and vicious Gothic horror that stalks the ships in a desperate game of survival. However, it soon becomes clear that that's just the beginning of their troubles. As things worsen and civilized behavior disintegrates in favor of survival at any cost, the crew must simultaneously battle the elements, the supernatural and eventually - themselves. The captains' only ally in all of this becomes a mute Inuit woman, who lives as an outcast from her tribe but still follows their old animistic religion."
+        description: "Season 1: In 1847-8, the crew of a real life Royal Naval expedition (later known as Franklin's expedition) led by three captains, Sir John Franklin, Francis Crozier and James Fitzjames, is sent to find the Arctic's fabled treacherous Northwest Passage but instead discovers a monstrous polar bear-like predator, a cunning and vicious Gothic horror that stalks the ships in a desperate game of survival."
     },
     {
         image: '/photos/movieTitles/Supernatural.jpg',
@@ -78,7 +78,7 @@ export const moviePosters = [
         director: "Eric Kripke",
         stars: "Jared Padalecki, Jensen Ackles, Jim Beaver",
         votes: "394.886",
-        description: "This television drama is about the two Winchester brothers, Sam and Dean, who were raised by their father, John, to hunt and kill all things that go \"bump in the night\" after his wife, Mary, was murdered by an evil supernatural being when the boys were young. 22 years later the brothers set out on a journey, fighting evil along the way, to find their recently missing father who, when they finally meet up with, reveals he knows what killed their mother, a demon and has found a way to track and kill it. Meanwhile, Sam starts to develop frightening abilities that include death visions, visions of people dying before it actually happens."
+        description: "This television drama is about the two Winchester brothers, Sam and Dean, who were raised by their father, John, to hunt and kill all things that go \"bump in the night\" after his wife, Mary, was murdered by an evil supernatural being when the boys were young. 22 years later the brothers set out on a journey, fighting evil along the way, to find their recently missing father who, when they finally meet up with, reveals he knows what killed their mother."
     },
     {
         image: '/photos/movieTitles/911.jpg',
