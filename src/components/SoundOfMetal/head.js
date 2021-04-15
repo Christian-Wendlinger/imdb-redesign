@@ -64,14 +64,14 @@ export default function Head({poster, trailer, trailerPoster, title, information
                             <hr className={classes.balken}/>
                         </Grid>
 
-                        <Grid item>
+                        <Grid item style={{paddingBottom: 20}}>
                             <Typography variant={"body1"}>
                                 {description} <ShowMore variant={"body1"}/>
                             </Typography>
                         </Grid>
 
-                        <Grid item xs style={{paddingTop: 20, paddingBottom: 10}}>
-                            <ReactPlayer width="100%" height="360px" url={process.env.PUBLIC_URL + trailer} controls={true} light={trailerPoster}/>
+                        <Grid item xs >
+                            <ReactPlayer width="100%" height="400px" url={process.env.PUBLIC_URL + trailer} controls={true} light={trailerPoster}/>
                         </Grid>
 
                     </Grid>
