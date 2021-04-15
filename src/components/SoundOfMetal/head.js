@@ -2,6 +2,7 @@ import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {AddBox} from "@material-ui/icons";
 import React from 'react';
 import ReactPlayer from 'react-player'
+import { autocompleteData } from "../../data/autocompleteData";
 import ShowMore from "../ShowMore";
 
 const useStyle = makeStyles({
@@ -69,8 +70,8 @@ export default function Head({poster, trailer, trailerPoster, title, information
                             </Typography>
                         </Grid>
 
-                        <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "100%"}}>
-                            <ReactPlayer url={process.env.PUBLIC_URL + trailer} controls={true} light={trailerPoster}/>
+                        <Grid item xs style={{paddingTop: 20, paddingBottom: 10}}>
+                            <ReactPlayer width="100%" height="360px" url={process.env.PUBLIC_URL + trailer} controls={true} light={trailerPoster}/>
                         </Grid>
 
                     </Grid>

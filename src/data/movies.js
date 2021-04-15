@@ -1,7 +1,7 @@
 export const movies = [
     {
         title: "Sound of Metal (2019)",
-        informations: "2h | Drama, Music | 4 December 2020 (Germany) | 12 | Directed by Darius Marder | Wirting Credits: Darius Marder, Abraham Marder, Derek Cianfrance",
+        informations: "2h | Drama, Music | 4 December 2020 (Germany) | 12 | Directed by Darius Marder | Writing Credits: Darius Marder, Abraham Marder, Derek Cianfrance",
         plotSummary: "A heavy-metal drummer's life is thrown into freefall when he begins to lose his hearing. Ruben is a drummer and one half of the metal duo Blackgammon along with the singer, his girlfriend, Lou. They live in a RV while driving across the country to perform gigs. Ruben begins to suddenly lose his hearing. He goes to a pharmacy in order to figure out what is happening to him. The pharmacist refers him to a doctor that Ruben is able to see immediately. The doctor performs a hearing test and determines Ruben can only successfully hear 20-30 percent of words and his hearing will continue to deteriorate rapidly. He may be able to get cochlear implants to correct it.",
         poster: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg",
         trailer: '/videos/trailer.mp4',
