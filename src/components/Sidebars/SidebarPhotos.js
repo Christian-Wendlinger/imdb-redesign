@@ -1,6 +1,16 @@
 import React from 'react';
-import {Button, Grid, makeStyles, Typography, withStyles} from "@material-ui/core";
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Button, Checkbox, FormControlLabel,
+    Grid,
+    makeStyles,
+    Typography,
+    withStyles
+} from "@material-ui/core";
 import SidebarPopover from "./SidebarPopover";
+import {ExpandMore} from "@material-ui/icons";
 
 
 const GreyButton = withStyles((theme) => ({
@@ -12,6 +22,16 @@ const GreyButton = withStyles((theme) => ({
         },
     },
 }))(Button);
+
+const GreyCheckbox = withStyles({
+    root: {
+        color: "#131314",
+        '&$checked': {
+            color: "#F5C518",
+        },
+    },
+    checked: {},
+})((props) => <Checkbox color="default" {...props} />);
 
 
 const useStyle = makeStyles((theme) => ({
@@ -26,15 +46,19 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default
     },
 
+    accordion: {
+        backgroundColor: theme.palette.background.default,
+        padding: 0,
+        boxShadow: "none"
+    },
+
 }));
 
-const Type1 = [
+
+const Type = [
     {text: "All"},
     {text: "Still Frame"},
-    {text: "Event"}
-];
-
-const Type2 = [
+    {text: "Event"},
     {text: "Publicity"},
     {text: "Poster"},
     {text: "Behind the Scenes"}
@@ -75,25 +99,44 @@ export default function SiderBrowse() {
     return (
         <Grid container direction={"column"} spacing={3}>
             <Grid item>
+            </Grid>
+
+            <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
                 </Typography>
             </Grid>
+
             <Grid item>
-                <SidebarPopover title={"Type"}
-                                itemsRow1={Type1}
-                                itemsRow2={Type2}/>
+                <Accordion className={classes.accordion} m={0} boxShadow={20} style={{marginBottom: 12}}>
+                    <AccordionSummary
+                        className={classes.accordion}
+                        expandIcon={<ExpandMore className={classes.expand}/>}
+                        id="panel1a-header">
+                        <Typography variant={"h3"}>Type</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={classes.accordion}>
+                        <Grid container direction={"column"}>
+                            {Type.map(item => {
+                                return(
+                                    <Grid item>
+                                        <FormControlLabel control={<GreyCheckbox checked={item.text === "All"}/>} label={item.text}/>
+                                    </Grid>
+                                );
+                            })}
+                        </Grid>
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
-            <Grid item>
-                <SidebarPopover title={"Person"}
-                                itemsRow1={Person1}
-                                itemsRow2={Person2}/>
-            </Grid>
-            <Grid item>
-                <SidebarPopover title={"Theme"}
-                                itemsRow1={Theme1}
-                                itemsRow2={Theme2}/>
-            </Grid>
+
+            <SidebarPopover title={"Person"}
+                            itemsRow1={Person1}
+                            itemsRow2={Person2}/>
+
+
+            <SidebarPopover title={"Theme"}
+                            itemsRow1={Theme1}
+                            itemsRow2={Theme2}/>
 
             <Grid item>
                 <Grid container direction={"row"} spacing="2">

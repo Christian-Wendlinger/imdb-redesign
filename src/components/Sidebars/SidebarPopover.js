@@ -28,7 +28,7 @@ const useStyle = makeStyles((theme) => ({
     },
     navArrow: {
         marginTop: -6,
-        marginRight: -5,
+        marginRight: -4,
         fontSize: 32
     }
 }));

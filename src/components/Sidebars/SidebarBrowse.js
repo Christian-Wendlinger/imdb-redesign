@@ -243,6 +243,7 @@ export default function SiderBrowse({shuffle}) {
                                     id="Vote-min"
                                     label="Min. Votes"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -252,6 +253,7 @@ export default function SiderBrowse({shuffle}) {
                                     id="Vote-max"
                                     label="Max. Votes"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                         </Grid>
@@ -276,6 +278,7 @@ export default function SiderBrowse({shuffle}) {
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -285,6 +288,7 @@ export default function SiderBrowse({shuffle}) {
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                         </Grid>

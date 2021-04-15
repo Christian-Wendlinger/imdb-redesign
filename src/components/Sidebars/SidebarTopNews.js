@@ -231,6 +231,7 @@ export default function SidebarTopNews({shuffle}) {
                                     id="From Date"
                                     label="From Date"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -240,6 +241,7 @@ export default function SidebarTopNews({shuffle}) {
                                     id="To Date"
                                     label="To Date"
                                     variant="outlined"
+                                    autoComplete={"off"}
                                 />
                             </Grid>
                         </Grid>
@@ -303,7 +305,6 @@ export default function SidebarTopNews({shuffle}) {
                             Reset
                         </GreyButton>
                     </Grid>
-
                 </Grid>
             </Grid>
 
