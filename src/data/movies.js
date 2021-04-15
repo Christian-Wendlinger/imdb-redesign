@@ -54,10 +54,10 @@ export const movies = [
             {
                 image: '/photos/soundOfMetalPictures/video7.png',
                 image2: '/photos/soundOfMetalPictures/video8.png',
-                image3: '',
-                image4: '',
-                image5: '',
-                image6: ''
+                image3: '/photos/soundOfMetalPictures/video3.png',
+                image4: '/photos/soundOfMetalPictures/video5.png',
+                image5: '/photos/soundOfMetalPictures/video2.png',
+                image6: '/photos/soundOfMetalPictures/video6.png'
             },
         ],
         details: [

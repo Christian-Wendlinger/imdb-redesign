@@ -40,7 +40,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                 <Grid item xs={3}>
                     <img src={poster} width={"100%"}/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={7}>
                     <Grid container direction={"column"}>
                         <Grid item>
                             <Typography variant={"h1"} color={"text"} className={classes.headline}>
@@ -69,7 +69,7 @@ export default function Head({poster, trailer, trailerPoster, title, information
                             </Typography>
                         </Grid>
 
-                        <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "80%"}}>
+                        <Grid item style={{paddingTop: 20, paddingBottom: 10, width: "100%"}}>
                             <ReactPlayer url={process.env.PUBLIC_URL + trailer} controls={true} light={trailerPoster}/>
                         </Grid>
 

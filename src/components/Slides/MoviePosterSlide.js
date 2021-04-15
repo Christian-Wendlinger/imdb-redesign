@@ -29,7 +29,7 @@ const useStyle = makeStyles(theme => ({
 export default function MoviePosterSlide({image, title, rating, year, link}) {
     const classes = useStyle();
     return (
-        <Grid container direction={"column"} spacing={1}>
+        <Grid container direction={"column"} spacing={0}>
             <Grid item>
                 <Link to={link} style={{textDecoration: "none"}}>
                     <img src={image} width={"100%"}/>

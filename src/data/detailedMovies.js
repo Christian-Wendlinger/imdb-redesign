@@ -7,7 +7,7 @@ export const detailedMovieData = [
         runtime: "310 episodes / 24 seasons",
         genres: "Animation, Comedy",
         year: "1997+",
-        description: "Die langjährige Trickserie South Park von Trey Parker und Matt Stone handelt von den Grundschülern Stan Marsh, Kyle Broflovski, Eric Cartman sowie Kenny McCormick und deren Abenteuern in der titelstiftenden Kleinstadt im Norden der USA. Seit 1997 nehmen die minimalistisch animierten Rotzlöffel kein Blatt vor den Mund und packen immer wieder politisch aufgeladene Themen an. In bester Satiremanier werden dabei kontemporäre heiße Eisen angepackt und aberwitzige Missstände bloßgestellt. Dabei trifft es vornehmlich das politisch konservative Lager, auch wenn über die genaue politische Ausrichtung der Serienschöpfer immer wieder diskutiert wird.",
+        description: "The curious, adventure-seeking, fourth grade group of 10 year old boys, Stan, Kyle, Cartman, and Kenny, all join in in buffoonish adventures that sometimes evolve nothing. Sometimes something that was simple at the start, turns out to get out of control. Everything is odd in the small mountain town, South Park, and the boys always find something to do with it. \"South Park\" follows four boys in the tiny mountain town of South Park, Colorado. Kyle Broflovski is a young Jewish boy with a strong moral center, who often encounters struggles with the other boys because of his religion and his strict, orthodox family.",
         creator: "Trey Parker, Matt Stone, Brian Graden",
         stars: "Trey Parker, Matt Stone, Isaac Hayes"
     },
@@ -19,7 +19,7 @@ export const detailedMovieData = [
         runtime: "16 episodes / 1 season",
         genres: "Action, Adventure, Fantasy",
         year: "2019+",
-        description: "Geralt of Rivia (Henry Cavill) Geralt of Rivia streift durch das Land und erledigt gegen Bezahlung Aufträge, bei denen er die Monsterprobleme der Menschen beseitigt. Als Witcher, bewaffnet mit einem Stahlschwert für menschliche Widersacher und einem Silberschwert für Monster, verdingt er seinen Lebensunterhalt. Als Mutant und Außenseiter sind ihm nicht alle Menschen wohl gesonnen und andere versuchen ihn für ihre Zwecke einzuspannen, was sein Credo, als Witcher immer neutral zu bleiben, oftmals auf die Probe stellt. Er ist in der Lage, Magie mittels Zeichen zu wirken und nutzt als geschickter Alchemist diverse Tränke, um sich vor Konfrontationen zu stärken.",
+        description: "The Witcher is an American fantasy drama web television series created by Lauren Schmidt Hissrich for Netflix. It is based on the book series of the same name by Polish writer Andrzej Sapkowski. The Witcher follows the story of Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world where people often prove more wicked than monsters and beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a special gift, the three must learn to navigate independently the increasingly volatile Continent.",
         creator: "Lauren Schmidt",
         stars: "Anna Shaffer, Henry Cavill, Freya Allan"
     },
@@ -31,19 +31,19 @@ export const detailedMovieData = [
         runtime: "3h 1min",
         genres: "Action, Adventure, Drama",
         year: "2019",
-        description: "Thanos (Josh Brolin) hat also tatsächlich Wort gehalten, seinen Plan in die Tat umgesetzt und die Hälfte allen Lebens im Universum ausgelöscht. Die Avengers? Machtlos. Iron Man (Robert Downey Jr.) und Nebula (Karen Gillan) sitzen auf dem Planeten Titan fest, während auf der Erde absolutes Chaos herrscht. Doch dann finden Captain America (Chris Evans) und die anderen überlebenden Helden auf der Erde heraus, dass Nick Fury (Samuel L. Jackson) vor den verheerenden Ereignissen gerade noch ein Notsignal absetzen konnte, um Verstärkung auf den Plan zu rufen. Die Superhelden-Gemeinschaft bekommt mit Captain Marvel (Brie Larson) kurzerhand tatkräftige Unterstützung im Kampf gegen ihren vermeintlich übermächtigen Widersacher.",
+        description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face. The grave course of events set in motion by Thanos, that wiped out half the universe and fractured the Avengers ranks, compels the remaining Avengers to take one final stand in Marvel Studios' grand conclusion to twenty-two films - Avengers: Endgame.",
         creator: "Anthony Russo, Joe Russo",
         stars: "Robert Downey Jr., Chris Evans, Mark Ruffalo"
     },
     {
         image: "https://s-cdn.serienjunkies.de/n/greys-anatomy.webp",
-        title: "Grey's Anatomy: Die jungen Ärzte",
+        title: "Grey's Anatomy",
         rating: "7.6",
         age: "12",
         runtime: "370 episodes / 17 seasons",
         genres: "Drama, Romance",
         year: "2005",
-        description: "Im Zentrum der Krankenhausserie Grey's Anatomy steht die junge Ärztin Meredith Grey (Ellen Pompeo). Sie ist die Tochter einer renommierten Chirurgin namens Ellis Grey (Kate Burton) und folgt nun in ihre Fußstapfen am Seattle Grace Hospital. Gemeinsam mit ihren Kollegen Cristina Yang (Sandra Oh), Isobel „Izzie\" Stevens (Katherine Heigl), George O'Malley (T.R. Knight) und Alex Karev (Justin Chambers) beginnt sie dort ihr erstes Lehrjahr als Assistenzärztin der Chirurgie. Die fünf Anfänger sind zwar Konkurrenten, aber zugleich befreundet. Zusammen meistern sie den anstrengenden Alltag im Krankenhaus, helfen sich bei ihren persönlichen Problemen und Liebeskummer.",
+        description: "A medical based drama centered around Meredith Grey, an aspiring surgeon and daughter of one of the best surgeons, Dr. Ellis Grey. Throughout the series, Meredith goes through professional and personal challenges along with fellow surgeons at Seattle Grace Hospital. The doctors of Grey Sloan Memorial Hospital deal with life-or-death consequences on a daily basis -- it's in one another that they find comfort, friendship and, at times, more than friendship. Together they're discovering that neither medicine nor relationships can be defined in black and white. Real life only comes in shades of grey.",
         creator: "Shonda Rhimes",
         stars: "Ellen Pompeo, Chandra Wilson, James Pickens Jr."
     }

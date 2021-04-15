@@ -13,6 +13,7 @@ import MainSlide from "../Slides/MainSlide";
 // main css (custom swiper style)
 import "../../main_style.css";
 import {moviePosters} from "../../data/moviePosters";
+import {moviePosters2} from "../../data/moviePosters2";
 import MoviePosterSlide from "../Slides/MoviePosterSlide";
 import HomeTabs from "../Homepage/HomeTabs";
 import {news} from "../../data/news";
@@ -41,7 +42,7 @@ export default function Homepage() {
     }, [])
 
     const [recommended, setRecommended] = useState([...moviePosters]);
-    const [explore, setExplore] = useState([...moviePosters].sort(() => Math.random() - 0.5))
+    const [explore, setExplore] = useState([...moviePosters2].sort(() => Math.random() - 0.5))
 
     const classes = useStyle();
     return (
@@ -108,7 +109,7 @@ export default function Homepage() {
                         </Typography>
                     </Link>
 
-                    <HomeTabs shuffle={() => setExplore([...moviePosters].sort(() => Math.random() - 0.5))}/>
+                    <HomeTabs shuffle={() => setExplore([...moviePosters2].sort(() => Math.random() - 0.5))}/>
 
                     <Swiper
                         simulateTouch={false}

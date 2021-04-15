@@ -47,46 +47,40 @@ export default function BrowseMovieListItem({
     return (
         [
             <Grid item>
-                <Grid container direction={"row"} spacing={2}>
-                    <Grid item>
-                        <Grid container direction={"column"}>
-                            <Grid item>
-                                <Link to={link}>
-                                    <img src={image} width={"100%"}/>
-                                </Link>
-                            </Grid>
+                <Grid container direction={"row"} spacing={3}>
+                    <Grid item xs={3}>
+                        <Link to={link}>
+                            <img src={image} width={"100%"}/>
+                        </Link>
 
+                        <Grid container direction={"row"} alignItems={"center"} justify={"space-between"}>
                             <Grid item>
-                                <Grid container direction={"row"} alignItems={"center"} justify={"space-between"}>
+                                <Grid container direction={"row"}>
                                     <Grid item>
-                                        <Grid container direction={"row"}>
-                                            <Grid item>
-                                                <Star color={"primary"} className={classes.starIcon}/>
-                                            </Grid>
-
-                                            <Grid item>
-                                                <Typography variant={"body1"}>&nbsp;{rating}</Typography>
-                                            </Grid>
-                                        </Grid>
+                                        <Star color={"primary"} className={classes.starIcon}/>
                                     </Grid>
 
                                     <Grid item>
-                                        <Grid container direction={"row"}>
-                                            <Grid item>
-                                                <StarBorder color={"primary"} className={classes.starIcon}/>
-                                            </Grid>
+                                        <Typography variant={"body1"}>&nbsp;{rating}</Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
 
-                                            <Grid item>
-                                                <Typography variant={"body1"}>&nbsp;Rate this</Typography>
-                                            </Grid>
-                                        </Grid>
+                            <Grid item>
+                                <Grid container direction={"row"}>
+                                    <Grid item>
+                                        <StarBorder color={"primary"} className={classes.starIcon}/>
+                                    </Grid>
+
+                                    <Grid item>
+                                        <Typography variant={"body1"}>&nbsp;Rate this</Typography>
                                     </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
 
-                    <Grid item xs>
+                    <Grid item xs={7}>
                         <Grid container direction={"column"} spacing={2}>
                             <Grid item>
                                 <Grid container spacing={1} alignItems={"center"}>
@@ -152,6 +146,7 @@ export default function BrowseMovieListItem({
                     </Grid>
                 </Grid>
             </Grid>,
+
             <Grid item style={{width: "100%", display: lastItem ? "none" : "block"}}>
                 <hr className={classes.balken}/>
             </Grid>

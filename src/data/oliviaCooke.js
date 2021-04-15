@@ -128,9 +128,6 @@ export const oliviaCooke = [
             }
         ],
         filmography: [
-            {
-                role: "Actress",
-                titles: [
                     {
                         title: "Sound of Metal",
                         image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
@@ -263,12 +260,7 @@ export const oliviaCooke = [
                         rating: "5,1",
                         year: "2014",
                         role: "Jane Harper"
-                    }
-                ]
-            },
-            {
-                role: "Soundtrack",
-                titles: [
+                    },
                     {
                         title: "Sound of Metal",
                         image: "https://m.media-amazon.com/images/M/MV5BNjcyYjg0M2ItMzMyZS00NmM1LTlhZDMtN2MxN2RhNWY4YTkwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg",
@@ -286,37 +278,19 @@ export const oliviaCooke = [
                         image: "https://m.media-amazon.com/images/M/MV5BNDU5YzgyOGYtNTFjMi00Mzg4LWFhODMtMjY3OWM0ZjM0YTVkXkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_.jpg",
                         rating: "6,3",
                         year: "2016"
-                    }
-                ]
-            },
-            {
-                role: "Producer",
-                titles: [
+                    },
                     {
                         title: "Little Fish",
                         image: "https://m.media-amazon.com/images/M/MV5BMTY1N2ZhMzktMThjZi00OWNhLWJhZjctMzEzNjQyOWIwZjBjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
                         rating: "6,9",
                         year: "2020"
-                    }
-                ]
-            },
-            {
-                role: "Self",
-                titles: [
+                    },
                     {
                         title: "GMA3: What You Need to Know",
                         image: "https://m.media-amazon.com/images/M/MV5BODU1ZTdjODQtYTI2ZC00OTMwLTkwMzItZjM1ZTg2NDU5YzE0XkEyXkFqcGdeQXVyODg3NDc1OTE@._V1_.jpg",
                         rating: "5,8",
                         year: "2020"
-                    },
-                    {
-                        title: "Made in Hollywood",
-                        image: "https://m.media-amazon.com/images/M/MV5BODU1ZTdjODQtYTI2ZC00OTMwLTkwMzItZjM1ZTg2NDU5YzE0XkEyXkFqcGdeQXVyODg3NDc1OTE@._V1_.jpg",
-                        rating: "5,8",
-                        year: "2020"
                     }
                 ]
-            }
-        ],
     }
 ]
