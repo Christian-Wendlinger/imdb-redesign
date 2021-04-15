@@ -20,25 +20,21 @@ const useStyle = makeStyles(theme => ({
     starIcon: {
         fontSize: 21,
         marginRight: 5,
-    },
-    firstRow: {
-        marginTop: 12
     }
 }));
 
 export default function MoviePosterSlide({image, title, rating, year, link}) {
     const classes = useStyle();
     return (
-        <Grid container direction={"column"} spacing={0}>
+        <Grid container direction={"column"} spacing={1}>
             <Grid item>
                 <Link to={link} style={{textDecoration: "none"}}>
-                    <img src={image} width={"100%"}/>
+                    <img src={process.env.PUBLIC_URL + image} width={"100%"}/>
                 </Link>
             </Grid>
 
             <Grid item>
-                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"}
-                      className={classes.firstRow}>
+                <Grid container direction={"row"} justify={"space-between"} alignItems={"center"}>
                     <Grid item>
                         <Grid container direction={"row"}>
                             <Grid item>

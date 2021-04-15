@@ -160,7 +160,8 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Personal
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Personal
                                     Details</Typography>
 
                                 <Grid container direction={"row"} spacing={2}>
@@ -214,7 +215,8 @@ export default function OliviaCooke() {
 
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Did You
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Did You
                                     Know</Typography>
                                 <Grid container direction={"column"} spacing={0}>
                                     {oliviaCooke[0].didYouKnow.map((item, index) => {
@@ -236,7 +238,8 @@ export default function OliviaCooke() {
                             <Grid item xs>
                                 <Typography variant={"h2"} className={classes.headline} style={{cursor: "pointer"}}
                                             color={"primary"}>Filmography</Typography>
-                                <KnownForTabs shuffle={() => setExplore([...oliviaCooke[0].filmography].sort(() => Math.random() - 0.5))}/>
+                                <KnownForTabs
+                                    shuffle={() => setExplore([...oliviaCooke[0].filmography].sort(() => Math.random() - 0.5))}/>
                                 <Swiper
                                     navigation
                                     spaceBetween={16}
@@ -277,7 +280,8 @@ export default function OliviaCooke() {
                         <Grid container direction={"column"} spacing={2}>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Related
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Related
                                     News</Typography>
                                 <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                                     <Grid item xs>
@@ -308,7 +312,8 @@ export default function OliviaCooke() {
                             </Grid>
 
                             <Grid item xs>
-                                <Typography variant={"h2"} color={"primary"} className={classes.headline} style={{cursor: "pointer"}}>Editorial
+                                <Typography variant={"h2"} color={"primary"} className={classes.headline}
+                                            style={{cursor: "pointer"}}>Editorial
                                     Lists</Typography>
                                 <Grid container direction={"column"} spacing={0} alignItems={"flex-start"}>
                                     <Grid item xs>

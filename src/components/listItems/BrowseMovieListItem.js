@@ -47,33 +47,39 @@ export default function BrowseMovieListItem({
     return (
         [
             <Grid item>
-                <Grid container direction={"row"} spacing={3}>
+                <Grid container direction={"row"} spacing={2}>
                     <Grid item xs={3}>
-                        <Link to={link}>
-                            <img src={image} width={"100%"}/>
-                        </Link>
-
-                        <Grid container direction={"row"} alignItems={"center"} justify={"space-between"}>
+                        <Grid container direction={"column"}>
                             <Grid item>
-                                <Grid container direction={"row"}>
-                                    <Grid item>
-                                        <Star color={"primary"} className={classes.starIcon}/>
-                                    </Grid>
-
-                                    <Grid item>
-                                        <Typography variant={"body1"}>&nbsp;{rating}</Typography>
-                                    </Grid>
-                                </Grid>
+                                <Link to={link}>
+                                    <img src={process.env.PUBLIC_URL + image} width={"100%"}/>
+                                </Link>
                             </Grid>
 
-                            <Grid item>
-                                <Grid container direction={"row"}>
+                            <Grid item xs style={{marginTop: 3}}>
+                                <Grid container direction={"row"} alignItems={"center"} justify={"space-between"}>
                                     <Grid item>
-                                        <StarBorder color={"primary"} className={classes.starIcon}/>
+                                        <Grid container direction={"row"}>
+                                            <Grid item>
+                                                <Star color={"primary"} className={classes.starIcon}/>
+                                            </Grid>
+
+                                            <Grid item>
+                                                <Typography variant={"body1"}>&nbsp;{rating}</Typography>
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
 
                                     <Grid item>
-                                        <Typography variant={"body1"}>&nbsp;Rate this</Typography>
+                                        <Grid container direction={"row"}>
+                                            <Grid item>
+                                                <StarBorder color={"primary"} className={classes.starIcon}/>
+                                            </Grid>
+
+                                            <Grid item>
+                                                <Typography variant={"body1"}>&nbsp;Rate this</Typography>
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>

@@ -60,7 +60,8 @@ export default function CastPage({movieTitle, year, rating, pageName, pageId}) {
                                                 description={item.description}
                                                 zodiacSign={item.zodiacSign}
                                                 knownFor={item.knownFor}
-                                                lastItem={index === cast.length - 1}/>
+                                                lastItem={index === cast.length - 1}
+                                                link={item.link}/>
                                         );
                                     }
                                 )}
