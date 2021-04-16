@@ -20,7 +20,7 @@ import {
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
 
-const ruleMargin = 15;
+const ruleMargin = 0;
 
 const CssTextField = withStyles({
     root: {

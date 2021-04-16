@@ -12,6 +12,7 @@ import {
 import SidebarPopover from "./SidebarPopover";
 import {ExpandMore} from "@material-ui/icons";
 
+const ruleMargin = 0;
 
 const GreyButton = withStyles((theme) => ({
     root: {
@@ -50,7 +51,19 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
         padding: 0,
         boxShadow: "none"
+    },    
+    balken: {
+    borderTop: "1px",
+    borderColor: theme.palette.balken,
+    marginTop: ruleMargin,
+    marginBottom: ruleMargin
     },
+    balken2: {
+        borderTop: "1px",
+        borderColor: theme.palette.background.default,
+        marginTop: ruleMargin,
+        marginBottom: ruleMargin
+    }
 
 }));
 
@@ -101,7 +114,7 @@ export default function SiderBrowse() {
     };
 
     return (
-        <Grid container direction={"column"} spacing={3}>
+        <Grid container direction={"column"} spacing={1}>
             <Grid item>
             </Grid>
 
@@ -112,7 +125,7 @@ export default function SiderBrowse() {
             </Grid>
 
             <Grid item>
-                <Accordion className={classes.accordion} m={0} boxShadow={20} style={{marginBottom: 12}}>
+                <Accordion className={classes.accordion} m={0} boxShadow={20}>
                     <AccordionSummary
                         className={classes.accordion}
                         expandIcon={<ExpandMore className={classes.expand}/>}
@@ -136,14 +149,26 @@ export default function SiderBrowse() {
                 </Accordion>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
             <SidebarPopover title={"Person"}
                             itemsRow1={Person1}
                             itemsRow2={Person2}/>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
 
 
             <SidebarPopover title={"Theme"}
                             itemsRow1={Theme1}
                             itemsRow2={Theme2}/>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
+            </Grid>
 
             <Grid item>
                 <Grid container direction={"row"} spacing="2">
