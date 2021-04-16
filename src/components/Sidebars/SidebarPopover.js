@@ -10,7 +10,7 @@ import {
     withStyles
 } from "@material-ui/core";
 import React, {useRef, useState} from "react";
-import {ArrowDropDown, ArrowDropUp} from "@material-ui/icons";
+import {ExpandMore, ExpandLess} from "@material-ui/icons";
 
 const useStyle = makeStyles((theme) => ({
     menuDropDown: {
@@ -25,11 +25,6 @@ const useStyle = makeStyles((theme) => ({
     },
     popoverContent: {
         pointerEvents: "auto"
-    },
-    navArrow: {
-        marginTop: -6,
-        marginRight: -4,
-        fontSize: 32
     }
 }));
 
@@ -67,7 +62,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
 
     return (
         <ClickAwayListener onClickAway={popoverLeave}>
-            <Grid item style={{marginBottom: 18, backgroundColor: openedPopover ? "#25272a" : ""}} ref={popoverAnchor}>
+            <Grid item style={{marginBottom: 6, marginTop: 18, backgroundColor: openedPopover ? "#25272a" : ""}} ref={popoverAnchor}>
                 <Grid container
                       className={classes.pointer}
                       direction={"row"}
@@ -79,8 +74,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
                     </Grid>
 
                     <Grid item>
-                        {openedPopover ? <ArrowDropUp className={classes.navArrow}/> :
-                            <ArrowDropDown className={classes.navArrow}/>}
+                        {openedPopover ? <ExpandLess/> : <ExpandMore/>}
                     </Grid>
                 </Grid>
 

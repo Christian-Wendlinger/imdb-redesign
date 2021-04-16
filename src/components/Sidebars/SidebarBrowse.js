@@ -21,7 +21,7 @@ import {
 import {ExpandMore} from "@material-ui/icons";
 import SidebarPopover from "./SidebarPopover";
 
-const ruleMargin = 15;
+const ruleMargin = 0;
 
 const CssTextField = withStyles({
     root: {
@@ -117,6 +117,12 @@ const useStyle = makeStyles((theme) => ({
     input: {
         color: '#828282'
     },
+    balken: {
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
+        marginTop: ruleMargin,
+        marginBottom: ruleMargin
+    }
 
 }));
 
@@ -207,7 +213,7 @@ export default function SiderBrowse({shuffle}) {
 
 
     return (
-        <Grid container direction={"column"} spacing={3}>
+        <Grid container direction={"column"} spacing={1}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
@@ -218,12 +224,23 @@ export default function SiderBrowse({shuffle}) {
                             itemsRow2={Genres2}
                             itemsRow3={Genres3}
             />
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
 
             <SidebarPopover title={"Title Type"}
                             itemsRow1={TT1}
                             itemsRow2={TT2}
                             itemsRow3={TT3}
             />
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
 
 
             <Grid item style={{marginTop: -12}}>
@@ -261,6 +278,10 @@ export default function SiderBrowse({shuffle}) {
                 </Accordion>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
             <Grid item>
                 <Accordion className={classes.accordion} className={classes.accordion}>
                     <AccordionSummary
@@ -294,6 +315,10 @@ export default function SiderBrowse({shuffle}) {
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
+            </Grid>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
             </Grid>
 
             <Grid item>
@@ -336,6 +361,10 @@ export default function SiderBrowse({shuffle}) {
                 </Accordion>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
 
             <Grid item>
                 <Accordion className={classes.accordion}>
@@ -364,6 +393,12 @@ export default function SiderBrowse({shuffle}) {
             </Grid>
 
             <Grid item>
+                <Typography variant={"h2"}>
+
+                </Typography>
+            </Grid>
+
+            <Grid item style={{marginBottom: 12}}>
                 <Typography variant={"h2"}>
                     Sort by
                 </Typography>
@@ -402,6 +437,10 @@ export default function SiderBrowse({shuffle}) {
                         <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                     </RadioGroup>
                 </FormControl>
+            </Grid>
+
+            <Grid item style={{width: "100%", display: "block", marginBottom: 12}}>
+                <hr className={classes.balken}/>
             </Grid>
 
             <Grid item>
