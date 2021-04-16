@@ -62,7 +62,7 @@ export default function SidebarPopover({title, itemsRow1, itemsRow2, itemsRow3})
 
     return (
         <ClickAwayListener onClickAway={popoverLeave}>
-            <Grid item style={{marginBottom: 4, marginTop: 12, backgroundColor: openedPopover ? "#25272a" : ""}} ref={popoverAnchor}>
+            <Grid item style={{marginBottom: 7, marginTop: 12, backgroundColor: openedPopover ? "#25272a" : ""}} ref={popoverAnchor}>
                 <Grid container
                       className={classes.pointer}
                       direction={"row"}
