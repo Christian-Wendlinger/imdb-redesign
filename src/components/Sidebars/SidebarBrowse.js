@@ -213,7 +213,7 @@ export default function SiderBrowse({shuffle}) {
 
 
     return (
-        <Grid container direction={"column"} spacing={1}>
+        <Grid container direction={"column"} spacing={0}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
@@ -238,12 +238,8 @@ export default function SiderBrowse({shuffle}) {
                 <hr className={classes.balken}/>
             </Grid>
 
-            <Grid item style={{width: "100%", display: "block"}}>
-                <hr className={classes.balken}/>
-            </Grid>
 
-
-            <Grid item style={{marginTop: -12}}>
+            <Grid item >
                 <Accordion className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
@@ -386,13 +382,7 @@ export default function SiderBrowse({shuffle}) {
                 </Accordion>
             </Grid>
 
-            <Grid item>
-                <Typography variant={"h2"}>
-
-                </Typography>
-            </Grid>
-
-            <Grid item>
+            <Grid item style={{marginBottom: 24}}>
                 <Typography variant={"h2"}>
 
                 </Typography>
@@ -437,10 +427,6 @@ export default function SiderBrowse({shuffle}) {
                         <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                     </RadioGroup>
                 </FormControl>
-            </Grid>
-
-            <Grid item style={{width: "100%", display: "block", marginBottom: 12}}>
-                <hr className={classes.balken}/>
             </Grid>
 
             <Grid item>
