@@ -112,6 +112,18 @@ const useStyle = makeStyles((theme) => ({
     input: {
         color: '#828282'
     },
+    balken: {
+        borderTop: "1px",
+        borderColor: theme.palette.balken,
+        marginTop: ruleMargin,
+        marginBottom: ruleMargin
+    },
+    balken2: {
+        borderTop: "1px",
+        borderColor: theme.palette.background.default,
+        marginTop: ruleMargin,
+        marginBottom: ruleMargin
+    }
 }));
 
 const ZS1 = [
@@ -157,14 +169,14 @@ export default function SidebarBornToday({shuffle}) {
 
 
     return (
-        <Grid container direction={"column"} spacing={3}>
+        <Grid container direction={"column"} spacing={1}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
                 </Typography>
             </Grid>
 
-            <Grid item style={{marginTop: -12}}>
+            <Grid item>
                 <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
@@ -198,7 +210,11 @@ export default function SidebarBornToday({shuffle}) {
                 </Accordion>
             </Grid>
 
-            <Grid item style={{marginBottom: 12}}>
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
+            <Grid item>
                 <Accordion className={classes.accordion} m={0} boxShadow={20} className={classes.accordion}>
                     <AccordionSummary
                         className={classes.accordion}
@@ -233,6 +249,10 @@ export default function SidebarBornToday({shuffle}) {
                 </Accordion>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken}/>
+            </Grid>
+
 
             <SidebarPopover title={"Zodiac Sign"}
                             itemsRow1={ZS1}
@@ -240,14 +260,14 @@ export default function SidebarBornToday({shuffle}) {
                             itemsRow3={ZS3}/>
 
 
-            <Grid item>
+            <Grid item style={{marginBottom: 24}}>
                 <Typography variant={"h2"}>
 
                 </Typography>
             </Grid>
 
-            <Grid item style={{marginTop: -12}}>
-                <Typography variant={"h2"}>
+            <Grid item>
+                <Typography variant={"h2"} style={{marginBottom: 12}}>
                     Sort by
                 </Typography>
             </Grid>
@@ -275,12 +295,20 @@ export default function SidebarBornToday({shuffle}) {
                 </FormControl>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
+            </Grid>
+
             <Grid item>
                 <RadioGroup aria-label="Asc/Desc" name="Radio1" value={value} onChange={handleRadio}>
                     <FormControlLabel value="Descending" control={<GreyRadio/>} label="Descending"
                                       onChange={handleRadio}/>
                     <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                 </RadioGroup>
+            </Grid>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
             </Grid>
 
             <Grid item>
