@@ -122,6 +122,12 @@ const useStyle = makeStyles((theme) => ({
         borderColor: theme.palette.balken,
         marginTop: ruleMargin,
         marginBottom: ruleMargin
+    },
+    balken2: {
+        borderTop: "1px",
+        borderColor: theme.palette.background.default,
+        marginTop: ruleMargin,
+        marginBottom: ruleMargin
     }
 
 }));
@@ -213,7 +219,7 @@ export default function SiderBrowse({shuffle}) {
 
 
     return (
-        <Grid container direction={"column"} spacing={0}>
+        <Grid container direction={"column"} spacing={1}>
             <Grid item>
                 <Typography variant={"h2"}>
                     Filter by
@@ -394,6 +400,10 @@ export default function SiderBrowse({shuffle}) {
                 </Typography>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
+            </Grid>
+
             <Grid item>
                 <FormControl variant="outlined" fullWidth>
                     <CssSelect
@@ -420,6 +430,10 @@ export default function SiderBrowse({shuffle}) {
                 </FormControl>
             </Grid>
 
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
+            </Grid>
+
             <Grid item>
                 <FormControl component="fieldset">
                     <RadioGroup aria-label="Sort" name="Radio2" value={value2} onChange={handleRadio2}>
@@ -427,6 +441,10 @@ export default function SiderBrowse({shuffle}) {
                         <FormControlLabel value="Ascending" control={<GreyRadio/>} label="Ascending"/>
                     </RadioGroup>
                 </FormControl>
+            </Grid>
+
+            <Grid item style={{width: "100%", display: "block"}}>
+                <hr className={classes.balken2}/>
             </Grid>
 
             <Grid item>
@@ -442,6 +460,7 @@ export default function SiderBrowse({shuffle}) {
                             Reset
                         </GreyButton>
                     </Grid>
+
 
                 </Grid>
             </Grid>
